@@ -4,8 +4,7 @@
 <title>El Inka &times; Forma &mdash; Bugambilia Service Trays 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#1C2133;--cream:#EDE8DF;--paper:#fff;--bone:#F7F3EA;--olive:#3D7A60;--tan:#B5946A;--sage:#7B9A86;--ts:#6B7280;--bd:#E5E0D5;}
+<style>:root{--ink:#1C2133;--cream:#EDE8DF;--paper:#fff;--bone:#F7F3EA;--olive:#3D7A60;--tan:#B5946A;--sage:#7B9A86;--ts:#6B7280;--bd:#E5E0D5;}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{background:#C8C3BB;-webkit-font-smoothing:antialiased}body{font-family:Inter,sans-serif;color:#111827}
 nav{position:sticky;top:0;z-index:200;background:rgba(200,195,187,.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.12);display:flex;align-items:center;padding:0 16px;height:44px;overflow-x:auto;scrollbar-width:none}
@@ -34,8 +33,8 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
 .vp-copy{font-size:7.5pt;color:var(--ts);line-height:1.65}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
 .pc{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--bd);display:flex;flex-direction:column}
-.ci{height:165px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.ci img{width:100%;height:100%;object-fit:contain;padding:12px;transition:transform .3s}
+.ci{height:165px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
+.ci img{width:100%;flex:1;object-fit:contain;padding:12px;transition:transform .3s}
 .ci:hover img{transform:scale(1.06)}
 .cs{height:3px}.cb{padding:10px 10px 12px;flex:1;display:flex;flex-direction:column;gap:5px}
 .csku{font-size:6.5pt;color:var(--ts);font-family:monospace;letter-spacing:.05em}
@@ -50,10 +49,24 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
 .t-o{background:#fff3e0;color:#e65100;border-color:#ffe0b2;font-weight:700}
 .t-g{background:#e8f0ec;color:var(--olive)}
 .t-star{background:#e8f0ec;color:var(--olive);border:1px solid #c8dfd2;font-weight:700}
-.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
-.cc{background:#fff;border:1px solid var(--bd);border-radius:12px;overflow:hidden}
-.csw{height:90px}.ccb{padding:10px 12px}
-.ccn{font-family:Jost,sans-serif;font-size:11pt;font-weight:400;color:var(--ink);margin-bottom:2px}
+.colour-grid{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}
+.colour-swatch{display:flex;flex-direction:column;align-items:center;gap:5px;width:72px}
+.swatch-circle{width:60px;height:60px;border-radius:50%;border:1px solid rgba(0,0,0,.08);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.swatch-name{font-size:6.5pt;font-weight:600;color:var(--ink);text-align:center;line-height:1.3}
+.swatch-code{font-size:6pt;color:var(--ts);font-family:monospace;letter-spacing:.04em}
+.finish-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px;max-width:500px}
+.finish-card{background:var(--paper);border:1px solid var(--bd);border-radius:12px;padding:16px}
+.finish-card .fn{font-family:Jost,sans-serif;font-size:11pt;font-weight:500;color:var(--ink);margin-bottom:4px}
+.finish-card .fd{font-size:7.5pt;color:var(--ts);line-height:1.6}
+.custom-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px}
+.custom-card{background:var(--paper);border:1px solid var(--bd);border-radius:14px;padding:22px 18px;display:flex;flex-direction:column;gap:10px}
+.custom-card.featured{border-color:#c8dfd2;background:var(--bone)}
+.custom-icon{font-size:24pt}
+.custom-label{font-size:6.5pt;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ts)}
+.custom-title{font-family:Jost,sans-serif;font-size:13pt;font-weight:400;color:var(--ink);line-height:1.2}
+.custom-price{font-family:Jost,sans-serif;font-size:16pt;color:var(--olive);font-weight:400}
+.custom-price-note{font-size:7pt;color:var(--ts);margin-top:-6px}
+.custom-copy{font-size:7.5pt;color:var(--ts);line-height:1.65}
 .tbl{width:100%;border-collapse:collapse;margin-top:12px;font-size:8.5pt}
 .tbl thead tr{border-bottom:1.5px solid var(--ink)}
 .tbl thead th{font-size:6.5pt;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ts);padding:0 8px 8px;text-align:left}
@@ -63,14 +76,14 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
 .ib{background:var(--bone);border:1px solid var(--bd);border-radius:8px;padding:12px 16px;font-size:8pt;color:var(--ts);line-height:1.7;margin-top:12px}
 .ib strong{color:#111827}
 .ft{text-align:center;font-size:7pt;color:var(--ts);padding:6px 0 2px;border-top:1px solid var(--bd);margin-top:14px}
-@media(max-width:560px){.pg{padding:18px 14px}.grid{grid-template-columns:repeat(2,1fr)}.cgrid{grid-template-columns:repeat(2,1fr)}.vp-grid{grid-template-columns:repeat(2,1fr)}.tbl{display:block;overflow-x:auto}}
-@media print{html{background:#fff}nav{display:none}.wrap{padding:0;gap:0}.pg{border-radius:0;box-shadow:none;page-break-after:always}}
-</style></head><body>
+@media(max-width:560px){.pg{padding:18px 14px}.grid{grid-template-columns:repeat(2,1fr)}.custom-grid{grid-template-columns:1fr}.finish-grid{grid-template-columns:1fr}.colour-grid{gap:10px}.colour-swatch{width:64px}.tbl{display:block;overflow-x:auto}}
+@media print{html{background:#fff}nav{display:none}.wrap{padding:0;gap:0}.pg{border-radius:0;box-shadow:none;page-break-after:always}}</style></head><body>
 <nav>
   <span class="brand">FORMA</span>
   <a href="#why">Why Bugambilia</a>
   <a href="#products">Trays</a>
   <a href="#colours">Colours</a>
+  <a href="#custom">Customisation</a>
   <a href="#order">Pricing</a>
   <a href="#" class="pb" onclick="window.print();return false">Print / PDF</a>
 </nav>
@@ -83,7 +96,7 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
     <p class="cs2">Prepared for Aldo &middot; El Inka Restaurant<br>21 St Clair Ave E, Toronto ON M4T 1L9</p>
     <div class="pills">
       <span>Bugambilia by G.E.T.</span><span>Cast Aluminium</span>
-      <span>4 tray formats</span><span>30 pieces</span><span>8% order discount</span>
+      <span>4 formats</span><span>23 colours</span><span>Custom branding available</span><span>30 pieces</span>
     </div>
   </div>
   <div class="ft">FORMA TABLEWARE LTD &middot; 174-8250 Manitoba St, Vancouver BC V5X 0L6 &middot; management@formatableware.com</div>
@@ -96,33 +109,7 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
     <p class="su">Bugambilia by G.E.T. is the commercial standard for high-volume operations. Every piece is built to last &mdash; and priced to save you money over time.</p>
     <div class="stripe" style="background:var(--olive)"></div>
   </div>
-  <div class="vp-grid">
-    <div class="vp">
-      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z"/><polyline points="9 12 11 14 15 10"/></svg>
-      <div class="vp-head">Truly Unbreakable</div>
-      <div class="vp-copy">G.E.T. cast aluminium withstands commercial kitchens, high-volume service, and repeated drops &mdash; no chips, no cracks, no replacements.</div>
-    </div>
-    <div class="vp">
-      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
-      <div class="vp-head">Manufacturer Warranty</div>
-      <div class="vp-copy">Every piece is backed by a full manufacturer warranty against defects &mdash; a documented guarantee on every unit in your order.</div>
-    </div>
-    <div class="vp">
-      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/><line x1="12" y1="9" x2="12" y2="13"/></svg>
-      <div class="vp-head">Temperature Retention</div>
-      <div class="vp-copy">Holds heat significantly longer than ceramic or melamine &mdash; food arrives at the right temperature every time.</div>
-    </div>
-    <div class="vp">
-      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3" ry="3"/><polyline points="9 12 11 14 15 10"/></svg>
-      <div class="vp-head">NSF Certified</div>
-      <div class="vp-copy">Meets NSF commercial kitchen standards. Dishwasher safe, BPA-free, compliant with food service health &amp; safety requirements.</div>
-    </div>
-    <div class="vp">
-      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      <div class="vp-head">Lower Cost Over Time</div>
-      <div class="vp-copy">Ceramic and fiberglass trays break and scratch. One Bugambilia purchase, zero attrition &mdash; your cost-per-service drops every month.</div>
-    </div>
-  </div>
+  <div class="vp-grid"><div class="vp"><svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z"/><polyline points='9 12 11 14 15 10'/></svg><div class="vp-head">Truly Unbreakable</div><div class="vp-copy">G.E.T. cast aluminium withstands commercial kitchens, high-volume service, and repeated drops &mdash; no chips, no cracks, no replacements.</div></div><div class="vp"><svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/><circle cx='12' cy='8' r='6'/></svg><div class="vp-head">Manufacturer Warranty</div><div class="vp-copy">Every piece is backed by a full manufacturer warranty against defects &mdash; documented on every unit in your order.</div></div><div class="vp"><svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/><line x1='12' y1='9' x2='12' y2='13'/></svg><div class="vp-head">Temperature Retention</div><div class="vp-copy">Holds heat significantly longer than ceramic or fiberglass &mdash; food arrives at the right temperature every time.</div></div><div class="vp"><svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v18H3z"/><polyline points='9 12 11 14 15 10'/></svg><div class="vp-head">NSF Certified</div><div class="vp-copy">Meets NSF commercial kitchen standards. Dishwasher safe, BPA-free, compliant with food service health &amp; safety requirements.</div></div><div class="vp"><svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22"/><path d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'/></svg><div class="vp-head">Lower Cost Over Time</div><div class="vp-copy">Ceramic and fiberglass trays break and scratch. One Bugambilia purchase, zero attrition &mdash; cost-per-service drops every month.</div></div></div>
   <div class="ft">FORMA TABLEWARE LTD &middot; 174-8250 Manitoba St, Vancouver BC V5X 0L6 &middot; management@formatableware.com</div>
 </section>
 
@@ -130,21 +117,42 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
   <div class="sh">
     <div class="ey">Tray Options &middot; Full Bugambilia Range</div>
     <h2>Service Tray Selection</h2>
-    <p class="su">Every tray format Bugambilia makes &mdash; from flat presentation trays to handled service trays. All cast aluminium, available in four colour finishes. 8% order discount applied.</p>
+    <p class="su">Every Bugambilia tray format, 8% order discount applied. Top Choice is the closest dimensional match to the 50&times;39&nbsp;cm spec.</p>
     <div class="stripe" style="background:var(--olive)"></div>
   </div>
-  <div class="grid">
-    <div class="pc">
-      <div class="ci" style="background:#1C2133"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/bugambilia/TU004.jpg" alt="ATC.1004.00512" loading="lazy" onerror="this.style.display='none'"></div>
+  <div class="grid"><div class="pc">
+      <div class="ci" style="background:#1C2133"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/bugambilia/TU014.jpg" alt="ATC.1004.00515" loading="lazy" onerror="this.style.display='none'"></div>
       <div class="cs" style="background:var(--olive)"></div>
       <div class="cb">
-        <div class="csku">ATC.1004.00512</div>
-        <div class="cn">L Rectangular Tray with Handles</div>
-        <div class="cd">46&times;30&nbsp;cm / 18.1&Prime;&times;11.8&Prime; &middot; 10&nbsp;cm depth</div>
+        <div class="csku">ATC.1004.00515</div>
+        <div class="cn">L Rectangular Tray</div>
+        <div class="cd">59.7&times;41.1&nbsp;cm / 23.5&Prime;&times;16.2&Prime; &middot; 2.5&nbsp;cm depth &middot; No handles</div>
         <div class="ct">
           <span class="tag t-o">Unbreakable</span>
           <span class="tag t-g">Cast Aluminium</span>
           <span class="tag t-star">&#9733;&nbsp;Top Choice</span>
+        </div>
+        <div class="cp">
+          <div class="cpl">Wholesale / unit &mdash; <span style="text-decoration:line-through;color:var(--ts)">$104.00</span></div>
+          <div style="display:flex;align-items:center;gap:7px">
+            <div class="cpv">$95.50</div>
+            <span style="font-size:6pt;background:var(--olive);color:#fff;border-radius:8px;padding:2px 6px;font-weight:700">8% OFF</span>
+          </div>
+        </div>
+        <div class="cnote">Closest dimensional match to the 50&times;39&nbsp;cm spec &mdash; 41&nbsp;cm width is nearly exact. Clean flat format, versatile for carrying and table presentation</div>
+      </div>
+    </div>
+    <div class="pc">
+      <div class="ci" style="background:#1C2133"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/bugambilia/TU004.jpg" alt="ATC.1004.00512" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="cs" style="background:var(--tan)"></div>
+      <div class="cb">
+        <div class="csku">ATC.1004.00512</div>
+        <div class="cn">L Rectangular Tray with Handles</div>
+        <div class="cd">46&times;30&nbsp;cm / 18.1&Prime;&times;11.8&Prime; &middot; 10&nbsp;cm depth &middot; Side handles</div>
+        <div class="ct">
+          <span class="tag t-o">Unbreakable</span>
+          <span class="tag t-g">Cast Aluminium</span>
+          
         </div>
         <div class="cp">
           <div class="cpl">Wholesale / unit &mdash; <span style="text-decoration:line-through;color:var(--ts)">$183.50</span></div>
@@ -153,12 +161,12 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
             <span style="font-size:6pt;background:var(--olive);color:#fff;border-radius:8px;padding:2px 6px;font-weight:700">8% OFF</span>
           </div>
         </div>
-        <div class="cnote">Side handles for easy carrying &mdash; ideal for transporting 3&ndash;4 side plates to the table</div>
+        <div class="cnote">Side handles for secure carrying &mdash; the most practical format for transporting 3&ndash;4 plates between kitchen and table</div>
       </div>
     </div>
     <div class="pc">
-      <div class="ci" style="background:#2D3748"><div style="color:#6B7280;font-size:8pt;text-align:center;padding:12px 8px;line-height:1.6">Image available<br>on request</div></div>
-      <div class="cs" style="background:var(--olive)"></div>
+      <div class="ci" style="background:#1C2133"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/bugambilia/TU004.jpg" alt="ATC.1004.00513" loading="lazy" onerror="this.style.display='none'"><div style="font-size:5.5pt;color:rgba(255,255,255,.45);text-align:center;padding:0 8px 6px">Image shown in L size &mdash; representative</div></div>
+      <div class="cs" style="background:var(--tan)"></div>
       <div class="cb">
         <div class="csku">ATC.1004.00513</div>
         <div class="cn">XL Rectangular Tray with Handles</div>
@@ -175,29 +183,7 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
             <span style="font-size:6pt;background:var(--olive);color:#fff;border-radius:8px;padding:2px 6px;font-weight:700">8% OFF</span>
           </div>
         </div>
-        <div class="cnote">Largest handled tray in the range &mdash; 75&times;57&nbsp;cm comfortably fits 4&ndash;6 full-size plates. Significantly larger than the 50&times;39&nbsp;cm spec &mdash; confirm with Aldo if this format works</div>
-      </div>
-    </div>
-    <div class="pc">
-      <div class="ci" style="background:#1C2133"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/bugambilia/TU014.jpg" alt="ATC.1004.00515" loading="lazy" onerror="this.style.display='none'"></div>
-      <div class="cs" style="background:var(--tan)"></div>
-      <div class="cb">
-        <div class="csku">ATC.1004.00515</div>
-        <div class="cn">L Rectangular Tray</div>
-        <div class="cd">59.7&times;41.1&nbsp;cm / 23.5&Prime;&times;16.2&Prime; &middot; 2.5&nbsp;cm depth</div>
-        <div class="ct">
-          <span class="tag t-o">Unbreakable</span>
-          <span class="tag t-g">Cast Aluminium</span>
-          
-        </div>
-        <div class="cp">
-          <div class="cpl">Wholesale / unit &mdash; <span style="text-decoration:line-through;color:var(--ts)">$104.00</span></div>
-          <div style="display:flex;align-items:center;gap:7px">
-            <div class="cpv">$95.50</div>
-            <span style="font-size:6pt;background:var(--olive);color:#fff;border-radius:8px;padding:2px 6px;font-weight:700">8% OFF</span>
-          </div>
-        </div>
-        <div class="cnote"><b>Closest dimensional match</b> to the 50&times;39&nbsp;cm spec &mdash; 41&nbsp;cm width is nearly exact. Clean flat format without handles</div>
+        <div class="cnote">Largest handled tray in the range &mdash; significantly bigger than the 50&times;39&nbsp;cm spec. Ideal for 6+ plates or large sharing formats. Confirm with Aldo before ordering</div>
       </div>
     </div>
     <div class="pc">
@@ -210,7 +196,7 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
         <div class="ct">
           <span class="tag t-o">Unbreakable</span>
           <span class="tag t-g">Cast Aluminium</span>
-          <span class="tag t-g">Flattest Profile</span>
+          
         </div>
         <div class="cp">
           <div class="cpl">Wholesale / unit &mdash; <span style="text-decoration:line-through;color:var(--ts)">$86.00</span></div>
@@ -219,13 +205,12 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
             <span style="font-size:6pt;background:var(--olive);color:#fff;border-radius:8px;padding:2px 6px;font-weight:700">8% OFF</span>
           </div>
         </div>
-        <div class="cnote">Shallowest profile in the range at 3&nbsp;cm deep &mdash; closest format to a traditional service tray</div>
+        <div class="cnote">Shallowest profile at just 3&nbsp;cm &mdash; the closest format to a traditional flat service tray. No handles</div>
       </div>
-    </div>
-  </div>
+    </div></div>
   <div class="ib" style="margin-top:14px">
-    <strong>&#9733; Closest match to spec:</strong> The L Rectangular Tray (no handles) at 59.7&times;41.1&nbsp;cm is the nearest to Aldo's 50&times;39&nbsp;cm request. The L Handled Tray (46&times;30&nbsp;cm) is slightly smaller but easier to carry. The XL Handled Tray (75&times;57&nbsp;cm) is significantly larger &mdash; confirm with Aldo before ordering.<br>
-    <strong>Images:</strong> XL Handled Tray and Flat Service Tray images available on request &mdash; physical samples can be arranged prior to order confirmation.
+    <strong>&#9733; Top Choice:</strong> The L Rectangular Tray (TU014) at 59.7&times;41.1&nbsp;cm is the closest match to the 50&times;39&nbsp;cm spec. The L Handled Tray (46&times;30&nbsp;cm) is the most practical for carrying. The XL (75&times;57&nbsp;cm) is significantly larger &mdash; confirm with Aldo before ordering.<br>
+    <strong>XL image note:</strong> XL shown using L tray image &mdash; same design language, larger format. Physical sample available on request.
   </div>
 </section>
 
@@ -233,134 +218,64 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
   <div class="sh">
     <div class="ey">Finish Options &middot; 23 Colours Available</div>
     <h2>Colour Selection</h2>
-    <p class="su">Every Bugambilia tray is available to order in any of the 23 standard colours below, plus two finishes &mdash; Classic (textured matte) or Mod (smooth gloss). Custom colours available on request.</p>
+    <p class="su">Every tray format is available in any of the 23 standard colours, plus two finishes &mdash; Classic (textured matte) or Mod (smooth gloss).</p>
     <div class="stripe" style="background:var(--tan)"></div>
   </div>
-
-  <style>
-    .colour-grid{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}
-    .colour-swatch{display:flex;flex-direction:column;align-items:center;gap:5px;width:72px}
-    .swatch-circle{width:60px;height:60px;border-radius:50%;border:1px solid rgba(0,0,0,.08);box-shadow:0 2px 6px rgba(0,0,0,.15)}
-    .swatch-name{font-size:6.5pt;font-weight:600;color:var(--ink);text-align:center;line-height:1.3}
-    .swatch-code{font-size:6pt;color:var(--ts);font-family:monospace;letter-spacing:.04em}
-    .finish-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px;max-width:500px}
-    .finish-card{background:var(--paper);border:1px solid var(--bd);border-radius:12px;padding:16px;}
-    .finish-card .fn{font-family:Jost,sans-serif;font-size:11pt;font-weight:500;color:var(--ink);margin-bottom:4px}
-    .finish-card .fd{font-size:7.5pt;color:var(--ts);line-height:1.6}
-  </style>
-
-  <div class="colour-grid">
-    <div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #F4F1EC, #E8E4DB)"></div>
-      <div class="swatch-name">White</div>
-      <div class="swatch-code">WW</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #1C1C1C, #111111)"></div>
-      <div class="swatch-name">Black</div>
-      <div class="swatch-code">BB</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #9EA5AE, #7B8490)"></div>
-      <div class="swatch-name">Steel</div>
-      <div class="swatch-code">ST</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #C0392B, #96281B)"></div>
-      <div class="swatch-name">Fire Red</div>
-      <div class="swatch-code">FR</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #2471A3, #1A5276)"></div>
-      <div class="swatch-name">Pacific Blue</div>
-      <div class="swatch-code">PC</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #922B21, #7B241C)"></div>
-      <div class="swatch-name">Brick</div>
-      <div class="swatch-code">BR</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #3E1C0C, #2C1008)"></div>
-      <div class="swatch-name">Chocolate</div>
-      <div class="swatch-code">CH</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #7D5A44, #5E4033)"></div>
-      <div class="swatch-name">Mocha</div>
-      <div class="swatch-code">MC</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #C9A97A, #B8956A)"></div>
-      <div class="swatch-name">Latte</div>
-      <div class="swatch-code">LT</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #2E7D32, #1B5E20)"></div>
-      <div class="swatch-name">Forest Green</div>
-      <div class="swatch-code">FT</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #8FA67A, #6E8A57)"></div>
-      <div class="swatch-name">Willow Green</div>
-      <div class="swatch-code">WG</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #8E1B3A, #6B1229)"></div>
-      <div class="swatch-name">Cranberry</div>
-      <div class="swatch-code">CB</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #9BC34A, #7DA832)"></div>
-      <div class="swatch-name">Lime</div>
-      <div class="swatch-code">LM</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #E8771F, #C45E0C)"></div>
-      <div class="swatch-name">Tangerine</div>
-      <div class="swatch-code">TG</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #F5C518, #DBA808)"></div>
-      <div class="swatch-name">Yellow</div>
-      <div class="swatch-code">YW</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #EDE8DF, #D8D0C4)"></div>
-      <div class="swatch-name">Marble White</div>
-      <div class="swatch-code">MW</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #2D2D2D, #1A1A1A)"></div>
-      <div class="swatch-name">Granite Black</div>
-      <div class="swatch-code">GB</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #9E9E9E, #757575)"></div>
-      <div class="swatch-name">Gray</div>
-      <div class="swatch-code">G</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #5DADE2, #2E86C1)"></div>
-      <div class="swatch-name">Sky Blue</div>
-      <div class="swatch-code">SB</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #1A9E80, #12786A)"></div>
-      <div class="swatch-name">Jade</div>
-      <div class="swatch-code">J</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #C4A97A, #A88B60)"></div>
-      <div class="swatch-name">Sand</div>
-      <div class="swatch-code">S</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #C0622D, #9E4B1E)"></div>
-      <div class="swatch-name">Terracotta</div>
-      <div class="swatch-code">T</div>
-    </div><div class="colour-swatch">
-      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #9B7EC8, #7D5BA6)"></div>
-      <div class="swatch-name">Lavender</div>
-      <div class="swatch-code">LV</div>
-    </div>
-  </div>
-
+  <div class="colour-grid"><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#F4F1EC,#E8E4DB)"></div><div class="swatch-name">White</div><div class="swatch-code">WW</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#1C1C1C,#111111)"></div><div class="swatch-name">Black</div><div class="swatch-code">BB</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#9EA5AE,#7B8490)"></div><div class="swatch-name">Steel</div><div class="swatch-code">ST</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#C0392B,#96281B)"></div><div class="swatch-name">Fire Red</div><div class="swatch-code">FR</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#2471A3,#1A5276)"></div><div class="swatch-name">Pacific Blue</div><div class="swatch-code">PC</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#922B21,#7B241C)"></div><div class="swatch-name">Brick</div><div class="swatch-code">BR</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#3E1C0C,#2C1008)"></div><div class="swatch-name">Chocolate</div><div class="swatch-code">CH</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#7D5A44,#5E4033)"></div><div class="swatch-name">Mocha</div><div class="swatch-code">MC</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#C9A97A,#B8956A)"></div><div class="swatch-name">Latte</div><div class="swatch-code">LT</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#2E7D32,#1B5E20)"></div><div class="swatch-name">Forest Green</div><div class="swatch-code">FT</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#8FA67A,#6E8A57)"></div><div class="swatch-name">Willow Green</div><div class="swatch-code">WG</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#8E1B3A,#6B1229)"></div><div class="swatch-name">Cranberry</div><div class="swatch-code">CB</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#9BC34A,#7DA832)"></div><div class="swatch-name">Lime</div><div class="swatch-code">LM</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#E8771F,#C45E0C)"></div><div class="swatch-name">Tangerine</div><div class="swatch-code">TG</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#F5C518,#DBA808)"></div><div class="swatch-name">Yellow</div><div class="swatch-code">YW</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#EDE8DF,#D8D0C4)"></div><div class="swatch-name">Marble White</div><div class="swatch-code">MW</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#2D2D2D,#1A1A1A)"></div><div class="swatch-name">Granite Black</div><div class="swatch-code">GB</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#9E9E9E,#757575)"></div><div class="swatch-name">Gray</div><div class="swatch-code">G</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#5DADE2,#2E86C1)"></div><div class="swatch-name">Sky Blue</div><div class="swatch-code">SB</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#1A9E80,#12786A)"></div><div class="swatch-name">Jade</div><div class="swatch-code">J</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#C4A97A,#A88B60)"></div><div class="swatch-name">Sand</div><div class="swatch-code">S</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#C0622D,#9E4B1E)"></div><div class="swatch-name">Terracotta</div><div class="swatch-code">T</div></div><div class="colour-swatch"><div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%,#9B7EC8,#7D5BA6)"></div><div class="swatch-name">Lavender</div><div class="swatch-code">LV</div></div></div>
   <div class="ey" style="margin-top:28px;margin-bottom:12px">Two Finishes Available</div>
   <div class="finish-grid">
     <div class="finish-card">
       <div class="fn">Classic</div>
-      <div class="fd">Upscale textured matte surface &mdash; the signature Bugambilia look. Slightly rough to the touch, creates an artisanal appearance.</div>
+      <div class="fd">Upscale textured matte &mdash; the signature Bugambilia look. Slightly rough to the touch, artisanal appearance.</div>
     </div>
     <div class="finish-card">
       <div class="fn">Mod</div>
-      <div class="fd">Smooth gloss surface with a subtle shine. A more contemporary finish for modern table presentations.</div>
+      <div class="fd">Smooth gloss surface with a subtle shine. A more contemporary finish for modern presentations.</div>
     </div>
   </div>
-
   <div class="ib" style="margin-top:16px">
-    <strong>Custom colours:</strong> Bugambilia can match custom colours on request &mdash; contact us with a Pantone reference or physical sample for a quote.<br>
-    <strong>Two-tone:</strong> Any two colours can be combined for a custom two-tone finish at no additional tooling cost.<br>
-    <strong>Lead time:</strong> All colours are made to order &mdash; 3&ndash;5 weeks from order confirmation.
+    <strong>Custom colours:</strong> Available on request with a Pantone reference or physical swatch &mdash; add 1&ndash;2 weeks for colour matching.<br>
+    <strong>Two-tone:</strong> Any two colours can be combined for a custom two-tone finish.
+  </div>
+  <div class="ft">FORMA TABLEWARE LTD &middot; 174-8250 Manitoba St, Vancouver BC V5X 0L6 &middot; management@formatableware.com</div>
+</section>
+
+<section class="pg" id="custom">
+  <div class="sh">
+    <div class="ey">Branding &amp; Customisation Options</div>
+    <h2>Make It Yours</h2>
+    <p class="su">Bugambilia trays can be customised with El Inka&rsquo;s branding &mdash; cast directly into the aluminium or applied as a surface print. A permanent investment in your brand presence at the table.</p>
+    <div class="stripe" style="background:var(--ink)"></div>
+  </div>
+  <div class="custom-grid">
+    <div class="custom-card featured">
+      <div class="custom-icon">&#127981;</div>
+      <div class="custom-label">Most Popular</div>
+      <div class="custom-title">Custom Cast Mold</div>
+      <div class="custom-price">$500 <span style="font-size:10pt">USD</span></div>
+      <div class="custom-price-note">One-time fee &mdash; lifetime investment</div>
+      <div class="custom-copy">Your logo or design is cast directly into the aluminium mold. Every piece produced from this mold carries your brand permanently &mdash; raised and integral to the material. The mold belongs to El Inka and can be reused for future orders at no additional mold cost.</div>
+    </div>
+    <div class="custom-card">
+      <div class="custom-icon">&#128396;</div>
+      <div class="custom-label">Surface Option</div>
+      <div class="custom-title">Custom Print</div>
+      <div class="custom-price" style="font-size:12pt;color:var(--tan)">Contact for pricing</div>
+      <div class="custom-price-note">Per order &mdash; no mold fee</div>
+      <div class="custom-copy">Your logo or artwork is printed onto the resin coating surface. Lower upfront cost with no mold investment. Ideal for testing a design or for smaller runs before committing to a custom cast mold.</div>
+    </div>
+    <div class="custom-card">
+      <div class="custom-icon">&#9881;&#65039;</div>
+      <div class="custom-label">Combined</div>
+      <div class="custom-title">Mold + Custom Colour</div>
+      <div class="custom-price" style="font-size:12pt;color:var(--tan)">$500 USD + colour</div>
+      <div class="custom-price-note">One-time mold &middot; custom colour each order</div>
+      <div class="custom-copy">Combine a custom cast mold with a bespoke colour match to El Inka&rsquo;s brand palette. The mold is permanent; the colour is selected fresh each production run, allowing seasonal or event variations on the same piece.</div>
+    </div>
+  </div>
+  <div class="ib" style="margin-top:16px">
+    <strong>Artwork requirements:</strong> Vector file (AI, EPS, or SVG) preferred for mold production. PNG/JPG accepted for surface print at 300dpi minimum.<br>
+    <strong>Lead time:</strong> Custom mold production adds 2&ndash;4 weeks to the standard 3&ndash;5 week lead time on first order. Reorders from an existing mold ship on standard timeline.
   </div>
   <div class="ft">FORMA TABLEWARE LTD &middot; 174-8250 Manitoba St, Vancouver BC V5X 0L6 &middot; management@formatableware.com</div>
 </section>
@@ -369,7 +284,7 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
   <div class="sh">
     <div class="ey">Pricing &middot; 30 units &middot; 8% discount</div>
     <h2>Pricing at a Glance</h2>
-    <p class="su">Select one format for 30 pieces, or mix formats &mdash; we can confirm the split on order.</p>
+    <p class="su">Select one format for all 30 pieces, or mix formats. Branding costs are additional.</p>
     <div class="stripe" style="background:var(--olive)"></div>
   </div>
   <table class="tbl">
@@ -382,6 +297,14 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
       <th style="text-align:right">30-unit Total</th>
     </tr></thead>
     <tbody><tr>
+      <td><b>ATC.1004.00515</b></td>
+      <td style="font-size:8pt">L Rectangular Tray</td>
+      <td style="text-align:center">30</td>
+      <td style="text-align:right">$104.00</td>
+      <td style="text-align:right"><b style="font-family:Jost,sans-serif">$95.50</b></td>
+      <td style="text-align:right;color:#d97706">-$8.50</td>
+      <td style="text-align:right"><b style="font-family:Jost,sans-serif">$2,865.00</b></td>
+    </tr><tr>
       <td><b>ATC.1004.00512</b></td>
       <td style="font-size:8pt">L Rectangular Tray with Handles</td>
       <td style="text-align:center">30</td>
@@ -398,14 +321,6 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
       <td style="text-align:right;color:#d97706">-$26.00</td>
       <td style="text-align:right"><b style="font-family:Jost,sans-serif">$9,015.00</b></td>
     </tr><tr>
-      <td><b>ATC.1004.00515</b></td>
-      <td style="font-size:8pt">L Rectangular Tray</td>
-      <td style="text-align:center">30</td>
-      <td style="text-align:right">$104.00</td>
-      <td style="text-align:right"><b style="font-family:Jost,sans-serif">$95.50</b></td>
-      <td style="text-align:right;color:#d97706">-$8.50</td>
-      <td style="text-align:right"><b style="font-family:Jost,sans-serif">$2,865.00</b></td>
-    </tr><tr>
       <td><b>ATC.1004.00404</b></td>
       <td style="font-size:8pt">Flat Service Tray</td>
       <td style="text-align:center">30</td>
@@ -417,8 +332,8 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
   </table>
   <div class="ib" style="margin-top:14px">
     <strong>Payment terms:</strong> 50% deposit to confirm production &middot; balance due prior to shipment.<br>
-    <strong>Lead time:</strong> 3&ndash;5 weeks from deposit receipt.<br>
-    <strong>Colour &amp; format:</strong> Confirm your selection on order &mdash; single format or mixed split both available.
+    <strong>Lead time:</strong> 3&ndash;5 weeks standard &middot; 5&ndash;9 weeks with custom mold (first order).<br>
+    <strong>Branding:</strong> Custom mold $500 USD one-time. Surface print pricing on request. Both can be added to this order.
   </div>
   <div class="ft">FORMA TABLEWARE LTD &middot; 174-8250 Manitoba St, Vancouver BC V5X 0L6 &middot; management@formatableware.com</div>
 </section>
