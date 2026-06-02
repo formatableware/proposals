@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Blaze Burgers &times; Forma &mdash; Bugambilia Order 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1C2133;--cream:#EDE8DF;--paper:#fff;--bone:#F7F3EA;--olive:#3D7A60;--tan:#B5946A;--sage:#7B9A86;--ts:#6B7280;--bd:#E5E0D5;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{background:#C8C3BB;-webkit-font-smoothing:antialiased}body{font-family:Inter,sans-serif;color:#111827}
+nav{position:sticky;top:0;z-index:200;background:rgba(200,195,187,.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(0,0,0,.12);display:flex;align-items:center;padding:0 16px;height:44px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav .brand{font-family:Jost,sans-serif;font-size:12px;font-weight:500;letter-spacing:.1em;color:var(--ink);margin-right:16px;white-space:nowrap}
+nav a{font-size:10px;font-weight:500;color:var(--ts);padding:0 10px;height:44px;display:flex;align-items:center;border-bottom:2px solid transparent;text-decoration:none;white-space:nowrap;transition:color .15s,border-color .15s}
+nav a:hover{color:var(--ink);border-color:var(--tan)}nav .pb{margin-left:auto;color:var(--olive)}
+.wrap{display:flex;flex-direction:column;align-items:center;padding:20px 16px 40px;gap:16px}
+.pg{width:100%;max-width:960px;background:var(--cream);border-radius:8px;box-shadow:0 4px 28px rgba(0,0,0,.18);padding:28px 28px 24px;scroll-margin-top:52px}
+.cover{display:flex;flex-direction:column;align-items:center;padding:48px 32px 32px;text-align:center;gap:10px}
+.yr{font-family:Jost,sans-serif;font-size:9pt;letter-spacing:.55em;color:var(--ts)}
+h1{font-family:Jost,sans-serif;font-size:clamp(26px,5vw,44px);font-weight:300;color:var(--ink);letter-spacing:-.02em;line-height:1.12}
+.cs2{font-size:9pt;color:var(--ts);line-height:1.7}
+.pills{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap;justify-content:center}
+.pills span{font-size:7.5pt;color:var(--ts);padding:5px 13px;background:var(--bone);border-radius:20px;border:1px solid var(--bd)}
+.sh{margin-bottom:18px}
+.ey{font-size:7pt;font-weight:600;letter-spacing:.22em;color:var(--ts);text-transform:uppercase;margin-bottom:6px}
+h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);line-height:1.1}
+.su{font-size:8.5pt;color:var(--ts);margin-top:4px;line-height:1.6;max-width:560px}
+.stripe{display:inline-block;width:28px;height:3px;border-radius:2px;margin-top:8px}
+.vp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px;margin-top:4px}
+.vp{background:#fff;border-radius:12px;border:1px solid var(--bd);padding:16px 14px 18px;display:flex;flex-direction:column;gap:9px;position:relative;overflow:hidden}
+.vp::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--olive)}
+.vp-icon{width:30px;height:30px;color:var(--olive);flex-shrink:0}
+.vp-head{font-family:Jost,sans-serif;font-size:10pt;font-weight:500;color:var(--ink);line-height:1.25}
+.vp-copy{font-size:7.5pt;color:var(--ts);line-height:1.65}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.pc{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--bd);display:flex;flex-direction:column}
+.ci{height:165px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.ci img{width:100%;height:100%;object-fit:contain;padding:12px;transition:transform .3s}
+.ci:hover img{transform:scale(1.06)}
+.cs{height:3px}.cb{padding:10px 10px 12px;flex:1;display:flex;flex-direction:column;gap:5px}
+.csku{font-size:6.5pt;color:var(--ts);font-family:monospace;letter-spacing:.05em}
+.cn{font-size:9pt;font-weight:600;color:var(--ink);line-height:1.3}
+.cd{font-size:7pt;color:var(--ts);line-height:1.5}
+.ct{display:flex;flex-wrap:wrap;gap:3px;margin-top:2px}
+.cp{margin-top:auto;padding-top:7px;border-top:1px solid var(--bd)}
+.cpl{font-size:7pt;color:var(--ts);margin-bottom:1px}
+.cpv{font-family:Jost,sans-serif;font-size:13pt;font-weight:400;color:var(--ink)}
+.cnote{font-size:7pt;color:var(--ts);line-height:1.5;margin-top:4px;padding-top:4px;border-top:1px solid var(--bd)}
+.tag{font-size:6pt;padding:2px 6px;border-radius:12px;background:var(--bone);color:var(--ts);border:1px solid var(--bd)}
+.t-o{background:#fff3e0;color:#e65100;border-color:#ffe0b2;font-weight:700}
+.t-g{background:#e8f0ec;color:var(--olive)}
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.cc{background:#fff;border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+.csw{height:90px}.ccb{padding:10px 12px}
+.ccn{font-family:Jost,sans-serif;font-size:11pt;font-weight:400;color:var(--ink);margin-bottom:2px}
+.ccp{font-size:7.5pt;font-weight:600;color:var(--olive)}
+.tbl{width:100%;border-collapse:collapse;margin-top:12px;font-size:8.5pt}
+.tbl thead tr{border-bottom:1.5px solid var(--ink)}
+.tbl thead th{font-size:6.5pt;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ts);padding:0 8px 8px;text-align:left}
+.tbl tbody tr{border-bottom:1px solid var(--bd)}
+.tbl tbody tr:hover{background:var(--bone)}
+.tbl tbody td{padding:9px 8px;vertical-align:middle;font-size:8pt}
+.ib{background:var(--bone);border:1px solid var(--bd);border-radius:8px;padding:12px 16px;font-size:8pt;color:var(--ts);line-height:1.7;margin-top:12px}
+.ib strong{color:#111827}
+.ft{text-align:center;font-size:7pt;color:var(--ts);padding:6px 0 2px;border-top:1px solid var(--bd);margin-top:14px}
+@media(max-width:560px){.pg{padding:18px 14px}.grid{grid-template-columns:repeat(2,1fr)}.cgrid{grid-template-columns:repeat(2,1fr)}.vp-grid{grid-template-columns:repeat(2,1fr)}.tbl{display:block;overflow-x:auto}}
+@media print{html{background:#fff}nav{display:none}.wrap{padding:0;gap:0}.pg{border-radius:0;box-shadow:none;page-break-after:always}}
+</style></head><body>
+<nav>
+  <span class="brand">FORMA</span>
+  <a href="#why">Why Bugambilia</a>
+  <a href="#products">Products</a>
+  <a href="#colours">Colours</a>
+  <a href="#order">Order Summary</a>
+  <a href="#" class="pb" onclick="window.print();return false">Print / PDF</a>
+</nav>
+<div class="wrap">
+
+<section class="pg" id="cover">
+  <div class="cover">
+    <div class="yr">FORMA TABLEWARE &middot; BUGAMBILIA PROPOSAL &middot; 2026</div>
+    <h1>Blaze Burgers<br>Tableware Order</h1>
+    <p class="cs2">Prepared by Forma Tableware Ltd. &middot; Vancouver BC<br>Unbreakable G.E.T. composite &middot; NSF certified &middot; Dishwasher safe &middot; BPA-free</p>
+    <div class="pills">
+      <span>Bugambilia Collection</span><span>120 pieces total</span>
+      <span>4 colour options</span><span>3&ndash;5 week production</span><span>50% deposit to confirm</span>
+    </div>
+  </div>
+  <div class="ft">FORMA TABLEWARE LTD &middot; 174-8250 Manitoba St, Vancouver BC V5X 0L6 &middot; management@formatableware.com</div>
+</section>
+
+<section class="pg" id="why">
+  <div class="sh">
+    <div class="ey">What You Are Buying</div>
+    <h2>Why Bugambilia</h2>
+    <p class="su">Bugambilia by G.E.T. is the commercial standard for high-volume operations. Every piece is built to last &mdash; and priced to save you money over time.</p>
+    <div class="stripe" style="background:var(--olive)"></div>
+  </div>
+  <div class="vp-grid">
+
+    <div class="vp">
+      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z"/>
+        <polyline points="9 12 11 14 15 10"/>
+      </svg>
+      <div class="vp-head">Truly Unbreakable</div>
+      <div class="vp-copy">G.E.T. composite construction withstands commercial kitchens, high-volume service, and repeated drops &mdash; no chips, no cracks, no replacements.</div>
+    </div>
+
+    <div class="vp">
+      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="8" r="6"/>
+        <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/>
+      </svg>
+      <div class="vp-head">Manufacturer Warranty</div>
+      <div class="vp-copy">Every piece is backed by a full manufacturer warranty against defects. Not a promise &mdash; a documented guarantee on every unit in your order.</div>
+    </div>
+
+    <div class="vp">
+      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/>
+      </svg>
+      <div class="vp-head">Temperature Retention</div>
+      <div class="vp-copy">Designed to hold both heat and cold significantly longer than ceramic or porcelain &mdash; food arrives at the right temperature, every time.</div>
+    </div>
+
+    <div class="vp">
+      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
+        <polyline points="9 12 11 14 15 10"/>
+      </svg>
+      <div class="vp-head">NSF Certified</div>
+      <div class="vp-copy">Meets NSF commercial kitchen standards. Dishwasher safe, BPA-free, and compliant with health &amp; safety requirements for food service operations.</div>
+    </div>
+
+    <div class="vp">
+      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="1" x2="12" y2="23"/>
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+      </svg>
+      <div class="vp-head">Lower Cost Over Time</div>
+      <div class="vp-copy">Ceramic breaks. Replace a plate twice and you have already spent more than this. One purchase, zero attrition &mdash; your cost-per-service drops every month.</div>
+    </div>
+
+  </div>
+  <div class="ft">FORMA TABLEWARE LTD &middot; 174-8250 Manitoba St, Vancouver BC V5X 0L6 &middot; management@formatableware.com</div>
+</section>
+
+<section class="pg" id="products">
+  <div class="sh">
+    <div class="ey">Confirmed Products &middot; 3 items</div>
+    <h2>Your Selection</h2>
+    <p class="su">All pieces in Bugambilia G.E.T. unbreakable composite. 10 pieces per colour across each product. 5% order discount applied.</p>
+    <div class="stripe" style="background:var(--olive)"></div>
+  </div>
+  <div class="grid">
+    <div class="pc">
+      <div class="ci" style="background:#1C2133"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/proposals/bwc-images/blaze_SON12.jpg" alt="SON12" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="cs" style="background:var(--olive)"></div>
+      <div class="cb">
+        <div class="csku">SON12</div>
+        <div class="cn">Siena Oval Flat</div>
+        <div class="cd">30.2&times;15.2&nbsp;cm / 11.9&Prime;&times;6&Prime; &middot; flat oval with edge</div>
+        <div class="ct"><span class="tag t-o">Unbreakable</span><span class="tag t-g">G.E.T. Composite</span></div>
+        <div class="cp">
+          <div class="cpl">Wholesale / unit &mdash; <span style="text-decoration:line-through;color:var(--ts)">$54.00</span></div>
+          <div style="display:flex;align-items:center;gap:7px">
+            <div class="cpv">$51.30</div>
+            <span style="font-size:6pt;background:var(--olive);color:#fff;border-radius:8px;padding:2px 6px;font-weight:700">5% OFF</span>
+          </div>
+        </div>
+        <div class="cnote"><b>40&nbsp;pcs</b> &middot; 10&nbsp;Sand &middot; 10&nbsp;Grainy Green &middot; 10&nbsp;Speckled Gray &middot; 10&nbsp;Granite</div>
+      </div>
+    </div>
+    <div class="pc">
+      <div class="ci" style="background:#1C2133"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/bugambilia/MRI03.jpg" alt="MRI02" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="cs" style="background:var(--sage)"></div>
+      <div class="cb">
+        <div class="csku">MRI02</div>
+        <div class="cn">S Shallow Rim Dish</div>
+        <div class="cd">~7&Prime; round &middot; shallow with rim</div>
+        <div class="ct"><span class="tag t-o">Unbreakable</span><span class="tag t-g">G.E.T. Composite</span></div>
+        <div class="cp">
+          <div class="cpl">Wholesale / unit &mdash; <span style="text-decoration:line-through;color:var(--ts)">$22.63</span></div>
+          <div style="display:flex;align-items:center;gap:7px">
+            <div class="cpv">$21.50</div>
+            <span style="font-size:6pt;background:var(--olive);color:#fff;border-radius:8px;padding:2px 6px;font-weight:700">5% OFF</span>
+          </div>
+        </div>
+        <div class="cnote"><b>40&nbsp;pcs</b> &middot; 10&nbsp;Sand &middot; 10&nbsp;Grainy Green &middot; 10&nbsp;Speckled Gray &middot; 10&nbsp;Granite</div>
+      </div>
+    </div>
+    <div class="pc">
+      <div class="ci" style="background:#1C2133"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/bugambilia/MRI03.jpg" alt="MRI03" loading="lazy" onerror="this.style.display='none'"></div>
+      <div class="cs" style="background:var(--sage)"></div>
+      <div class="cb">
+        <div class="csku">MRI03</div>
+        <div class="cn">M Shallow Rim Dish</div>
+        <div class="cd">9.45&Prime;&times;9.45&Prime; &middot; shallow with rim</div>
+        <div class="ct"><span class="tag t-o">Unbreakable</span><span class="tag t-g">G.E.T. Composite</span></div>
+        <div class="cp">
+          <div class="cpl">Wholesale / unit &mdash; <span style="text-decoration:line-through;color:var(--ts)">$35.60</span></div>
+          <div style="display:flex;align-items:center;gap:7px">
+            <div class="cpv">$33.82</div>
+            <span style="font-size:6pt;background:var(--olive);color:#fff;border-radius:8px;padding:2px 6px;font-weight:700">5% OFF</span>
+          </div>
+        </div>
+        <div class="cnote"><b>40&nbsp;pcs</b> &middot; 10&nbsp;Sand &middot; 10&nbsp;Grainy Green &middot; 10&nbsp;Speckled Gray &middot; 10&nbsp;Granite</div>
+      </div>
+    </div>
+  </div>
+  <div class="ib"><strong>Note on MRI02:</strong> S Shallow Rim Dish shown using MRI03 image &mdash; same profile, smaller format. Physical sample available on request.</div>
+</section>
+
+<section class="pg" id="colours">
+  <div class="sh">
+    <div class="ey">Colour Selection</div>
+    <h2>Colour Split</h2>
+    <p class="su">All four Bugambilia finishes applied equally across every product &mdash; 10 pieces per colour, per product.</p>
+    <div class="stripe" style="background:var(--tan)"></div>
+  </div>
+  <div class="cgrid"><div class="cc"><div class="csw" style="background:linear-gradient(145deg,#C9AD8C,#B89570)"></div><div class="ccb"><div class="ccn">Sand</div><div class="ccp">25% of order</div></div></div><div class="cc"><div class="csw" style="background:linear-gradient(145deg,#7A8C69,#5C6E4E)"></div><div class="ccb"><div class="ccn">Grainy Green</div><div class="ccp">25% of order</div></div></div><div class="cc"><div class="csw" style="background:linear-gradient(145deg,#A8B0B8,#8A9098)"></div><div class="ccb"><div class="ccn">Speckled Gray</div><div class="ccp">25% of order</div></div></div><div class="cc"><div class="csw" style="background:linear-gradient(145deg,#5C5C5A,#3E3E3C)"></div><div class="ccb"><div class="ccn">Granite</div><div class="ccp">25% of order</div></div></div></div>
+  <div class="ib">Colour swatches are representative &mdash; physical samples available on request. Production 3&ndash;5 weeks from confirmed order &amp; deposit.</div>
+</section>
+
+<section class="pg" id="order">
+  <div class="sh">
+    <div class="ey">Order Confirmation</div>
+    <h2>Order Summary</h2>
+    <p class="su">Complete breakdown by product, colour, and pricing with 5% order discount applied.</p>
+    <div class="stripe" style="background:var(--olive)"></div>
+  </div>
+  <table class="tbl">
+    <thead><tr>
+      <th>Colour</th><th style="text-align:center">Qty</th>
+      <th>Code</th><th>Item</th><th>WS / unit</th>
+      <th style="text-align:right">Line Total</th>
+    </tr></thead>
+    <tbody><tr>
+          <td style="color:var(--ts)">Sand</td>
+          <td style="text-align:center">10</td>
+          <td rowspan="5" style="vertical-align:middle"><b>SON12</b></td>
+          <td rowspan="5" style="vertical-align:middle;font-size:8pt">Siena Oval Flat</td>
+          <td rowspan="5" style="vertical-align:middle">
+            <span style="text-decoration:line-through;color:var(--ts);font-size:8pt">$54.00</span><br>
+            <b style="font-family:Jost,sans-serif;font-size:11pt">$51.30</b>
+          </td>
+          <td rowspan="5" style="text-align:right;vertical-align:middle">
+            <b style="font-family:Jost,sans-serif;font-size:12pt">$2,052.00</b>
+          </td>
+        </tr><tr style=""><td style="color:var(--ts)">Grainy Green</td><td style="text-align:center">10</td></tr>
+<tr style=""><td style="color:var(--ts)">Speckled Gray</td><td style="text-align:center">10</td></tr>
+<tr style="border-bottom:2px solid var(--bd);"><td style="color:var(--ts)">Granite</td><td style="text-align:center">10</td></tr>
+<tr style="border-bottom:2px solid var(--bd)"><td style="font-weight:600">Total</td><td style="text-align:center;font-weight:600">40</td></tr>
+<tr>
+          <td style="color:var(--ts)">Sand</td>
+          <td style="text-align:center">10</td>
+          <td rowspan="5" style="vertical-align:middle"><b>MRI02</b></td>
+          <td rowspan="5" style="vertical-align:middle;font-size:8pt">S Shallow Rim Dish</td>
+          <td rowspan="5" style="vertical-align:middle">
+            <span style="text-decoration:line-through;color:var(--ts);font-size:8pt">$22.63</span><br>
+            <b style="font-family:Jost,sans-serif;font-size:11pt">$21.50</b>
+          </td>
+          <td rowspan="5" style="text-align:right;vertical-align:middle">
+            <b style="font-family:Jost,sans-serif;font-size:12pt">$860.00</b>
+          </td>
+        </tr><tr style=""><td style="color:var(--ts)">Grainy Green</td><td style="text-align:center">10</td></tr>
+<tr style=""><td style="color:var(--ts)">Speckled Gray</td><td style="text-align:center">10</td></tr>
+<tr style="border-bottom:2px solid var(--bd);"><td style="color:var(--ts)">Granite</td><td style="text-align:center">10</td></tr>
+<tr style="border-bottom:2px solid var(--bd)"><td style="font-weight:600">Total</td><td style="text-align:center;font-weight:600">40</td></tr>
+<tr>
+          <td style="color:var(--ts)">Sand</td>
+          <td style="text-align:center">10</td>
+          <td rowspan="5" style="vertical-align:middle"><b>MRI03</b></td>
+          <td rowspan="5" style="vertical-align:middle;font-size:8pt">M Shallow Rim Dish</td>
+          <td rowspan="5" style="vertical-align:middle">
+            <span style="text-decoration:line-through;color:var(--ts);font-size:8pt">$35.60</span><br>
+            <b style="font-family:Jost,sans-serif;font-size:11pt">$33.82</b>
+          </td>
+          <td rowspan="5" style="text-align:right;vertical-align:middle">
+            <b style="font-family:Jost,sans-serif;font-size:12pt">$1,352.80</b>
+          </td>
+        </tr><tr style=""><td style="color:var(--ts)">Grainy Green</td><td style="text-align:center">10</td></tr>
+<tr style=""><td style="color:var(--ts)">Speckled Gray</td><td style="text-align:center">10</td></tr>
+<tr style="border-bottom:2px solid var(--bd);"><td style="color:var(--ts)">Granite</td><td style="text-align:center">10</td></tr>
+<tr style="border-bottom:2px solid var(--bd)"><td style="font-weight:600">Total</td><td style="text-align:center;font-weight:600">40</td></tr>
+<tr style="background:var(--bone)">
+      <td colspan="4" style="font-size:8pt;color:var(--ts);text-align:right;padding-right:12px">Subtotal at list price</td>
+      <td></td><td style="text-align:right;color:var(--ts);font-size:9pt">$4,489.20</td></tr>
+    <tr style="background:var(--bone)">
+      <td colspan="4" style="text-align:right;padding-right:12px;color:#d97706;font-weight:600;font-size:9pt">5% Order Discount</td>
+      <td></td><td style="text-align:right;color:#d97706;font-weight:700">&minus;$224.46</td></tr>
+    <tr style="background:#e8f0ec">
+      <td colspan="4" style="font-weight:700;font-size:10pt;text-align:right;padding-right:12px">Net Order Total</td>
+      <td></td><td style="text-align:right"><b style="font-family:Jost,sans-serif;font-size:15pt;color:var(--olive)">$4,264.74</b></td></tr></tbody>
+  </table>
+  <div class="ib" style="margin-top:14px">
+    <strong>Payment terms:</strong> 50% deposit to confirm production &middot; balance due prior to shipment.<br>
+    <strong>Lead time:</strong> 3&ndash;5 weeks from deposit receipt &middot; <strong>Ship to:</strong> Vancouver BC or as directed.
+  </div>
+  <div class="ft">FORMA TABLEWARE LTD &middot; 174-8250 Manitoba St, Vancouver BC V5X 0L6 &middot; management@formatableware.com</div>
+</section>
+
+</div></body></html>
