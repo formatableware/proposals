@@ -231,13 +231,138 @@ h2{font-family:Jost,sans-serif;font-size:20pt;font-weight:300;color:var(--ink);l
 
 <section class="pg" id="colours">
   <div class="sh">
-    <div class="ey">Finish Options</div>
+    <div class="ey">Finish Options &middot; 23 Colours Available</div>
     <h2>Colour Selection</h2>
-    <p class="su">All four Bugambilia finishes available across every tray format. One colour for the full order or mixed &mdash; confirm at order placement.</p>
+    <p class="su">Every Bugambilia tray is available to order in any of the 23 standard colours below, plus two finishes &mdash; Classic (textured matte) or Mod (smooth gloss). Custom colours available on request.</p>
     <div class="stripe" style="background:var(--tan)"></div>
   </div>
-  <div class="cgrid"><div class="cc"><div class="csw" style="background:linear-gradient(145deg,#C9AD8C,#B89570)"></div><div class="ccb"><div class="ccn">Sand</div></div></div><div class="cc"><div class="csw" style="background:linear-gradient(145deg,#7A8C69,#5C6E4E)"></div><div class="ccb"><div class="ccn">Grainy Green</div></div></div><div class="cc"><div class="csw" style="background:linear-gradient(145deg,#A8B0B8,#8A9098)"></div><div class="ccb"><div class="ccn">Speckled Gray</div></div></div><div class="cc"><div class="csw" style="background:linear-gradient(145deg,#5C5C5A,#3E3E3C)"></div><div class="ccb"><div class="ccn">Granite</div></div></div></div>
-  <div class="ib">Colour swatches are representative. Physical samples available on request prior to order confirmation.</div>
+
+  <style>
+    .colour-grid{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}
+    .colour-swatch{display:flex;flex-direction:column;align-items:center;gap:5px;width:72px}
+    .swatch-circle{width:60px;height:60px;border-radius:50%;border:1px solid rgba(0,0,0,.08);box-shadow:0 2px 6px rgba(0,0,0,.15)}
+    .swatch-name{font-size:6.5pt;font-weight:600;color:var(--ink);text-align:center;line-height:1.3}
+    .swatch-code{font-size:6pt;color:var(--ts);font-family:monospace;letter-spacing:.04em}
+    .finish-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px;max-width:500px}
+    .finish-card{background:var(--paper);border:1px solid var(--bd);border-radius:12px;padding:16px;}
+    .finish-card .fn{font-family:Jost,sans-serif;font-size:11pt;font-weight:500;color:var(--ink);margin-bottom:4px}
+    .finish-card .fd{font-size:7.5pt;color:var(--ts);line-height:1.6}
+  </style>
+
+  <div class="colour-grid">
+    <div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #F4F1EC, #E8E4DB)"></div>
+      <div class="swatch-name">White</div>
+      <div class="swatch-code">WW</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #1C1C1C, #111111)"></div>
+      <div class="swatch-name">Black</div>
+      <div class="swatch-code">BB</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #9EA5AE, #7B8490)"></div>
+      <div class="swatch-name">Steel</div>
+      <div class="swatch-code">ST</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #C0392B, #96281B)"></div>
+      <div class="swatch-name">Fire Red</div>
+      <div class="swatch-code">FR</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #2471A3, #1A5276)"></div>
+      <div class="swatch-name">Pacific Blue</div>
+      <div class="swatch-code">PC</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #922B21, #7B241C)"></div>
+      <div class="swatch-name">Brick</div>
+      <div class="swatch-code">BR</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #3E1C0C, #2C1008)"></div>
+      <div class="swatch-name">Chocolate</div>
+      <div class="swatch-code">CH</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #7D5A44, #5E4033)"></div>
+      <div class="swatch-name">Mocha</div>
+      <div class="swatch-code">MC</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #C9A97A, #B8956A)"></div>
+      <div class="swatch-name">Latte</div>
+      <div class="swatch-code">LT</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #2E7D32, #1B5E20)"></div>
+      <div class="swatch-name">Forest Green</div>
+      <div class="swatch-code">FT</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #8FA67A, #6E8A57)"></div>
+      <div class="swatch-name">Willow Green</div>
+      <div class="swatch-code">WG</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #8E1B3A, #6B1229)"></div>
+      <div class="swatch-name">Cranberry</div>
+      <div class="swatch-code">CB</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #9BC34A, #7DA832)"></div>
+      <div class="swatch-name">Lime</div>
+      <div class="swatch-code">LM</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #E8771F, #C45E0C)"></div>
+      <div class="swatch-name">Tangerine</div>
+      <div class="swatch-code">TG</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #F5C518, #DBA808)"></div>
+      <div class="swatch-name">Yellow</div>
+      <div class="swatch-code">YW</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #EDE8DF, #D8D0C4)"></div>
+      <div class="swatch-name">Marble White</div>
+      <div class="swatch-code">MW</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #2D2D2D, #1A1A1A)"></div>
+      <div class="swatch-name">Granite Black</div>
+      <div class="swatch-code">GB</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #9E9E9E, #757575)"></div>
+      <div class="swatch-name">Gray</div>
+      <div class="swatch-code">G</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #5DADE2, #2E86C1)"></div>
+      <div class="swatch-name">Sky Blue</div>
+      <div class="swatch-code">SB</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #1A9E80, #12786A)"></div>
+      <div class="swatch-name">Jade</div>
+      <div class="swatch-code">J</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #C4A97A, #A88B60)"></div>
+      <div class="swatch-name">Sand</div>
+      <div class="swatch-code">S</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #C0622D, #9E4B1E)"></div>
+      <div class="swatch-name">Terracotta</div>
+      <div class="swatch-code">T</div>
+    </div><div class="colour-swatch">
+      <div class="swatch-circle" style="background:radial-gradient(circle at 35% 35%, #9B7EC8, #7D5BA6)"></div>
+      <div class="swatch-name">Lavender</div>
+      <div class="swatch-code">LV</div>
+    </div>
+  </div>
+
+  <div class="ey" style="margin-top:28px;margin-bottom:12px">Two Finishes Available</div>
+  <div class="finish-grid">
+    <div class="finish-card">
+      <div class="fn">Classic</div>
+      <div class="fd">Upscale textured matte surface &mdash; the signature Bugambilia look. Slightly rough to the touch, creates an artisanal appearance.</div>
+    </div>
+    <div class="finish-card">
+      <div class="fn">Mod</div>
+      <div class="fd">Smooth gloss surface with a subtle shine. A more contemporary finish for modern table presentations.</div>
+    </div>
+  </div>
+
+  <div class="ib" style="margin-top:16px">
+    <strong>Custom colours:</strong> Bugambilia can match custom colours on request &mdash; contact us with a Pantone reference or physical sample for a quote.<br>
+    <strong>Two-tone:</strong> Any two colours can be combined for a custom two-tone finish at no additional tooling cost.<br>
+    <strong>Lead time:</strong> All colours are made to order &mdash; 3&ndash;5 weeks from order confirmation.
+  </div>
+  <div class="ft">FORMA TABLEWARE LTD &middot; 174-8250 Manitoba St, Vancouver BC V5X 0L6 &middot; management@formatableware.com</div>
 </section>
 
 <section class="pg" id="order">
