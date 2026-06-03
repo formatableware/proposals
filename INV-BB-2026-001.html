@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Invoice INV-BB-2026-001 &mdash; Blaze Burgers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1C2133;--olive:#3D7A60;--tan:#B5946A;--cream:#EDE8DF;--bone:#F7F3EA;--ts:#6B7280;--bd:#E5E0D5;}
+*{margin:0;padding:0;box-sizing:border-box}
+html{background:#C8C3BB}
+body{font-family:Inter,sans-serif;color:var(--ink);background:#fff;max-width:780px;margin:24px auto;padding:48px 52px;box-shadow:0 4px 32px rgba(0,0,0,.18);border-radius:4px}
+.header{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:28px;border-bottom:2px solid var(--ink)}
+.brand{font-family:Jost,sans-serif;font-size:22pt;font-weight:300;color:var(--ink);letter-spacing:-.02em}
+.brand-sub{font-size:8pt;color:var(--ts);margin-top:2px;letter-spacing:.06em}
+.inv-meta{text-align:right}
+.inv-label{font-size:8pt;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ts)}
+.inv-num{font-family:Jost,sans-serif;font-size:16pt;font-weight:400;color:var(--ink);margin-top:2px}
+.inv-date{font-size:9pt;color:var(--ts);margin-top:4px}
+.addresses{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin:28px 0}
+.addr-block .label{font-size:7pt;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--ts);margin-bottom:8px}
+.addr-block .company{font-size:11pt;font-weight:600;color:var(--ink);margin-bottom:3px}
+.addr-block .detail{font-size:9pt;color:#374151;line-height:1.7}
+.terms-bar{background:var(--bone);border:1px solid var(--bd);border-radius:6px;padding:12px 16px;display:flex;gap:32px;margin-bottom:28px}
+.term{display:flex;flex-direction:column;gap:2px}
+.term-label{font-size:6.5pt;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ts)}
+.term-val{font-size:9pt;color:var(--ink);font-weight:500}
+table{width:100%;border-collapse:collapse;margin-bottom:0}
+thead tr{border-bottom:1.5px solid var(--ink)}
+thead th{font-size:7pt;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ts);padding:0 8px 10px;text-align:left}
+thead th.r{text-align:right}
+tbody tr{border-bottom:1px solid var(--bd)}
+tbody td{padding:12px 8px;vertical-align:top;font-size:9pt}
+td.r{text-align:right}
+td.sku-col{font-family:monospace;font-size:8pt;color:var(--ts);white-space:nowrap;padding-top:14px}
+.item-name{font-weight:600;color:var(--ink);margin-bottom:2px}
+.item-desc{font-size:8pt;color:var(--ts)}
+.totals{margin-top:0;display:flex;justify-content:flex-end}
+.totals-table{width:300px;border-collapse:collapse}
+.totals-table td{padding:7px 10px;font-size:9pt}
+.totals-table td.label{color:var(--ts)}
+.totals-table td.amount{text-align:right;font-variant-numeric:tabular-nums}
+.totals-table tr.discount td{color:#d97706}
+.totals-table tr.subtotal-net td{border-top:1px solid var(--bd);font-weight:600}
+.totals-table tr.tax td{color:var(--ts);font-size:8.5pt}
+.totals-table tr.grand td{border-top:2px solid var(--ink);font-family:Jost,sans-serif;font-size:14pt;font-weight:400;padding-top:10px}
+.totals-table tr.grand td.amount{color:var(--olive)}
+.payment-schedule{margin-top:28px;border:1px solid var(--bd);border-radius:8px;overflow:hidden}
+.payment-schedule .ps-header{background:var(--ink);color:#fff;padding:10px 16px;font-size:7.5pt;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+.ps-row{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--bd)}
+.ps-row:last-child{border-bottom:none}
+.ps-row.highlight{background:var(--bone)}
+.ps-label{font-size:9pt;color:var(--ink)}
+.ps-sublabel{font-size:7.5pt;color:var(--ts);margin-top:1px}
+.ps-amount{font-family:Jost,sans-serif;font-size:13pt;color:var(--ink)}
+.ps-amount.due{color:var(--olive);font-weight:500}
+.footer{margin-top:36px;padding-top:16px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:flex-end}
+.footer-left{font-size:8pt;color:var(--ts);line-height:1.8}
+.footer-right{text-align:right;font-size:8pt;color:var(--ts);line-height:1.8}
+.gst-note{margin-top:4px;font-size:7.5pt;color:var(--ts)}
+@media print{html{background:#fff}body{margin:0;padding:36px 44px;box-shadow:none;border-radius:0;max-width:none}}
+</style></head><body>
+
+<div class="header">
+  <div>
+    <div class="brand">FORMA</div>
+    <div class="brand-sub">TABLEWARE LTD.</div>
+  </div>
+  <div class="inv-meta">
+    <div class="inv-label">Invoice</div>
+    <div class="inv-num">INV-BB-2026-001</div>
+    <div class="inv-date">June 2, 2026</div>
+  </div>
+</div>
+
+<div class="addresses">
+  <div class="addr-block">
+    <div class="label">From</div>
+    <div class="company">Forma Tableware Ltd.</div>
+    <div class="detail">
+      174-8250 Manitoba St<br>
+      Vancouver, BC&nbsp;&nbsp;V5X 0L6<br>
+      management@formatableware.com<br>
+      GST #: <span style="color:var(--ts);font-style:italic">[Insert GST #]</span><br>
+      PST #: <span style="color:var(--ts);font-style:italic">[Insert PST #]</span>
+    </div>
+  </div>
+  <div class="addr-block">
+    <div class="label">Bill To</div>
+    <div class="company">Blaze Burgers</div>
+    <div class="detail">
+      Attn: Addy<br>
+      43 E. 5th Ave<br>
+      Vancouver, BC&nbsp;&nbsp;V5T 1G7<br>
+      604-568-5486<br>
+      admin@blazegourmetburgers.com
+    </div>
+  </div>
+</div>
+
+<div class="terms-bar">
+  <div class="term"><div class="term-label">Invoice #</div><div class="term-val">INV-BB-2026-001</div></div>
+  <div class="term"><div class="term-label">Invoice Date</div><div class="term-val">June 2, 2026</div></div>
+  <div class="term"><div class="term-label">Payment Terms</div><div class="term-val">50% deposit &middot; balance prior to shipment</div></div>
+  <div class="term"><div class="term-label">Lead Time</div><div class="term-val">3&ndash;5 weeks from deposit</div></div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width:80px">SKU</th>
+      <th>Description</th>
+      <th class="r" style="width:50px">Qty</th>
+      <th class="r" style="width:90px">Unit Price</th>
+      <th class="r" style="width:100px">Amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="sku-col">SON12</td>
+      <td><div class="item-name">Siena Oval Flat</div><div class="item-desc">Bugambilia G.E.T. Composite · 30.2×15.2 cm</div></td>
+      <td class="r">30</td>
+      <td class="r">$54.00</td>
+      <td class="r">$1,620.00</td>
+    </tr><tr>
+      <td class="sku-col">MRI02</td>
+      <td><div class="item-name">S Shallow Rim Dish</div><div class="item-desc">Bugambilia G.E.T. Composite · ~7" round</div></td>
+      <td class="r">40</td>
+      <td class="r">$22.63</td>
+      <td class="r">$905.20</td>
+    </tr><tr>
+      <td class="sku-col">MRI03</td>
+      <td><div class="item-name">M Shallow Rim Dish</div><div class="item-desc">Bugambilia G.E.T. Composite · 9.45"×9.45"</div></td>
+      <td class="r">40</td>
+      <td class="r">$35.60</td>
+      <td class="r">$1,424.00</td>
+    </tr>
+    <tr style="border-bottom:none"><td colspan="5" style="padding:0"></td></tr>
+  </tbody>
+</table>
+
+<div class="totals">
+  <table class="totals-table">
+    <tr>
+      <td class="label">Subtotal</td>
+      <td class="amount">$3,949.20</td>
+    </tr>
+    <tr class="discount">
+      <td class="label">Discount (5%)</td>
+      <td class="amount">&minus;$197.46</td>
+    </tr>
+    <tr class="subtotal-net">
+      <td class="label">Net Subtotal</td>
+      <td class="amount">$3,751.74</td>
+    </tr>
+    <tr class="tax">
+      <td class="label">GST (5%)</td>
+      <td class="amount">$187.59</td>
+    </tr>
+    <tr class="tax">
+      <td class="label">PST (7%)</td>
+      <td class="amount">$262.62</td>
+    </tr>
+    <tr class="grand">
+      <td class="label">Total</td>
+      <td class="amount">$4,201.95</td>
+    </tr>
+  </table>
+</div>
+
+<div class="payment-schedule">
+  <div class="ps-header">Payment Schedule</div>
+  <div class="ps-row highlight">
+    <div>
+      <div class="ps-label">Deposit &mdash; Due Now</div>
+      <div class="ps-sublabel">Required to confirm production &amp; reserve your order</div>
+    </div>
+    <div class="ps-amount due">$2,100.97</div>
+  </div>
+  <div class="ps-row">
+    <div>
+      <div class="ps-label">Balance &mdash; Due Before Shipment</div>
+      <div class="ps-sublabel">Payable prior to release from production &amp; shipping</div>
+    </div>
+    <div class="ps-amount">$2,100.98</div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-left">
+    <strong>Forma Tableware Ltd.</strong><br>
+    174-8250 Manitoba St, Vancouver BC V5X 0L6<br>
+    management@formatableware.com
+    <div class="gst-note">Please add your GST and PST registration numbers before sending.</div>
+  </div>
+  <div class="footer-right">
+    <strong>Questions?</strong><br>
+    management@formatableware.com<br>
+    Reference: INV-BB-2026-001
+  </div>
+</div>
+
+</body></html>
