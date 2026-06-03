@@ -69,7 +69,16 @@ h3{font-family:Jost,sans-serif;font-size:13pt;font-weight:400;color:var(--ts);ma
 .ft{text-align:center;font-size:7pt;color:var(--ts);padding:6px 0 2px;border-top:1px solid var(--bd);margin-top:14px}
 hr.divider{border:none;border-top:1px solid var(--bd);margin:20px 0}
 @media(max-width:560px){.pg{padding:18px 14px}.grid{grid-template-columns:repeat(2,1fr)}.compare-grid{grid-template-columns:1fr}.action-grid{grid-template-columns:1fr}}
-@media print{html{background:#fff}nav{display:none}.wrap{padding:0;gap:0}.pg{border-radius:0;box-shadow:none;page-break-after:always}}</style></head><body>
+@media print{html{background:#fff}nav{display:none}.wrap{padding:0;gap:0}.pg{border-radius:0;box-shadow:none;page-break-after:always}}
+.hpanel{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:4px}
+.hp{background:#fff;border-radius:10px;border:1px solid var(--bd);padding:12px 10px 14px;display:flex;flex-direction:column;gap:7px;position:relative;overflow:hidden}
+.hp::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--tan)}
+.hi{width:24px;height:24px;color:var(--olive);flex-shrink:0}
+.hh{font-family:Jost,sans-serif;font-size:8.5pt;font-weight:500;color:var(--ink);line-height:1.25}
+.hc{font-size:7pt;color:var(--ts);line-height:1.55}
+@media(max-width:700px){.hpanel{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:400px){.hpanel{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
 <nav>
   <span class="brand">FORMA</span>
   <a href="#observatory">Observatory</a>
@@ -353,62 +362,55 @@ hr.divider{border:none;border-top:1px solid var(--bd);margin:20px 0}
 
 <!-- ALTITUDES -->
 <section class="pg" id="why-bugambilia">
-  <div class="sh">
+  <div class="sh" style="margin-bottom:14px">
     <div class="ey">Why Bugambilia for Altitudes</div>
-    <h2>Why Bugambilia</h2>
-    <p class="su">Bugambilia by G.E.T. is the commercial standard for high-volume casual dining. Cast aluminium construction, NSF certified, available in 23 colours &mdash; built for exactly the throughput Altitudes demands.</p>
-    <div class="stripe" style="background:var(--olive)"></div>
+    <h2>Built for Commercial Kitchens</h2>
+    <div class="stripe" style="background:var(--tan)"></div>
   </div>
-  <div class="vp-grid">
-
-    <div class="vp">
-      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <div class="hpanel"><div class="hp">
+      <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z"/>
         <polyline points="9 12 11 14 15 10"/>
       </svg>
-      <div class="vp-head">Truly Unbreakable</div>
-      <div class="vp-copy">G.E.T. composite construction withstands commercial kitchens, high-volume service, and repeated drops &mdash; no chips, no cracks, no replacements.</div>
-    </div>
-
-    <div class="vp">
-      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <div class="hh">Truly Unbreakable</div>
+      <div class="hc">G.E.T. composite construction withstands commercial kitchens, high-volume service, and repeated drops &mdash; no chips, no cracks, no replacements..</div>
+    </div><div class="hp">
+      <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="8" r="6"/>
         <path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/>
       </svg>
-      <div class="vp-head">Manufacturer Warranty</div>
-      <div class="vp-copy">Every piece is backed by a full manufacturer warranty against defects. Not a promise &mdash; a documented guarantee on every unit in your order.</div>
-    </div>
-
-    <div class="vp">
-      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <div class="hh">Manufacturer Warranty</div>
+      <div class="hc">Every piece is backed by a full manufacturer warranty against defects. Not a promise &mdash; a documented guarantee on every unit in your order..</div>
+    </div><div class="hp">
+      <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/>
         <line x1="12" y1="9" x2="12" y2="13"/>
       </svg>
-      <div class="vp-head">Temperature Retention</div>
-      <div class="vp-copy">Designed to hold both heat and cold significantly longer than ceramic or porcelain &mdash; food arrives at the right temperature, every time.</div>
-    </div>
-
-    <div class="vp">
-      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <div class="hh">Temperature Retention</div>
+      <div class="hc">Designed to hold both heat and cold significantly longer than ceramic or porcelain &mdash; food arrives at the right temperature, every time.</div>
+    </div><div class="hp">
+      <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="3" ry="3"/>
         <polyline points="9 12 11 14 15 10"/>
       </svg>
-      <div class="vp-head">NSF Certified</div>
-      <div class="vp-copy">Meets NSF commercial kitchen standards. Dishwasher safe, BPA-free, and compliant with health &amp; safety requirements for food service operations.</div>
-    </div>
-
-    <div class="vp">
-      <svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <div class="hh">NSF Certified</div>
+      <div class="hc">Meets NSF commercial kitchen standards. Dishwasher safe, BPA-free, and compliant with health &amp; safety requirements for food service operations..</div>
+    </div><div class="hp">
+      <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <line x1="12" y1="1" x2="12" y2="23"/>
         <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
       </svg>
-      <div class="vp-head">Lower Cost Over Time</div>
-      <div class="vp-copy">Ceramic breaks. Replace a plate twice and you have already spent more than this. One purchase, zero attrition &mdash; your cost-per-service drops every month.</div>
-    </div>
-    <div class="vp"><svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 0 1 7 7c0 4-3 7-4 8H9c-1-1-4-4-4-8a7 7 0 0 1 7-7z"/><line x1="12" y1="22" x2="12" y2="17"/><line x1="9" y1="22" x2="15" y2="22"/></svg><div class="vp-head">Heat Lamp Safe</div><div class="vp-copy">Rated &minus;20&deg;F to 200&deg;F (&minus;29&deg;C to 93&deg;C) &mdash; safe under standard heat lamps. The resin-coated aluminium conducts heat to the food but the exterior surface stays cooler, allowing servers to handle safely throughout service. Do not expose to open flame.</div></div>
-  </div>
-    <div class="vp"><svg class="vp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8"/><path d="M8 6l4 4 4-4"/><circle cx="12" cy="16" r="4"/><path d="M12 12v4"/></svg><div class="vp-head">Heat Lamp Safe</div><div class="vp-copy">Rated to <b>375&deg;F / 190&deg;C</b>. Standard commercial heat lamps run at 150&ndash;250&deg;F (65&ndash;121&deg;C) at food level &mdash; well within spec. Cast aluminium warms evenly; handles dissipate heat faster than ceramic, keeping outer surfaces manageable for servers.</div></div>
-  </div>
+      <div class="hh">Lower Cost Over Time</div>
+      <div class="hc">Ceramic breaks. Replace a plate twice and you have already spent more than this.</div>
+    </div><div class="hp">
+      <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 0 1 7 7c0 4-3 7-4 8H9c-1-1-4-4-4-8a7 7 0 0 1 7-7z"/><line x1="12" y1="22" x2="12" y2="17"/><line x1="9" y1="22" x2="15" y2="22"/></svg>
+      <div class="hh">Heat Lamp Safe</div>
+      <div class="hc">Rated &minus;20&deg;F to 200&deg;F (&minus;29&deg;C to 93&deg;C) &mdash; safe under standard heat lamps. The resin-coated aluminium conducts heat to the food but the exterior surface stays cooler, allowing servers to handle safely throughout service.</div>
+    </div><div class="hp">
+      <svg class="hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8"/><path d="M8 6l4 4 4-4"/><circle cx="12" cy="16" r="4"/><path d="M12 12v4"/></svg>
+      <div class="hh">Heat Lamp Safe</div>
+      <div class="hc">Rated to <b>375&deg;F / 190&deg;C</b>. Standard commercial heat lamps run at 150&ndash;250&deg;F (65&ndash;121&deg;C) at food level &mdash; well within spec.</div>
+    </div></div>
   <div class="ft">FORMA TABLEWARE LTD &middot; 174-8250 Manitoba St, Vancouver BC V5X 0L6 &middot; management@formatableware.com</div>
 </section>
 
@@ -611,10 +613,64 @@ hr.divider{border:none;border-top:1px solid var(--bd);margin:20px 0}
   </div>
   <div class="ib" style="margin-top:10px"><strong>Mediterraneo 2.0 Caribe:</strong> Ariane Fine Porcelain &mdash; commercial-grade, chip-resistant fine porcelain. Images and final pricing to be confirmed. Available to order on request.</div>
 
-  <div class="ey" style="margin:20px 0 10px">Mediterraneo 2.0 Caribe &mdash; Mexican Vitrified Porcelain</div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px">
-    <div class="pc">
-      <div class="ci" style="background:#1C2133"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/b70630efab20b6df.jpg" alt="Dinner Plate 27cm" loading="lazy" onerror="this.style.display='none'"></div>
+  <div class="ey" style="margin:20px 0 10px">Mediterr&aacute;neo 2.0 Caribe &mdash; Anfora Mexico &middot; Image from Anfora on request</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px"><div class="pc">
+      <div class="ci" style="background:#2D5A45;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px">
+        <div style="font-size:22pt">&#127754;</div>
+        <div style="font-size:6.5pt;color:rgba(255,255,255,.65);text-align:center;padding:0 8px">Caribe glaze &middot; image from<br>Anfora on request</div>
+      </div>
+      <div class="cs" style="background:var(--sage)"></div>
+      <div class="cb">
+        <div class="cline">Mediterraneo 2.0 Caribe</div>
+        <div class="csku">1009.00016 &middot; <span style="color:var(--olive)">8PMR2711CARI3</span></div>
+        <div class="cn">Dinner Plate 27cm</div>
+        <div class="cd">Anfora &middot; vitrified porcelain &middot; Caribe reactive glaze</div>
+        <div class="ct"><span class="tag t-o">In Stock</span><span class="tag">120 Units</span><span class="tag">Made in Mexico</span></div>
+        <div class="cp"><div class="cpl">Wholesale / unit</div><div class="cpv">$38.00</div></div>
+        <div class="cnote">Textured blue-green reactive glaze &mdash; distinctive accent plate for the Observatory or Altitudes.</div>
+      </div></div><div class="pc">
+      <div class="ci" style="background:#2D5A45;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px">
+        <div style="font-size:22pt">&#127754;</div>
+        <div style="font-size:6.5pt;color:rgba(255,255,255,.65);text-align:center;padding:0 8px">Caribe glaze &middot; image from<br>Anfora on request</div>
+      </div>
+      <div class="cs" style="background:var(--sage)"></div>
+      <div class="cb">
+        <div class="cline">Mediterraneo 2.0 Caribe</div>
+        <div class="csku"> &middot; <span style="color:var(--olive)">8PMR2311CARI3</span></div>
+        <div class="cn">Plate 23cm</div>
+        <div class="cd">Anfora &middot; vitrified porcelain &middot; Caribe reactive glaze</div>
+        <div class="ct"><span class="tag t-o">In Stock</span><span class="tag">120 Units</span><span class="tag">Made in Mexico</span></div>
+        <div class="cp"><div class="cpl">Wholesale / unit</div><div class="cpv">$25.50</div></div>
+        <div class="cnote">Medium format &mdash; arriving with next Mexico shipment.</div>
+      </div></div><div class="pc">
+      <div class="ci" style="background:#2D5A45;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px">
+        <div style="font-size:22pt">&#127754;</div>
+        <div style="font-size:6.5pt;color:rgba(255,255,255,.65);text-align:center;padding:0 8px">Caribe glaze &middot; image from<br>Anfora on request</div>
+      </div>
+      <div class="cs" style="background:var(--sage)"></div>
+      <div class="cb">
+        <div class="cline">Mediterraneo 2.0 Caribe</div>
+        <div class="csku">1009.00015 &middot; <span style="color:var(--olive)">8PMR1911CARI3</span></div>
+        <div class="cn">Large Side Plate 19cm</div>
+        <div class="cd">Anfora &middot; vitrified porcelain &middot; Caribe reactive glaze</div>
+        <div class="ct"><span class="tag t-o">In Stock</span><span class="tag">120 Units</span><span class="tag">Made in Mexico</span></div>
+        <div class="cp"><div class="cpl">Wholesale / unit</div><div class="cpv">$16.00</div></div>
+        <div class="cnote">Side plate &mdash; amuse-bouche, bread, dessert. Same Caribe glaze.</div>
+      </div></div><div class="pc">
+      <div class="ci" style="background:#2D5A45;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px">
+        <div style="font-size:22pt">&#127754;</div>
+        <div style="font-size:6.5pt;color:rgba(255,255,255,.65);text-align:center;padding:0 8px">Caribe glaze &middot; image from<br>Anfora on request</div>
+      </div>
+      <div class="cs" style="background:var(--sage)"></div>
+      <div class="cb">
+        <div class="cline">Mediterraneo 2.0 Caribe</div>
+        <div class="csku">1009.00014 &middot; <span style="color:var(--olive)">8PMR1511CARI3</span></div>
+        <div class="cn">Side Plate 15cm</div>
+        <div class="cd">Anfora &middot; vitrified porcelain &middot; Caribe reactive glaze</div>
+        <div class="ct"><span class="tag t-o">In Stock</span><span class="tag">120 Units</span><span class="tag">Made in Mexico</span></div>
+        <div class="cp"><div class="cpl">Wholesale / unit</div><div class="cpv">$14.00</div></div>
+        <div class="cnote">Smallest format &mdash; amuse-bouche or petit fours. Great for accent service.</div>
+      </div></div></div>
       <div class="cs" style="background:var(--sage)"></div>
       <div class="cb">
         <div class="cline">Mediterraneo 2.0 Caribe</div>
