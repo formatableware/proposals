@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forma Tableware — Wholesale Partnership Proposal for Bed Bath & Beyond</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Inter:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1C2133;--cream:#EDE8DF;--bone:#F7F3EA;--paper:#FFFFFF;--olive:#3D7A60;--tan:#B5946A;--sage:#7B9A86;--text-primary:#111827;--text-secondary:#6B7280;--border:#E5E0D5;--radius:0.875rem;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Inter",sans-serif;background:var(--cream);color:var(--text-primary);font-size:14px;line-height:1.6;}
+.doc-header{background:var(--ink);color:var(--cream);padding:20px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.doc-header-left{display:flex;align-items:baseline;gap:14px;}
+.wordmark{font-family:"Jost",sans-serif;font-weight:300;font-size:18px;letter-spacing:.32em;text-transform:uppercase;color:var(--cream);}
+.division{font-size:9px;text-transform:uppercase;letter-spacing:.2em;color:var(--sage);font-weight:400;}
+.doc-title{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:rgba(237,232,223,.5);font-weight:400;}
+.hero{background:var(--ink);color:var(--cream);padding:64px 40px 56px;border-bottom:1px solid rgba(255,255,255,.07);}
+.hero-eyebrow{font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.22em;color:var(--olive);margin-bottom:18px;}
+.hero h1{font-family:"Jost",sans-serif;font-weight:300;font-size:42px;letter-spacing:-.01em;line-height:1.1;max-width:680px;margin-bottom:20px;}
+.hero h1 em{font-style:italic;font-family:"Cormorant Garamond",serif;font-weight:400;font-size:48px;color:var(--tan);}
+.hero-intro{font-size:15px;color:rgba(237,232,223,.72);max-width:560px;line-height:1.7;font-weight:300;}
+.hero-tagline{margin-top:28px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:16px;color:rgba(237,232,223,.4);letter-spacing:.04em;}
+.tab-nav{background:var(--ink);padding:0 40px;display:flex;gap:0;border-top:1px solid rgba(255,255,255,.06);overflow-x:auto;scrollbar-width:none;}
+.tab-nav::-webkit-scrollbar{display:none;}
+.tab-btn{font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.14em;color:rgba(237,232,223,.5);background:none;border:none;padding:16px 18px 14px;cursor:pointer;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap;}
+.tab-btn:hover{color:var(--cream);}
+.tab-btn.active{color:var(--cream);border-bottom-color:var(--olive);}
+.supplier-page{display:none;}
+.supplier-page.active{display:block;}
+.supplier-hero{background:var(--paper);border-bottom:1px solid var(--border);padding:40px 40px 36px;}
+.supplier-eyebrow{font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.22em;margin-bottom:10px;}
+.supplier-hero h2{font-family:"Jost",sans-serif;font-weight:400;font-size:28px;letter-spacing:.01em;margin-bottom:10px;}
+.supplier-blurb{font-size:13.5px;color:var(--text-secondary);max-width:700px;line-height:1.7;}
+.supplier-hero h3{font-family:"Jost",sans-serif;font-weight:400;font-size:16px;letter-spacing:.01em;margin:28px 0 8px;color:var(--text-secondary);padding-top:20px;border-top:1px solid var(--border);}
+.supplier-meta{background:var(--bone);padding:24px 40px;display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;border-bottom:1px solid var(--border);}
+.selling-points{display:flex;gap:12px;flex:1;min-width:280px;flex-wrap:wrap;}
+.sp-item{background:var(--paper);border:1px solid var(--border);border-radius:.5rem;padding:12px 16px;flex:1;min-width:140px;}
+.sp-num{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.18em;margin-bottom:4px;}
+.sp-text{font-size:12.5px;color:var(--text-secondary);line-height:1.5;}
+.banners{display:flex;gap:10px;flex-shrink:0;}
+.banner{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 20px;border-radius:.625rem;min-width:130px;text-align:center;}
+.banner.lead{background:var(--ink);color:var(--cream);}
+.banner.custom{background:var(--olive);color:var(--paper);}
+.banner-label{font-size:8px;font-weight:600;text-transform:uppercase;letter-spacing:.22em;opacity:.7;margin-bottom:4px;}
+.banner-value{font-family:"Jost",sans-serif;font-size:13px;font-weight:400;letter-spacing:.02em;line-height:1.3;}
+.products-section{padding:36px 40px 48px;background:var(--cream);}
+.section-label{font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.22em;color:var(--text-secondary);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+@media(max-width:960px){.product-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:540px){.product-grid{grid-template-columns:1fr;}.doc-header,.hero,.supplier-hero,.supplier-meta,.products-section{padding-left:20px;padding-right:20px;}.tab-nav{padding:0 10px;}}
+.product-card{background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:transform .18s,box-shadow .18s;display:flex;flex-direction:column;}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(28,33,51,.11);}
+.card-accent{height:3px;width:100%;flex-shrink:0;}
+/* Image: padding-bottom ratio so image is never cropped */
+.card-img-wrap{width:100%;position:relative;padding-bottom:75%;flex-shrink:0;overflow:hidden;}
+.card-img-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:14px;}
+.card-img-wrap .no-img{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.2);font-size:11px;}
+.card-body{padding:16px;flex:1;display:flex;flex-direction:column;gap:5px;}
+.card-line{font-size:8.5px;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--text-secondary);}
+.card-name{font-family:"Jost",sans-serif;font-weight:400;font-size:15px;color:var(--text-primary);line-height:1.3;}
+.card-colour{font-size:11px;color:var(--text-secondary);font-style:italic;}
+.card-desc-en{font-size:12px;color:var(--text-secondary);line-height:1.55;margin-top:4px;}
+.card-pricing{margin-top:auto;padding-top:12px;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+.price-row{display:flex;flex-direction:column;}
+.price-label{font-size:7.5px;font-weight:600;text-transform:uppercase;letter-spacing:.18em;color:var(--text-secondary);margin-bottom:2px;}
+.price-val{font-family:"Jost",sans-serif;font-size:14px;font-weight:400;color:var(--text-primary);}
+.price-row.stk .price-val{color:var(--olive);}
+.price-bundle{grid-column:1/-1;display:flex;gap:8px;margin-top:4px;}
+.bundle-pill{flex:1;background:var(--bone);border-radius:6px;padding:6px 8px;text-align:center;}
+.bundle-pill .price-val{font-size:12px;}
+.sku{font-family:monospace;font-size:9px;color:var(--text-secondary);opacity:.55;margin-top:6px;}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(28,33,51,.75);z-index:500;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--paper);border-radius:var(--radius);max-width:700px;width:100%;max-height:92vh;overflow-y:auto;position:relative;}
+.modal-close{position:absolute;top:14px;right:14px;background:var(--bone);border:none;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-secondary);z-index:10;}
+.modal-img{width:100%;position:relative;padding-bottom:56%;overflow:hidden;border-radius:var(--radius) var(--radius) 0 0;}
+.modal-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:20px;}
+.modal-body{padding:28px;}
+.modal-body .card-line{margin-bottom:6px;}
+.modal-body .card-name{font-size:22px;margin-bottom:4px;}
+.modal-body .card-colour{margin-bottom:14px;}
+.modal-lang-block{margin:16px 0;display:flex;flex-direction:column;gap:10px;}
+.lang-tag{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--tan);margin-bottom:4px;}
+.modal-pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px;padding-top:20px;border-top:1px solid var(--border);}
+.modal-price-block{background:var(--bone);border-radius:8px;padding:10px 12px;}
+.modal-price-block .price-val{font-size:15px;}
+.modal-sku{font-family:monospace;font-size:10px;color:var(--text-secondary);margin-top:14px;}
+footer{background:var(--ink);color:rgba(237,232,223,.5);padding:32px 40px;font-size:11px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+footer .wordmark{font-size:14px;opacity:.7;}
+.footer-contact{text-align:right;line-height:1.8;}
+</style>
+</head>
+<body>
+
+<header class="doc-header">
+  <div class="doc-header-left">
+    <span class="wordmark">Forma</span>
+    <span class="division">Tableware</span>
+  </div>
+  <span class="doc-title">Wholesale Partnership Proposal &mdash; Bed Bath &amp; Beyond</span>
+</header>
+
+<section class="hero">
+  <p class="hero-eyebrow">Curated for Bed Bath &amp; Beyond &mdash; June 2026</p>
+  <h1>Form. Feeling.<br><em>Function.</em></h1>
+  <p class="hero-intro">A hand-selected assortment from Forma Tableware&rsquo;s supplier portfolio &mdash; chosen for visual impact, ecommerce relevance, and enduring appeal. Each piece is modern without being trend-dependent, and earns its place on the page through design conviction.</p>
+  <p class="hero-tagline">Form. Feeling. Function.</p>
+</section>
+
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="lagos">Lagos del Mundo</button>
+  <button class="tab-btn" data-tab="anfora">Anfora</button>
+  <button class="tab-btn" data-tab="bonna">Bonna</button>
+  <button class="tab-btn" data-tab="cosytrendy">Cosy &amp; Trendy</button>
+  <button class="tab-btn" data-tab="ariane">Ariane</button>
+  <button class="tab-btn" data-tab="vicrila">Vicrila</button>
+  <button class="tab-btn" data-tab="browne">Browne Group</button>
+  <button class="tab-btn" data-tab="wmf">WMF</button>
+  <button class="tab-btn" data-tab="pppeltre">PP Peltre</button>
+</nav>
+
+<!-- LAGOS -->
+<div class="supplier-page active" id="page-lagos">
+  <div class="supplier-hero">
+    <p class="supplier-eyebrow" style="color:var(--tan)">Handmade in Mexico &middot; Stoneware &amp; Blown Glass</p>
+    <h2>Lagos del Mundo</h2>
+    <p class="supplier-blurb">Lagos del Mundo is a Mexican artisan studio producing handmade stoneware and mouth-blown glass that carries the warmth of traditional craft into contemporary dining. Each piece is individual &mdash; reactive glazes, slight variations in form, the unmistakable evidence of a human hand. We chose Lagos for their ability to deliver genuine artisan character at scale, with a complete programme spanning plates, cups, tumblers, trays, and carafes that tells a cohesive story from first coffee to last pour of wine.</p>
+  </div>
+  <div class="supplier-meta">
+    <div class="selling-points">
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">01</div><div class="sp-text">Handmade in Mexico &mdash; genuine artisan provenance that drives ecommerce storytelling and premium perceived value.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">02</div><div class="sp-text">Reactive glaze means no two pieces are identical &mdash; a built-in conversation starter and strong unboxing moment.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">03</div><div class="sp-text">Complete programme across ceramic and blown glass &mdash; ideal for bundle building and cross-sell across dining and beverage.</div></div>
+    </div>
+    <div class="banners">
+      <div class="banner lead"><div class="banner-label">Lead Time</div><div class="banner-value">4&ndash;6 Weeks</div></div>
+      <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Custom glaze colours on minimum runs</div></div>
+    </div>
+  </div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Terra, Tidal &amp; Tidal Wave</div><div class="product-grid" id="grid-lagos"></div></div>
+</div>
+
+<!-- ANFORA (includes Ranieri Halo) -->
+<div class="supplier-page" id="page-anfora">
+  <div class="supplier-hero">
+    <p class="supplier-eyebrow" style="color:var(--olive)">Made in Mexico &middot; Vitrified Porcelain &middot; Commercial Grade</p>
+    <h2>Anfora</h2>
+    <p class="supplier-blurb">Anfora is one of the Americas&rsquo; leading ceramic manufacturers, with deep roots in Mexican craft and modern hospitality. Their collections strike a precise balance between bold visual character and professional-grade durability &mdash; commercial vitrified porcelain that holds its colour, stacks reliably, and photographs with the kind of depth that drives ecommerce conversion. We selected Flux in matte black and Phase in White &amp; Sand for their opposite but equally compelling personalities: Flux is architectural and dramatic; Phase is sun-washed, reactive, and alive with coastal warmth.</p>
+    <h3>Ranieri by Anfora &mdash; Halo Collection</h3>
+    <p class="supplier-blurb">Ranieri by Anfora brings a refined European-inspired design vocabulary to professional-grade porcelain. The Halo collection&rsquo;s signature raised rim frames every plate like a spotlight &mdash; architectural without being ostentatious, elevating any plating style into a composed moment. Brilliant white vitrified porcelain, chip-resistant, dishwasher safe, in a complete four-size programme.</p>
+  </div>
+  <div class="supplier-meta">
+    <div class="selling-points">
+      <div class="sp-item"><div class="sp-num" style="color:var(--olive)">01</div><div class="sp-text">Commercial vitrified ceramic &mdash; chip-resistant and stackable, purpose-built for high-volume professional and home use.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--olive)">02</div><div class="sp-text">Flux&rsquo;s matte black and Phase&rsquo;s reactive coastal tones cover opposite ends of the design spectrum in a single brand story.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--olive)">03</div><div class="sp-text">Made in Mexico with 80+ years of manufacturing heritage &mdash; strong provenance narrative for retail and gift positioning.</div></div>
+    </div>
+    <div class="banners">
+      <div class="banner lead"><div class="banner-label">Lead Time</div><div class="banner-value">4&ndash;6 Weeks</div></div>
+      <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Custom colour &amp; decal on MOQ 144 pcs</div></div>
+    </div>
+  </div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Flux (Black) &middot; Phase (White &amp; Sand) &middot; Ranieri Halo</div><div class="product-grid" id="grid-anfora"></div></div>
+</div>
+
+<!-- BONNA -->
+<div class="supplier-page" id="page-bonna">
+  <div class="supplier-hero">
+    <p class="supplier-eyebrow" style="color:var(--olive)">Turkish Porcelain &middot; Chip Guarantee &middot; Commercial Grade</p>
+    <h2>Bonna</h2>
+    <p class="supplier-blurb">Bonna is one of Turkey&rsquo;s foremost porcelain manufacturers, combining European design sensibility with industrial-grade durability. Their pieces photograph beautifully &mdash; strong colour, clean silhouette, tactile matte glaze &mdash; while carrying a lifetime chip guarantee. The Haze collection&rsquo;s ocean-blue matte is a category-leading aesthetic: dramatic on the product page, timeless in the home.</p>
+  </div>
+  <div class="supplier-meta">
+    <div class="selling-points">
+      <div class="sp-item"><div class="sp-num" style="color:var(--olive)">01</div><div class="sp-text">Lifetime chip guarantee backed by Bonna &mdash; a genuine retail differentiator and strong product-page trust signal.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--olive)">02</div><div class="sp-text">High-temperature matte glazes yield extraordinary colour depth &mdash; visually distinctive on any screen.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--olive)">03</div><div class="sp-text">Microwave and dishwasher safe across all collections &mdash; broad consumer appeal and reduced returns risk.</div></div>
+    </div>
+    <div class="banners">
+      <div class="banner lead"><div class="banner-label">Lead Time</div><div class="banner-value">6&ndash;8 Weeks</div></div>
+      <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Custom decal &amp; colour on MOQ 144 pcs</div></div>
+    </div>
+  </div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Haze Collection</div><div class="product-grid" id="grid-bonna"></div></div>
+</div>
+
+<!-- COSY & TRENDY -->
+<div class="supplier-page" id="page-cosytrendy">
+  <div class="supplier-hero">
+    <p class="supplier-eyebrow" style="color:var(--sage)">Belgian Design &middot; Artisan Stoneware &amp; Porcelain</p>
+    <h2>Cosy &amp; Trendy</h2>
+    <p class="supplier-blurb">Cosy &amp; Trendy is a Belgian lifestyle brand whose tableware collections blend an earthy, organic aesthetic with colour confidence that reads immediately in photography. Their stoneware-look ceramics &mdash; designed to evoke natural stone and volcanic basalt &mdash; have strong ecommerce velocity because they look exactly as good on a phone screen as in a styled shoot.</p>
+  </div>
+  <div class="supplier-meta">
+    <div class="selling-points">
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">01</div><div class="sp-text">Organic stoneware-look surfaces photograph with extraordinary depth &mdash; self-styling for product pages with minimal art direction.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">02</div><div class="sp-text">Complete colour families &mdash; allows buyers to merchandise full table settings without mixing brands.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">03</div><div class="sp-text">Microwave &amp; dishwasher safe, strong price-to-quality ratio &mdash; optimised for gift and registry positioning.</div></div>
+    </div>
+    <div class="banners">
+      <div class="banner lead"><div class="banner-label">Lead Time</div><div class="banner-value">4&ndash;6 Weeks</div></div>
+      <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Private label available on select SKUs</div></div>
+    </div>
+  </div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Basalt Ocean Green &middot; Dolmen</div><div class="product-grid" id="grid-cosytrendy"></div></div>
+</div>
+
+<!-- ARIANE -->
+<div class="supplier-page" id="page-ariane">
+  <div class="supplier-hero">
+    <p class="supplier-eyebrow" style="color:var(--tan)">Fine Porcelain &middot; Restaurant Grade &middot; Artisan Glazes</p>
+    <h2>Ariane</h2>
+    <p class="supplier-blurb">Ariane produces fine porcelain at the intersection of chef-driven design and consumer-market craft appeal. Their collections balance clean coupe profiles with handmade-feeling finishes like the dot-pattern of Loma and the reactive beige-granite of Terrane. We chose Ariane because their pieces tell a coherent story of &ldquo;professional quality, artisan character&rdquo; that resonates powerfully with home cooks who follow culinary culture.</p>
+  </div>
+  <div class="supplier-meta">
+    <div class="selling-points">
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">01</div><div class="sp-text">Hand-applied dot and reactive glaze textures create visible artisan character &mdash; exceptional for product close-up photography.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">02</div><div class="sp-text">Coupe and elevated-rim profiles are the current benchmark of fine dining presentation &mdash; strong trade and lifestyle appeal.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">03</div><div class="sp-text">Full programme depth: plates, bowls, cups, platters &mdash; enables broad assortment planning with a single brand story.</div></div>
+    </div>
+    <div class="banners">
+      <div class="banner lead"><div class="banner-label">Lead Time</div><div class="banner-value">6&ndash;10 Weeks</div></div>
+      <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Colour &amp; decal on MOQ 288 pcs</div></div>
+    </div>
+  </div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Loma &middot; Terrane &middot; Vital Coupe</div><div class="product-grid" id="grid-ariane"></div></div>
+</div>
+
+<!-- VICRILA -->
+<div class="supplier-page" id="page-vicrila">
+  <div class="supplier-hero">
+    <p class="supplier-eyebrow" style="color:var(--sage)">Spanish Tempered Glass &middot; Commercial Strength &middot; Dishwasher Safe</p>
+    <h2>Vicrila</h2>
+    <p class="supplier-blurb">Vicrila is Spain&rsquo;s leading commercial glassware manufacturer, producing restaurant-grade tempered glass that is over three times stronger than standard glass while maintaining the clarity of fine crystal. Their collections span stemmed wine glasses, rocks glasses, tumblers, and specialty forms &mdash; all designed with restraint that photographs clean and works across every table aesthetic.</p>
+  </div>
+  <div class="supplier-meta">
+    <div class="selling-points">
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">01</div><div class="sp-text">Tempered glass &mdash; 3&times; stronger &mdash; dramatically reduces breakage returns and increases customer satisfaction.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">02</div><div class="sp-text">Spanish manufacturing heritage with strict QC &mdash; consistent clarity and weight across every SKU.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">03</div><div class="sp-text">Commercial dishwasher safe &mdash; a practical selling point for home consumers who want durability without sacrificing aesthetics.</div></div>
+    </div>
+    <div class="banners">
+      <div class="banner lead"><div class="banner-label">Lead Time</div><div class="banner-value">4&ndash;6 Weeks</div></div>
+      <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Laser etching on select collections</div></div>
+    </div>
+  </div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Elevate &middot; Stride &middot; Spark</div><div class="product-grid" id="grid-vicrila"></div></div>
+</div>
+
+<!-- BROWNE -->
+<div class="supplier-page" id="page-browne">
+  <div class="supplier-hero">
+    <p class="supplier-eyebrow" style="color:var(--tan)">North American &middot; Foodservice Glass &middot; Commercial Reliability</p>
+    <h2>Browne Group</h2>
+    <p class="supplier-blurb">Browne Foodservice is a well-established North American supplier with decades of experience in professional hospitality glassware. Their glass collections &mdash; Centra, Side-Heavy Sham, Reserva, and Finesse &mdash; cover the full spectrum from everyday stackable workhorses to elegant stemware. Short lead times and consistent North American availability make Browne an ideal partner for replenishment and programme continuity.</p>
+  </div>
+  <div class="supplier-meta">
+    <div class="selling-points">
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">01</div><div class="sp-text">North American stock &mdash; among the shortest lead times in the portfolio, ideal for reorder and seasonal restocking.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">02</div><div class="sp-text">Full range from everyday stackable tumblers to elegant stemware &mdash; single supplier covers multiple glassware categories.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">03</div><div class="sp-text">Proven durability in professional foodservice &mdash; lowest breakage rates in the category, reducing total cost of ownership.</div></div>
+    </div>
+    <div class="banners">
+      <div class="banner lead"><div class="banner-label">Lead Time</div><div class="banner-value">2&ndash;3 Weeks</div></div>
+      <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Etching &amp; silkscreen on select runs</div></div>
+    </div>
+  </div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Centra &middot; Side-Heavy Sham &middot; Reserva &middot; Finesse</div><div class="product-grid" id="grid-browne"></div></div>
+</div>
+
+<!-- WMF -->
+<div class="supplier-page" id="page-wmf">
+  <div class="supplier-hero">
+    <p class="supplier-eyebrow" style="color:var(--sage)">German Engineering &middot; 18/10 Stainless Steel &middot; Cutlery &amp; Crystal</p>
+    <h2>WMF</h2>
+    <p class="supplier-blurb">WMF is one of Germany&rsquo;s most storied kitchenware brands, with over 160 years of manufacturing expertise in stainless steel and crystal. Their cutlery collections &mdash; Sara and Edita &mdash; deliver the precise weight, balance, and polish that elevate a table from functional to considered. Paired with the Royal stemware collection, WMF provides the finishing layer that completes any curated table programme.</p>
+  </div>
+  <div class="supplier-meta">
+    <div class="selling-points">
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">01</div><div class="sp-text">160+ years of German manufacturing heritage &mdash; one of the most trusted cutlery brands in the world for premium retail.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">02</div><div class="sp-text">18/10 stainless steel construction &mdash; superior corrosion resistance and lasting mirror finish through repeated dishwasher cycles.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">03</div><div class="sp-text">Cutlery + wine glass programme in a single supplier &mdash; enables complete table cover with premium brand coherence.</div></div>
+    </div>
+    <div class="banners">
+      <div class="banner lead"><div class="banner-label">Lead Time</div><div class="banner-value">4&ndash;8 Weeks</div></div>
+      <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Laser engraving on cutlery handles</div></div>
+    </div>
+  </div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Sara &amp; Edita Cutlery &middot; Royal Stemware</div><div class="product-grid" id="grid-wmf"></div></div>
+</div>
+
+<!-- PP PELTRE -->
+<div class="supplier-page" id="page-pppeltre">
+  <div class="supplier-hero">
+    <p class="supplier-eyebrow" style="color:var(--tan)">Mexican Enamelware &middot; Artisan Speckle &middot; Colour-Forward</p>
+    <h2>PP Peltre</h2>
+    <p class="supplier-blurb">PP Peltre is a Mexico City enamelware studio making handcrafted pieces that carry genuine artisan energy in a colour vocabulary that is impossible to ignore. The Hue collection &mdash; available in speckle-on-speckle and solid-with-edge colourways across black, white, blue, and pink &mdash; is purpose-built for social-media-driven ecommerce where visual distinctiveness is the primary driver of conversion.</p>
+  </div>
+  <div class="supplier-meta">
+    <div class="selling-points">
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">01</div><div class="sp-text">Artisan speckle pattern &mdash; no two pieces identical &mdash; creates strong social content potential and premium unboxing experience.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">02</div><div class="sp-text">Multiple colourways in one SKU structure allow colour-drop retail strategies and seasonal refresh without new tooling.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--tan)">03</div><div class="sp-text">Heat-resistant enamel &mdash; oven, stovetop, and campfire capable &mdash; genuine lifestyle product with wide usage occasions.</div></div>
+    </div>
+    <div class="banners">
+      <div class="banner lead"><div class="banner-label">Lead Time</div><div class="banner-value">6&ndash;8 Weeks</div></div>
+      <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Custom speckle colours on MOQ 96 pcs</div></div>
+    </div>
+  </div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Hue Collection</div><div class="product-grid" id="grid-pppeltre"></div></div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="modal-img"><img id="modalImg" src="" alt=""></div>
+    <div class="modal-body">
+      <div class="card-line" id="modalLine"></div>
+      <div class="card-name" id="modalName"></div>
+      <div class="card-colour" id="modalColour"></div>
+      <div class="modal-lang-block">
+        <div><div class="lang-tag">English</div><div class="card-desc-en" id="modalDescEn"></div></div>
+        <div><div class="lang-tag">Fran&ccedil;ais</div><div class="card-desc-en" id="modalDescFr" style="font-style:italic;opacity:.85"></div></div>
+      </div>
+      <div class="modal-pricing">
+        <div class="modal-price-block"><div class="price-label">Stockist Price</div><div class="price-val" id="modalStk" style="color:var(--olive)"></div></div>
+        <div class="modal-price-block"><div class="price-label">Suggested MSRP</div><div class="price-val" id="modalRet"></div></div>
+        <div class="modal-price-block"><div class="price-label">6-Piece Bundle</div><div class="price-val" id="modal6"></div></div>
+        <div class="modal-price-block"><div class="price-label">12-Piece Bundle</div><div class="price-val" id="modal12"></div></div>
+      </div>
+      <div class="modal-sku" id="modalSku"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span class="wordmark">Forma</span>
+  <div class="footer-contact">
+    <div>management@formatableware.com</div>
+    <div>174&ndash;8250 Manitoba St, Vancouver BC V5X 0L6</div>
+    <div>GST 760526764RT0001</div>
+  </div>
+</footer>
+
+<script>
+const FR = {
+  'Terra':(c)=>`La collection Terra de Lagos del Mundo présente une céramique artisanale aux teintes terreuses chaudes. La glaçure réactive crée une esthétique cohérente. Fabriqué à la main au Mexique. Passe au lave-vaisselle.`,
+  'Tidal':(c)=>`Verre soufflé à la main de la collection Tidal de Lagos del Mundo. Forme organique avec glaçure réactive. Fabriqué au Mexique — chaque pièce varie légèrement. Lavage à la main recommandé.`,
+  'Tidal Wave':(c)=>`Carafe artisanale de la collection Tidal Wave de Lagos del Mundo. Fabriquée à la main au Mexique. Lavage à la main recommandé.`,
+  'Flux':(c)=>`Céramique vitrifiée contemporaine de la collection Anfora Flux. Grade commercial, empilable, passe au lave-vaisselle.`,
+  'Phase':(c)=>`La collection Phase d’Anfora s’inspire des palettes ensoleillées de la côte méditerranéenne avec des glaçures réactives multitonales. Céramique vitrifiée de qualité commerciale, empilable, passe au lave-vaisselle.`,
+  'Halo — Ranieri':(c)=>`De la collection Halo de Ranieri, cette pièce en porcelaine blanche vitrifiée présente un rebord surelevé distinctif. Grade professionnel, résistant aux ébréchures, passe au lave-vaisselle.`,
+  'Haze':(c)=>`Assiette ou bol de la collection Bonna Haze, en porcelaine mate bleu océan. Garantie anti-ébréchure. Passe au lave-vaisselle et au micro-ondes.`,
+  'Basalt - Ocean Green':(c)=>`Céramique aspect pierre de la collection Basalt Vert Océan de Cosy & Trendy. Passe au lave-vaisselle et au micro-ondes.`,
+  'Dolmen':(c)=>`Céramique à forme organique de la collection Dolmen de Cosy & Trendy. Passe au lave-vaisselle et au micro-ondes.`,
+  'Loma':(c)=>`La collection Loma d’Ariane présente des formes en céramique organique avec un motif de points appliqués à la main. Finition mate artisanale. Passe au lave-vaisselle.`,
+  'Terrane':(c)=>`Le modèle Terrane d’Ariane est façonné à la main avec une riche glaçure réactive granit beige. Passe au lave-vaisselle.`,
+  'Vital Coupe':(c)=>`Porcelaine fine de style coupe contemporain de la collection Ariane Vital Coupe. Passe au micro-ondes, au lave-vaisselle et résiste aux chocs thermiques.`,
+  'Elevate':(c)=>`Verre trempé élégant de la collection Vicrila Elevate. Verre trempé espagnol — résistance supérieure. Passe au lave-vaisselle commercial.`,
+  'Stride':(c)=>`Verre trempé polyvalent de la collection Vicrila Stride. Verre trempé espagnol — résistance supérieure. Passe au lave-vaisselle commercial.`,
+  'Spark':(c)=>`Verre trempé classique de la collection Vicrila Spark. Verre trempé espagnol. Passe au lave-vaisselle commercial.`,
+  'Centra':(c)=>`Verre commercial de la collection Browne Centra. Conception robuste pour service à volume élevé. Passe au lave-vaisselle.`,
+  'Side-heavy Sham':(c)=>`Verre à fond épais de la collection Browne Side-Heavy Sham. Construction durable. Passe au lave-vaisselle.`,
+  'Reserva':(c)=>`Verre à vin ou flûte de la collection Browne Reserva. Profil élégant, qualité commerciale. Passe au lave-vaisselle.`,
+  'Finesse':(c)=>`Verre de la collection Browne Finesse. Silhouette affinée pour le service de spiritueux. Passe au lave-vaisselle.`,
+  'Sara':(c)=>`Couvert en acier inoxydable 18/10 de la collection Sara de WMF. Équilibre précis et finition miroir durable. Passe au lave-vaisselle.`,
+  'Edita':(c)=>`Couvert en acier inoxydable 18/10 de la collection Edita de WMF. Design contemporain, finition impeccable. Passe au lave-vaisselle.`,
+  'Royal':(c)=>`Verre à vin de la collection Royal de WMF. Cristal transparent, silhouette classique. Passe au lave-vaisselle.`,
+  'Hue':(c)=>`La collection Hue de PP Peltre apporte une énergie artisanale audacieuse avec son motif moucheé. Surface en émail durable, résistante à la chaleur. Passe au lave-vaisselle.`,
+};
+function getFr(line,colour){const fn=FR[line];return fn?fn(colour):`Pièce artisanale de la collection ${line}. Passe au lave-vaisselle.`;}
+
+function accentFor(line){
+  const m={'Lucid':'#3D7A60','Aura':'#3D7A60','Frame':'#3D7A60','Haze':'#7B9A86',
+    'Halo — Ranieri':'#B5946A','Loma':'#B5946A','Terrane':'#B5946A',
+    'Terra':'#B5946A','Tidal':'#7B9A86','Tidal Wave':'#7B9A86',
+    'Basalt - Ocean Green':'#7B9A86','Dolmen':'#7B9A86','Obsidian':'#1C2133',
+    'Elevate':'#7B9A86','Stride':'#7B9A86','Spark':'#3D7A60',
+    'Hue':'#B5946A','Vital Coupe':'#3D7A60','Flux':'#1C2133','Phase':'#B5946A',
+    'Sara':'#7B9A86','Edita':'#7B9A86','Royal':'#7B9A86',
+    'Centra':'#B5946A','Side-heavy Sham':'#B5946A','Reserva':'#B5946A','Finesse':'#B5946A',
+  };
+  return m[line]||'#3D7A60';
+}
+
+function bgStyle(p){
+  // imageBg: "ink" = navy #1C2133, "white" = #FFFFFF, "auto" = detect from image
+  if(p.imageBg==='white') return '#FFFFFF';
+  if(p.imageBg==='ink') return '#1C2133';
+  // "auto" for Vicrila: transparent glass on white bg
+  return '#FFFFFF';
+}
+
+function makeCard(p){
+  const ret=parseFloat(p.retailPrice);
+  const stk=parseFloat(p.stockistPrice);
+  const b6=(ret*6*0.90).toFixed(2);
+  const b12=(ret*12*0.85).toFixed(2);
+  const img=(p.imageUrls&&p.imageUrls.length)?p.imageUrls[0]:'';
+  const accent=accentFor(p.formaLine);
+  const bg=bgStyle(p);
+  const frText=getFr(p.formaLine,p.colour);
+  const shortDesc=(p.description||'').slice(0,110)+((p.description||'').length>110?'…':'');
+  const nameEsc=(p.name||'').replace(/"/g,'&quot;');
+
+  const card=document.createElement('div');
+  card.className='product-card';
+  card.onclick=()=>openModal(p,frText);
+  card.innerHTML=`
+    <div class="card-accent" style="background:${accent}"></div>
+    <div class="card-img-wrap" style="background:${bg}">
+      ${img?`<img src="${img}" alt="${nameEsc}" loading="lazy">`:`<div class="no-img">No image</div>`}
+    </div>
+    <div class="card-body">
+      <div class="card-line">${p.formaLine||''}</div>
+      <div class="card-name">${p.name}</div>
+      ${p.colour?`<div class="card-colour">${p.colour}</div>`:''}
+      <div class="card-desc-en">${shortDesc}</div>
+      <div class="card-pricing">
+        <div class="price-row stk"><div class="price-label">Stockist Price</div><div class="price-val">$${stk.toFixed(2)}</div></div>
+        <div class="price-row"><div class="price-label">Suggested MSRP</div><div class="price-val">$${ret.toFixed(2)}</div></div>
+        <div class="price-bundle">
+          <div class="bundle-pill"><div class="price-label">6-Piece Bundle</div><div class="price-val">$${b6}</div></div>
+          <div class="bundle-pill"><div class="price-label">12-Piece Bundle</div><div class="price-val">$${b12}</div></div>
+        </div>
+      </div>
+      <div class="sku">${p.formaSku}</div>
+    </div>`;
+  return card;
+}
+
+function openModal(p,frText){
+  const ret=parseFloat(p.retailPrice),stk=parseFloat(p.stockistPrice);
+  const bg=bgStyle(p);
+  document.getElementById('modalImg').src=(p.imageUrls&&p.imageUrls[0])||'';
+  document.getElementById('modal').querySelector('.modal-img').style.background=bg;
+  document.getElementById('modalLine').textContent=p.formaLine||'';
+  document.getElementById('modalName').textContent=p.name;
+  document.getElementById('modalColour').textContent=p.colour||'';
+  document.getElementById('modalDescEn').textContent=p.description||'';
+  document.getElementById('modalDescFr').textContent=frText;
+  document.getElementById('modalStk').textContent='$'+stk.toFixed(2);
+  document.getElementById('modalRet').textContent='$'+ret.toFixed(2);
+  document.getElementById('modal6').textContent='$'+(ret*6*0.90).toFixed(2);
+  document.getElementById('modal12').textContent='$'+(ret*12*0.85).toFixed(2);
+  document.getElementById('modalSku').textContent='SKU: '+p.formaSku;
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(){document.getElementById('modal').classList.remove('open');}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target===document.getElementById('modal'))closeModal();});
+
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.supplier-page').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('page-'+btn.dataset.tab).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+
+const PRODUCTS = {
+lagos: [
+  {formaSku:"1002.00004",name:"Dinner Plate 27 cm",formaLine:"Terra",supplierName:"Lagos del Mundo",stockistPrice:36.21,retailPrice:80.46,colour:"Terra Ox w/ Matte White Ox",material:"Stoneware",description:"Terra's dinner plate 27cm brings warm earth-toned ceramic across the complete dining programme. The terracotta-inspired glaze ranges from sandy warm tones to deep umber, creating a cohesive artisan aesthetic for both casual and contemporary fine-dining settings. Dishwasher safe.",imageUrls:["https://i.postimg.cc/3NGp2vLD/1002_00004.png"],imageBg:"ink"},
+  {formaSku:"1002.00007",name:"Gourmet Plate 26 cm",formaLine:"Terra",supplierName:"Lagos del Mundo",stockistPrice:35.8,retailPrice:79.55,colour:"Terra Ox w/ Matte White Ox",material:"Stoneware",description:"Terra's gourmet plate 26cm pairs a wide artisan surface with warm reactive earth-toned glaze. Ideal for fine dining presentation and styled table photography. Dishwasher safe.",imageUrls:["https://i.postimg.cc/FFk0MMhZ/1002_00007.png"],imageBg:"ink"},
+  {formaSku:"1002.00002",name:"Deep Coupe Plate",formaLine:"Terra",supplierName:"Lagos del Mundo",stockistPrice:40.36,retailPrice:89.69,colour:"Terra Ox w/ Matte White Ox",material:"Stoneware",description:"Terra's deep coupe plate combines a rimless coupe profile with the brand's signature earth-toned reactive glaze. A striking centrepiece for pasta, risotto, and bowl meals. Dishwasher safe.",imageUrls:["https://i.postimg.cc/vTn95VP1/1002_00002.png"],imageBg:"ink"},
+  {formaSku:"1002.00013",name:"Mug 20 oz",formaLine:"Terra",supplierName:"Lagos del Mundo",stockistPrice:32.2,retailPrice:71.55,colour:"Terra Ox w/ Matte White Ox",material:"Stoneware",description:"Terra's large 20oz mug brings artisan warmth to the morning ritual. Generous volume for brunch lattes and long teas. Dishwasher safe.",imageUrls:["https://i.postimg.cc/FFk0MMhB/1002_00013.png"],imageBg:"ink"},
+  {formaSku:"1002.00018",name:"Low Ceramic Tumbler 10 oz",formaLine:"Terra",supplierName:"Lagos del Mundo",stockistPrice:27.59,retailPrice:61.31,colour:"Terra Ox w/ Matte White Ox",material:"Stoneware",description:"Terra's low ceramic tumbler is a versatile piece for hot and cold drinks. The reactive glaze gives each piece a distinct character. Dishwasher safe.",imageUrls:["https://i.postimg.cc/Wpq0BB2V/1002_00018.png"],imageBg:"ink"},
+  {formaSku:"1002.00003",name:"Round Platter",formaLine:"Terra",supplierName:"Lagos del Mundo",stockistPrice:43.94,retailPrice:97.65,colour:"Terra Ox w/ Matte White Ox",material:"Stoneware",description:"Terra's round platter is a statement serving piece for shared dining. Ideal centrepiece for charcuterie, mezze, or family-style service.",imageUrls:["https://i.postimg.cc/QC75cT6T/1002_00003.png"],imageBg:"ink"},
+  {formaSku:"1002.00024",name:"Blown Glass Old Fashioned 12 oz",formaLine:"Tidal",supplierName:"Lagos del Mundo",stockistPrice:10.83,retailPrice:24.06,colour:"White Rim",material:"Glass",description:"Handmade blown glass rocks glass with a delicate white rim from the Tidal collection. Organic form, subtle variation. 354 ml. Hand wash recommended.",imageUrls:["https://i.postimg.cc/ZYv6GGTb/1002_00024.png"],imageBg:"ink"},
+  {formaSku:"1002.00025",name:"Blown Glass Hiball 15 oz",formaLine:"Tidal",supplierName:"Lagos del Mundo",stockistPrice:12.3,retailPrice:27.33,colour:"White Rim",material:"Glass",description:"Handmade blown glass hiball with organic flowing form and white rim accent. 443 ml. Handmade in Mexico \u2014 each piece varies slightly. Hand wash recommended.",imageUrls:["https://i.postimg.cc/7PJSFFxP/1002_00025.png"],imageBg:"ink"},
+  {formaSku:"1002.00022",name:"Blown Glass Carafe 1L \u2014 Black",formaLine:"Tidal Wave",supplierName:"Lagos del Mundo",stockistPrice:62.71,retailPrice:139.36,colour:"Black Matte",material:"Glass",description:"Dramatic hand-blown glass carafe with a handmade ceramic cap in black matte. A genuine table statement piece. 1 litre. Handmade in Mexico. Hand wash recommended.",imageUrls:["https://i.postimg.cc/kMRW00n7/1002_00022.png"],imageBg:"ink"},
+  {formaSku:"1002.0002",name:"Ceramic Carafe 1L \u2014 Clay",formaLine:"Tidal Wave",supplierName:"Lagos del Mundo",stockistPrice:64.0,retailPrice:142.22,colour:"Clay w/ White",material:"Ceramic",description:"The Tidal Wave ceramic carafe in clay with white trim. Beautiful tableside vessel for water, cold brew, and house wine service. Dishwasher safe.",imageUrls:["https://i.postimg.cc/sfG5kkVy/1002_00020.png"],imageBg:"ink"}
+],
+anfora: [
+  {formaSku:"1009.00024",name:"Side Plate 15 cm \u2014 Black",formaLine:"Flux",supplierName:"Anfora",stockistPrice:9.33,retailPrice:20.75,colour:"Black",material:"Vitrified Porcelain",description:"Contemporary vitrified ceramic from the Anfora Flux collection. 5.9\" diameter. Commercial-grade vitrified ceramic made in Mexico. Dishwasher safe \u00b7 Stackable.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/9dbe733d9a470087.jpg"],imageBg:"white"},
+  {formaSku:"1009.00025",name:"Large Side Plate 19 cm \u2014 Black",formaLine:"Flux",supplierName:"Anfora",stockistPrice:15.17,retailPrice:33.71,colour:"Black",material:"Vitrified Porcelain",description:"Contemporary vitrified ceramic from the Anfora Flux collection. 7.5\" diameter. Commercial-grade vitrified ceramic made in Mexico. Dishwasher safe \u00b7 Stackable.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/b8c9fb53b99ec212.jpg"],imageBg:"white"},
+  {formaSku:"1009.00026",name:"Luncheon Plate 23 cm \u2014 Black",formaLine:"Flux",supplierName:"Anfora",stockistPrice:19.89,retailPrice:44.19,colour:"Black",material:"Vitrified Porcelain",description:"Contemporary vitrified ceramic from the Anfora Flux collection. 9.1\" diameter. Commercial-grade vitrified ceramic made in Mexico. Dishwasher safe \u00b7 Stackable.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/de4b49405c1fc2ca.jpg"],imageBg:"white"},
+  {formaSku:"1009.00017",name:"Bread & Butter Plate 10 cm",formaLine:"Phase",supplierName:"Anfora",stockistPrice:11.03,retailPrice:24.53,colour:"White & Sand",material:"Vitrified Porcelain",description:"Phase draws from sun-washed Mediterranean palettes with warm, multi-tone reactive glazes. The reactive glaze creates subtle surface variation that makes each piece feel individual. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/5f99d118a66092a9.jpg"],imageBg:"white"},
+  {formaSku:"1009.00020",name:"Large Side Plate 19 cm \u2014 White & Sand",formaLine:"Phase",supplierName:"Anfora",stockistPrice:20.17,retailPrice:44.82,colour:"White & Sand",material:"Vitrified Porcelain",description:"Phase draws from sun-washed Mediterranean palettes with warm, multi-tone reactive glazes. Authentic artisan character, individual surface variation. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/ab8f599cea206356.jpg"],imageBg:"white"},
+  {formaSku:"1009.00015",name:"Large Side Plate 19 cm \u2014 Ocean Patina",formaLine:"Phase",supplierName:"Anfora",stockistPrice:12.94,retailPrice:28.76,colour:"Ocean Patina",material:"Vitrified Porcelain",description:"Versatile vitrified ceramic from the Anfora Phase collection. 7.5\" diameter. Commercial-grade, dishwasher safe and stackable.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/a79585d61a3ced7d.jpg"],imageBg:"white"},
+  {formaSku:"1009.00016",name:"Dinner Plate 27 cm \u2014 Ocean Patina",formaLine:"Phase",supplierName:"Anfora",stockistPrice:34.61,retailPrice:76.91,colour:"Ocean Patina",material:"Vitrified Porcelain",description:"Versatile vitrified ceramic from the Anfora Phase collection. 10.6\" diameter. Commercial-grade vitrified ceramic. Dishwasher safe \u00b7 Stackable.",imageUrls:["https://anfora.com/cdn/shop/files/PlatoTrinche27cmMediterraneoconRelieveMediterraneo2.0_3.jpg?v=1736884878"],imageBg:"white"},
+  {formaSku:"1008.00006",name:"Bread & Butter Plate 12.5 cm",formaLine:"Halo \u2014 Ranieri",supplierName:"Ranieri",stockistPrice:6.12,retailPrice:13.6,colour:"White",material:"Porcelain",description:"From the Halo/Barcelona collection. Vitrified white porcelain with a distinctive raised rim that frames the dish like a spotlight halo. Professional-grade, chip-resistant, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/a2518796d54e2899.jpg"],imageBg:"white"},
+  {formaSku:"1008.00003",name:"Large Side Plate 19 cm",formaLine:"Halo \u2014 Ranieri",supplierName:"Ranieri",stockistPrice:14.72,retailPrice:32.7,colour:"White",material:"Porcelain",description:"From the Halo/Barcelona collection. Vitrified white porcelain with a distinctive raised rim that frames the dish like a spotlight halo. Professional-grade, chip-resistant, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/10b08548d134f4ac.jpg"],imageBg:"white"},
+  {formaSku:"1008.00004",name:"Luncheon Plate 23 cm",formaLine:"Halo \u2014 Ranieri",supplierName:"Ranieri",stockistPrice:19.94,retailPrice:44.3,colour:"White",material:"Porcelain",description:"From the Halo/Barcelona collection. Vitrified white porcelain with a distinctive raised rim. Professional-grade, chip-resistant, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/fbbdb8c9903a48f8.jpg"],imageBg:"white"},
+  {formaSku:"1008.00005",name:"Dinner Plate 27 cm",formaLine:"Halo \u2014 Ranieri",supplierName:"Ranieri",stockistPrice:28.31,retailPrice:62.9,colour:"White",material:"Porcelain",description:"From the Halo/Barcelona collection. Vitrified white porcelain with a distinctive raised rim that frames the dish like a spotlight halo. The architectural profile elevates any plating style. Professional-grade, chip-resistant, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/5c5fca67fb9bfb41.jpg"],imageBg:"white"}
+],
+bonna: [
+  {formaSku:"1006.00001",name:"Side Plate 17 cm",formaLine:"Haze",supplierName:"Bonna",stockistPrice:11.49,retailPrice:26.0,colour:"Blue",material:"Porcelain",description:"Side plate from the Bonna Haze collection. 6.7\" diameter. Distinctive ocean blue matte glaze. Chip guarantee, dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/6d31cc27a866e926.jpg"],imageBg:"white"},
+  {formaSku:"1006.00002",name:"Salad Plate 21 cm",formaLine:"Haze",supplierName:"Bonna",stockistPrice:14.52,retailPrice:33.0,colour:"Blue",material:"Porcelain",description:"Flat plate from the Bonna Haze collection. 8.3\" diameter. Ocean blue matte glaze. Chip guarantee, dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/39c7b859196682a0.jpg"],imageBg:"white"},
+  {formaSku:"1006.00003",name:"Dinner Plate 27 cm",formaLine:"Haze",supplierName:"Bonna",stockistPrice:19.67,retailPrice:44.5,colour:"Blue",material:"Porcelain",description:"Dinner plate from the Bonna Haze collection. 10.6\" diameter. Distinctive ocean blue matte glaze. Chip guarantee, dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/25886144f4f4f0eb.jpg"],imageBg:"white"},
+  {formaSku:"1006.00004",name:"Pasta Plate 27 cm",formaLine:"Haze",supplierName:"Bonna",stockistPrice:30.12,retailPrice:68.5,colour:"Blue",material:"Porcelain",description:"Pasta plate from the Bonna Haze collection. 10.6\" diameter. Ocean blue matte glaze. Generous well for pasta, risotto, and noodle dishes. Chip guarantee.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/70cbc4bc3e9f9577.jpg"],imageBg:"white"},
+  {formaSku:"1006.00005",name:"Luncheon Plate 24 cm",formaLine:"Haze",supplierName:"Bonna",stockistPrice:21.98,retailPrice:50.0,colour:"Blue",material:"Porcelain",description:"Flat plate from the Bonna Haze collection. 9.5\" diameter. Ocean blue matte glaze. Chip guarantee.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/139694dbb24d61ae.jpg"],imageBg:"white"},
+  {formaSku:"1006.00007",name:"Bowl 18 cm",formaLine:"Haze",supplierName:"Bonna",stockistPrice:27.32,retailPrice:62.0,colour:"Blue",material:"Porcelain",description:"Statement bowl from the Bonna Haze collection. 7.1\" diameter, 585 ml. Striking ocean blue matte finish. Chip guarantee. Dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/f5940162f87eb127.jpg"],imageBg:"white"},
+  {formaSku:"1006.00008",name:"Entr\u00e9e Bowl 26 cm",formaLine:"Haze",supplierName:"Bonna",stockistPrice:34.73,retailPrice:58.0,colour:"Blue",material:"Porcelain",description:"Statement entr\u00e9e bowl from the Bonna Haze collection. 10.2\" diameter, 1000 ml. Ocean blue matte finish. Chip guarantee.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/0edbe772be9c5767.jpg"],imageBg:"white"},
+  {formaSku:"1006.00006",name:"Platter 33 cm",formaLine:"Haze",supplierName:"Bonna",stockistPrice:38.87,retailPrice:65.0,colour:"Blue",material:"Porcelain",description:"Large platter from the Bonna Haze collection. 13.0\" diameter. Ocean blue matte glaze. Ideal for sharing dishes. Chip guarantee.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/41a98bb645fcc0e6.jpg"],imageBg:"white"}
+],
+cosytrendy: [
+  {formaSku:"1014.0001",name:"Dinner Plate \u00d8 27 cm",formaLine:"Basalt - Ocean Green",supplierName:"Cosy & Trendy",stockistPrice:35.18,retailPrice:94.2,colour:"Ocean Green",material:"Stoneware",description:"Full-size dinner plate in the Cosy & Trendy Basalt Ocean Green collection. 10.6\" diameter. Stoneware-look ceramic with the depth and texture of natural stone. Dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/cosy-trendy/1014_00010.png"],imageBg:"ink"},
+  {formaSku:"1014.00013",name:"Soup Plate \u00d8 24 cm",formaLine:"Basalt - Ocean Green",supplierName:"Cosy & Trendy",stockistPrice:34.3,retailPrice:92.0,colour:"Ocean Green",material:"Stoneware",description:"Wide soup plate from the Cosy & Trendy Basalt Ocean Green collection. 9.5\" diameter. Organic stoneware-look surface. Dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/cosy-trendy/1014_00013.png"],imageBg:"ink"},
+  {formaSku:"1014.00011",name:"Dessert Plate \u00d8 21 cm",formaLine:"Basalt - Ocean Green",supplierName:"Cosy & Trendy",stockistPrice:28.04,retailPrice:75.1,colour:"Ocean Green",material:"Stoneware",description:"Dessert plate from the Cosy & Trendy Basalt Ocean Green collection. 8.3\" diameter. Dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/cosy-trendy/1014_00011.png"],imageBg:"ink"},
+  {formaSku:"1014.00018",name:"Mug \u00d8 7 cm",formaLine:"Basalt - Ocean Green",supplierName:"Cosy & Trendy",stockistPrice:16.24,retailPrice:45.6,colour:"Ocean Green",material:"Stoneware",description:"Mug from the Cosy & Trendy Basalt Ocean Green collection. 170 ml. Stoneware-look ceramic. Dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/cosy-trendy/1014_00018.png"],imageBg:"ink"},
+  {formaSku:"1014.0003",name:"Dinner Plate \u00d8 27 cm",formaLine:"Dolmen",supplierName:"Cosy & Trendy",stockistPrice:36.16,retailPrice:96.65,colour:"Stone White",material:"Porcelain",description:"Full-size dinner plate in the organic-form Dolmen collection. Stone white porcelain. Dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/cosy-trendy/1014_00030.png"],imageBg:"ink"},
+  {formaSku:"1014.00031",name:"Dessert Plate \u00d8 20 cm",formaLine:"Dolmen",supplierName:"Cosy & Trendy",stockistPrice:25.94,retailPrice:69.85,colour:"Stone White",material:"Porcelain",description:"Dessert plate in the organic-form Dolmen collection. 7.9\" diameter. Stone white porcelain. Dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/cosy-trendy/1014_00031.png"],imageBg:"ink"},
+  {formaSku:"1014.00036",name:"Bowl \u00d8 10 cm",formaLine:"Dolmen",supplierName:"Cosy & Trendy",stockistPrice:12.22,retailPrice:33.05,colour:"Stone White",material:"Porcelain",description:"Bowl from the Dolmen collection. 4.3\" diameter. Organic-form stone white porcelain. Dishwasher and microwave safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/cosy-trendy/1014_00036.png"],imageBg:"ink"}
+],
+ariane: [
+  {formaSku:"1013.00002",name:"Flat Plate \u2014 Dark Sand",formaLine:"Loma",supplierName:"Ariane",stockistPrice:23.78,retailPrice:64.45,colour:"Dark Sand",material:"Porcelain",description:"Loma's flat plate features organic ceramic forms with a distinctive hand-applied dark sand dot pattern. Matte finish, irregular dot distribution. Complete service program. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/6a63184a7342b7c6.jpg"],imageBg:"white"},
+  {formaSku:"1013.00004",name:"Deep Plate \u2014 Dark Sand",formaLine:"Loma",supplierName:"Ariane",stockistPrice:33.76,retailPrice:90.65,colour:"Dark Sand",material:"Porcelain",description:"Loma's deep plate with hand-applied dark sand dots. Artisan matte finish. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/3a727ccf99466921.jpg"],imageBg:"white"},
+  {formaSku:"1013.00007",name:"Non Stackable Mug",formaLine:"Loma",supplierName:"Ariane",stockistPrice:18.26,retailPrice:50.65,colour:"Dark Sand",material:"Porcelain",description:"Loma's non-stackable mug with organic form and hand-applied dark sand dot pattern. Tactile matte finish. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/51253b24d9f4d64a.jpg"],imageBg:"white"},
+  {formaSku:"1013.00042",name:"Coupe Plate \u2014 Large",formaLine:"Terrane",supplierName:"Ariane",stockistPrice:29.78,retailPrice:79.45,colour:"Beige Granite",material:"Porcelain",description:"The Terrane coupe plate is handcrafted with a rich granite-beige reactive glaze. Rimless coupe profile maximises the presentation surface. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/fb1c4ff679805786.jpg"],imageBg:"white"},
+  {formaSku:"1013.00045",name:"Coupe Deep Bowl",formaLine:"Terrane",supplierName:"Ariane",stockistPrice:43.94,retailPrice:116.1,colour:"Beige Granite",material:"Porcelain",description:"The Terrane coupe deep bowl is handcrafted with a reactive granite-beige glaze creating subtle colour variation and surface movement. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/8c88e9fe8505cf12.jpg"],imageBg:"white"},
+  {formaSku:"1013.00028",name:"Coupe Elevated Flat Plate",formaLine:"Vital Coupe",supplierName:"Ariane",stockistPrice:8.1,retailPrice:22.75,colour:"White",material:"Porcelain",description:"Contemporary coupe-style fine porcelain. Rimless coupe profile with elevated presentation surface. Microwave safe, dishwasher safe, thermal shock proof.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/efa6339442abc6ae.jpg"],imageBg:"white"},
+  {formaSku:"1013.00037",name:"Elevated Bowl \u2014 Small",formaLine:"Vital Coupe",supplierName:"Ariane",stockistPrice:9.9,retailPrice:27.25,colour:"White",material:"Porcelain",description:"Ariane Vital Coupe elevated bowl for soups, salads, and desserts. Clean coupe profile. Microwave safe, dishwasher safe, thermal shock proof.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/842eab09c4d112bc.jpg"],imageBg:"white"}
+],
+vicrila: [
+  {formaSku:"1012.00046",name:"Brisa 10.25 oz",formaLine:"Elevate",supplierName:"Vicrila",stockistPrice:5.52,retailPrice:16.3,colour:"Transparent",material:"Glass",description:"All-purpose wine glass from the Vicrila Elevate collection. 303 ml. Spanish tempered glass \u2014 superior strength and dishwasher durability.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/38bde968943ba639.jpg"],imageBg:"auto"},
+  {formaSku:"1012.00045",name:"Brisa 16.5 oz",formaLine:"Elevate",supplierName:"Vicrila",stockistPrice:5.84,retailPrice:17.1,colour:"Transparent",material:"Glass",description:"All-purpose wine glass from the Vicrila Elevate collection. 488 ml. Spanish tempered glass. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/38bde968943ba639.jpg"],imageBg:"auto"},
+  {formaSku:"1012.00025",name:"Corte 8.75 oz",formaLine:"Elevate",supplierName:"Vicrila",stockistPrice:5.78,retailPrice:16.95,colour:"Transparent",material:"Glass",description:"Compact spirits glass from Vicrila Elevate. 259 ml. Spanish tempered glass.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/62027016c460043f.jpg"],imageBg:"auto"},
+  {formaSku:"1012.00051",name:"Stem 10 oz",formaLine:"Stride",supplierName:"Vicrila",stockistPrice:4.2,retailPrice:13.0,colour:"Transparent",material:"Glass",description:"Stemmed wine glass from the Vicrila Stride collection. 296 ml. Spanish tempered glass. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/e098b33aac4ee9db.jpg"],imageBg:"auto"},
+  {formaSku:"1012.0003",name:"Seira Rocks Stacked 11.25 oz",formaLine:"Stride",supplierName:"Vicrila",stockistPrice:3.22,retailPrice:10.55,colour:"Transparent",material:"Glass",description:"Rocks glass for cocktails on the rocks. 333 ml. Stackable. Spanish tempered glass.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/32a74cebf31b5a86.jpg"],imageBg:"auto"},
+  {formaSku:"1012.00004",name:"Finca 6 oz",formaLine:"Spark",supplierName:"Vicrila",stockistPrice:6.74,retailPrice:19.35,colour:"Transparent",material:"Glass",description:"Small wine and sherry glass from the Vicrila Spark collection. 177 ml. Spanish tempered glass, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/201388139820adb7.jpg"],imageBg:"auto"},
+  {formaSku:"1012.00023",name:"Fino 6 oz",formaLine:"Spark",supplierName:"Vicrila",stockistPrice:5.9,retailPrice:17.25,colour:"Transparent",material:"Glass",description:"Classic small wine glass from the Vicrila Spark collection. 177 ml. Elegant taper. Spanish tempered glass, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/ffaf40109c29f47b.jpg"],imageBg:"auto"}
+],
+browne: [
+  {formaSku:"1001.0004",name:"Rocks \u2014 10.3 oz",formaLine:"Centra",supplierName:"Browne Group",stockistPrice:5.44,retailPrice:13.29,colour:"Transparent",material:"Glass",description:"Centra rocks glass, 10.3 oz / 305 ml. Commercial-grade stackable glass built for high-volume service. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/PG42565.jpg"],imageBg:"white"},
+  {formaSku:"1001.00041",name:"Highball \u2014 12.3 oz",formaLine:"Centra",supplierName:"Browne Group",stockistPrice:5.76,retailPrice:16.0,colour:"Transparent",material:"Glass",description:"Centra highball glass, 12.3 oz / 365 ml. Commercial-grade for high-volume service. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/PG42885.jpg"],imageBg:"white"},
+  {formaSku:"1001.00034",name:"Whisky \u2014 2 oz",formaLine:"Side-heavy Sham",supplierName:"Browne Group",stockistPrice:3.19,retailPrice:8.85,colour:"Transparent",material:"Glass",description:"Side-heavy sham whisky glass, 2 oz / 58 ml. Weighted base for stability. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/PG42484.jpg"],imageBg:"white"},
+  {formaSku:"1001.00035",name:"Old Fashioned \u2014 10.7 oz",formaLine:"Side-heavy Sham",supplierName:"Browne Group",stockistPrice:4.63,retailPrice:12.85,colour:"Transparent",material:"Glass",description:"Side-heavy sham old fashioned glass, 10.7 oz / 315 ml. Weighted base design. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/PG42884.jpg"],imageBg:"white"},
+  {formaSku:"1001.00033",name:"Highball \u2014 9.8 oz",formaLine:"Side-heavy Sham",supplierName:"Browne Group",stockistPrice:4.32,retailPrice:12.0,colour:"Transparent",material:"Glass",description:"Side-heavy sham highball glass, 9.8 oz / 290 ml. Weighted base, commercial-grade. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/PG42469.jpg"],imageBg:"white"},
+  {formaSku:"1001.00018",name:"Champagne Flute \u2014 6.25 oz",formaLine:"Reserva",supplierName:"Browne Group",stockistPrice:11.03,retailPrice:24.8,colour:"Transparent",material:"Glass",description:"Reserva champagne flute, 6.25 oz / 185 ml. Elegant slender profile. Commercial quality, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG67076.jpg"],imageBg:"white"},
+  {formaSku:"1001.00019",name:"Tall Wine \u2014 15.5 oz",formaLine:"Reserva",supplierName:"Browne Group",stockistPrice:8.61,retailPrice:21.05,colour:"Transparent",material:"Glass",description:"Reserva tall wine glass, 15.5 oz / 460 ml. Versatile for red or white. Commercial quality, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG67078.jpg"],imageBg:"white"},
+  {formaSku:"1001.0002",name:"Tall Wine \u2014 19.5 oz",formaLine:"Reserva",supplierName:"Browne Group",stockistPrice:11.04,retailPrice:28.8,colour:"Transparent",material:"Glass",description:"Reserva tall wine glass, 19.5 oz / 580 ml. Generous bowl for bold reds. Commercial quality, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG67079.jpg"],imageBg:"white"},
+  {formaSku:"1001.00013",name:"Shot \u2014 2 oz",formaLine:"Finesse",supplierName:"Browne Group",stockistPrice:9.06,retailPrice:20.4,colour:"Transparent",material:"Glass",description:"Finesse shot glass, 2 oz / 60 ml. Refined silhouette for spirits service. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG64008.jpg"],imageBg:"white"},
+  {formaSku:"1001.00014",name:"Whisky \u2014 10.25 oz",formaLine:"Finesse",supplierName:"Browne Group",stockistPrice:16.31,retailPrice:36.7,colour:"Transparent",material:"Glass",description:"Finesse whisky glass, 10.25 oz / 300 ml. Elegant tapered form. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG64009.jpg"],imageBg:"white"},
+  {formaSku:"1001.00016",name:"Long Drink \u2014 11.75 oz",formaLine:"Finesse",supplierName:"Browne Group",stockistPrice:13.36,retailPrice:30.05,colour:"Transparent",material:"Glass",description:"Finesse long drink glass, 11.75 oz / 350 ml. Sleek profile for cocktails and mixers. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG64011.jpg"],imageBg:"white"},
+  {formaSku:"1001.00017",name:"Hiball \u2014 15 oz",formaLine:"Finesse",supplierName:"Browne Group",stockistPrice:19.2,retailPrice:43.2,colour:"Transparent",material:"Glass",description:"Finesse hiball glass, 15 oz / 445 ml. Tall refined form for long drinks. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG64012.jpg"],imageBg:"white"}
+],
+wmf: [
+  {formaSku:"1003.00001",name:"Oval Soup Spoon",formaLine:"Sara",supplierName:"WMF",stockistPrice:10.8,retailPrice:24.0,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Sara oval soup spoon. 18/10 stainless steel construction. Precise weight and balance, lasting mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/tJg6mcCY/1003_00001.png"],imageBg:"ink"},
+  {formaSku:"1003.00002",name:"Dinner Fork",formaLine:"Sara",supplierName:"WMF",stockistPrice:10.8,retailPrice:24.0,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Sara dinner fork. 18/10 stainless steel. Precise proportions and mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/Wz4ZfybD/1003_00002.png"],imageBg:"ink"},
+  {formaSku:"1003.00003",name:"Dinner Knife",formaLine:"Sara",supplierName:"WMF",stockistPrice:10.8,retailPrice:24.0,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Sara dinner knife. 18/10 stainless steel with balanced handle. Mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/x8dmFZTz/1003_00003.png"],imageBg:"ink"},
+  {formaSku:"1003.00005",name:"Salad Fork",formaLine:"Sara",supplierName:"WMF",stockistPrice:10.8,retailPrice:24.0,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Sara salad fork. 18/10 stainless steel. Mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/8cCvnYPM/1003_00005.png"],imageBg:"ink"},
+  {formaSku:"1003.00004",name:"Teaspoon",formaLine:"Sara",supplierName:"WMF",stockistPrice:10.8,retailPrice:24.0,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Sara teaspoon. 18/10 stainless steel. Mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/FzKSn6sY/1003_00004.png"],imageBg:"ink"},
+  {formaSku:"1003.00006",name:"Oval Soup Spoon",formaLine:"Edita",supplierName:"WMF",stockistPrice:10.8,retailPrice:24.0,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Edita oval soup spoon. 18/10 stainless steel. Contemporary design, mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/VvHtyFd6/1003_00006.png"],imageBg:"ink"},
+  {formaSku:"1003.00007",name:"Dinner Fork",formaLine:"Edita",supplierName:"WMF",stockistPrice:10.8,retailPrice:24.0,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Edita dinner fork. 18/10 stainless steel, contemporary profile. Mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/3NwGbqJ2/1003_00007.png"],imageBg:"ink"},
+  {formaSku:"1003.00008",name:"Dinner Knife",formaLine:"Edita",supplierName:"WMF",stockistPrice:10.8,retailPrice:24.0,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Edita dinner knife. 18/10 stainless steel. Contemporary form, mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/4yFcC1my/1003_00008.png"],imageBg:"ink"},
+  {formaSku:"1003.0001",name:"Salad Fork",formaLine:"Edita",supplierName:"WMF",stockistPrice:8.38,retailPrice:18.62,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Edita salad fork. 18/10 stainless steel. Contemporary proportions, mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/NFPXhx52/1003_00010.png"],imageBg:"ink"},
+  {formaSku:"1003.00009",name:"Teaspoon",formaLine:"Edita",supplierName:"WMF",stockistPrice:10.8,retailPrice:24.0,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Edita teaspoon. 18/10 stainless steel. Contemporary design, mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/qqZKfGzC/1003_00009.png"],imageBg:"ink"},
+  {formaSku:"1003.00011",name:"Red Wine Glass",formaLine:"Royal",supplierName:"WMF",stockistPrice:10.13,retailPrice:22.52,colour:"Transparent",material:"Glass",description:"WMF Royal red wine glass. Crystal-clear glass, classic stemware proportions for red wine service.",imageUrls:["https://i.postimg.cc/RhbtrTNH/1003_00011.png"],imageBg:"ink"},
+  {formaSku:"1003.00012",name:"Bordeaux Glass",formaLine:"Royal",supplierName:"WMF",stockistPrice:12.22,retailPrice:27.16,colour:"Transparent",material:"Glass",description:"WMF Royal Bordeaux glass. Crystal-clear, generous bowl for full-bodied Bordeaux and Cabernet.",imageUrls:["https://i.postimg.cc/MHrBkYvm/1003_00012.png"],imageBg:"ink"},
+  {formaSku:"1003.00013",name:"Burgundy Glass",formaLine:"Royal",supplierName:"WMF",stockistPrice:12.22,retailPrice:27.16,colour:"Transparent",material:"Glass",description:"WMF Royal Burgundy glass. Wide-bowled crystal glass designed to express Pinot Noir and delicate reds.",imageUrls:["https://i.postimg.cc/Hkbr3m4r/1003-00013.png"],imageBg:"ink"}
+],
+pppeltre: [
+  {formaSku:"1010.00007",name:"Dinner Plate 27 cm \u2014 White/Black",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:23.53,retailPrice:52.28,colour:"White w/ Black",material:"Enamelware",description:"Hue by PP Peltre brings bold artisan energy with its signature speckled enamelware dinner plate. White with black speckle. Durable, heat-resistant enamel. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/7c0277fdbbb2843a.jpg"],imageBg:"white"},
+  {formaSku:"1010.00014",name:"Dinner Plate 27 cm \u2014 Pink/Blue",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:23.53,retailPrice:52.28,colour:"Pink w/ Blue",material:"Enamelware",description:"Hue's dinner plate in pink with blue speckle. Artisan enamelware with signature colour-on-colour pattern. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/007a0f80e4786d9b.jpg"],imageBg:"white"},
+  {formaSku:"1010.00005",name:"Deep Plate 20 cm \u2014 Black/White",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:18.45,retailPrice:41.0,colour:"Black w/ White",material:"Enamelware",description:"Hue speckled enamelware deep plate in black with white speckle. Bold, tactile surface. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/e9b25220777cafdd.jpg"],imageBg:"white"},
+  {formaSku:"1010.00002",name:"Mug 13.5 oz \u2014 Black/White",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:8.51,retailPrice:18.92,colour:"Black w/ White",material:"Enamelware",description:"Hue's signature speckled enamelware mug in black with white speckle. 13.5 oz. Durable, heat-resistant enamel. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/fe4a8b841589fc10.jpg"],imageBg:"white"},
+  {formaSku:"1010.00009",name:"Mug 13.5 oz \u2014 Blue/Pink",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:8.51,retailPrice:18.92,colour:"Blue w/ Pink",material:"Enamelware",description:"Hue's speckled enamelware mug in blue with pink speckle. 13.5 oz. Heat-resistant enamel. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/fc125d25a7a2575f.jpg"],imageBg:"white"},
+  {formaSku:"1010.00004",name:"Bowl 19.3 oz \u2014 Black/White",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:11.63,retailPrice:25.84,colour:"Black w/ White",material:"Enamelware",description:"Hue enamelware bowl in black with white speckle. 19.3 oz. Artisan speckle pattern. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/ab71f1a23945fff8.jpg"],imageBg:"white"},
+  {formaSku:"1010.00006",name:"Luncheon Plate 24 cm \u2014 Black/White",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:12.19,retailPrice:27.08,colour:"Black w/ White",material:"Enamelware",description:"Hue luncheon plate with bold enamel body and crisp contrasting rim. Distinctive two-tone silhouette. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/8aecfae2b138e0e6.jpg"],imageBg:"white"},
+  {formaSku:"1010.00003",name:"Ramekin 5 oz",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:7.96,retailPrice:17.68,colour:"Black w/ White",material:"Enamelware",description:"Hue enamelware ramekin. 5 oz. Versatile for dips and sides. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/fd93a377c513d701.jpg"],imageBg:"white"},
+  {formaSku:"1010.00001",name:"Shot Glass 3.3 oz \u2014 White/Black",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:5.42,retailPrice:12.04,colour:"White w/ Black",material:"Enamelware",description:"Hue shot glass in white with contrasting black edge. Handcrafted enamelware for spirits service.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/58e54432c34d882e.jpg"],imageBg:"white"}
+],
+};
+
+Object.entries(PRODUCTS).forEach(([key,products])=>{
+  const grid=document.getElementById('grid-'+key);
+  if(!grid)return;
+  products.forEach(p=>grid.appendChild(makeCard(p)));
+});
+</script>
+</body>
+</html>
