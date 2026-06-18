@@ -85,6 +85,31 @@ body{font-family:"Inter",sans-serif;background:var(--cream);color:var(--text-pri
 .modal-price-block{background:var(--bone);border-radius:8px;padding:10px 12px;}
 .modal-price-block .price-val{font-size:15px;}
 .modal-sku{font-family:monospace;font-size:10px;color:var(--text-secondary);margin-top:14px;}
+
+.supplier-lifestyle {
+  width:100%;
+  height:280px;
+  overflow:hidden;
+  position:relative;
+  background:var(--ink);
+}
+.supplier-lifestyle img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0.92;
+}
+.supplier-lifestyle .lifestyle-caption {
+  position:absolute;
+  bottom:16px;
+  left:24px;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:15px;
+  color:rgba(255,255,255,0.7);
+  letter-spacing:0.04em;
+}
+
 footer{background:var(--ink);color:rgba(237,232,223,.5);padding:32px 40px;font-size:11px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
 footer .wordmark{font-size:14px;opacity:.7;}
 .footer-contact{text-align:right;line-height:1.8;}
@@ -110,6 +135,7 @@ footer .wordmark{font-size:14px;opacity:.7;}
 <nav class="tab-nav">
   <button class="tab-btn active" data-tab="lagos">Lagos del Mundo</button>
   <button class="tab-btn" data-tab="anfora">Anfora</button>
+  <button class="tab-btn" data-tab="frame">Anfora Frame</button>
   <button class="tab-btn" data-tab="bonna">Bonna</button>
   <button class="tab-btn" data-tab="cosytrendy">Cosy &amp; Trendy</button>
   <button class="tab-btn" data-tab="ariane">Ariane</button>
@@ -161,6 +187,28 @@ footer .wordmark{font-size:14px;opacity:.7;}
     </div>
   </div>
   <div class="products-section"><div class="section-label">Curated Selection &mdash; Flux (Black) &middot; Phase (White &amp; Sand) &middot; Ranieri Halo</div><div class="product-grid" id="grid-anfora"></div></div>
+</div>
+
+
+<!-- ANFORA FRAME -->
+<div class="supplier-page" id="page-frame">
+  <div class="supplier-hero">
+    <p class="supplier-eyebrow" style="color:var(--sage)">Anfora Opal &middot; Tempered Opal Glass &middot; Venetian Tradition</p>
+    <h2>Anfora &mdash; Frame Collection</h2>
+    <p class="supplier-blurb">The Frame collection by Anfora Opal is crafted from tempered opal glass &mdash; a material with the clean white appearance of fine porcelain and the thermal shock resistance of tempered glass. The defining detail is the collection&rsquo;s precise rim architecture: a clean edge that creates a natural visual frame for any plating concept. Drawing on Venetian craft tradition, Frame covers the full dining programme from espresso to serving platters, all dishwasher safe and chip-resistant. A quietly distinctive choice for buyers who want something that reads as premium without announcing itself.</p>
+  </div>
+  <div class="supplier-meta">
+    <div class="selling-points">
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">01</div><div class="sp-text">Tempered opal glass &mdash; porcelain appearance with superior thermal shock resistance, going from freezer to oven without cracking.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">02</div><div class="sp-text">Signature rim architecture creates a clean visual frame that elevates plating &mdash; a quiet design detail with strong photographic impact.</div></div>
+      <div class="sp-item"><div class="sp-num" style="color:var(--sage)">03</div><div class="sp-text">Full programme from espresso cup to 36 cm oval platter &mdash; enables cohesive table cover with a single distinctive collection.</div></div>
+    </div>
+    <div class="banners">
+      <div class="banner lead"><div class="banner-label">Lead Time</div><div class="banner-value">4&ndash;6 Weeks</div></div>
+      <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Custom decal on MOQ 144 pcs</div></div>
+    </div>
+  </div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Frame / Venecia</div><div class="product-grid" id="grid-frame"></div></div>
 </div>
 
 <!-- BONNA -->
@@ -265,7 +313,7 @@ footer .wordmark{font-size:14px;opacity:.7;}
       <div class="banner custom"><div class="banner-label">Personalization</div><div class="banner-value">Etching &amp; silkscreen on select runs</div></div>
     </div>
   </div>
-  <div class="products-section"><div class="section-label">Curated Selection &mdash; Centra &middot; Side-Heavy Sham &middot; Reserva &middot; Finesse</div><div class="product-grid" id="grid-browne"></div></div>
+  <div class="products-section"><div class="section-label">Curated Selection &mdash; Centra &middot; Side-Heavy Sham &middot; Reserva &middot; Finesse &middot; Grande Sunray &middot; Foundation Plates</div><div class="product-grid" id="grid-browne"></div></div>
 </div>
 
 <!-- WMF -->
@@ -367,6 +415,10 @@ const FR = {
   'Sara':(c)=>`Couvert en acier inoxydable 18/10 de la collection Sara de WMF. Équilibre précis et finition miroir durable. Passe au lave-vaisselle.`,
   'Edita':(c)=>`Couvert en acier inoxydable 18/10 de la collection Edita de WMF. Design contemporain, finition impeccable. Passe au lave-vaisselle.`,
   'Royal':(c)=>`Verre à vin de la collection Royal de WMF. Cristal transparent, silhouette classique. Passe au lave-vaisselle.`,
+  'Frame':(c)=>`La collection Frame d’Anfora Opal est fabriquée en verre opal trempé — l’apparence de la porcelaine fine avec la résistance aux chocs thermiques du verre trempé. Le rebord précis encadre naturellement chaque présentation. Passe au lave-vaisselle, résistant aux ébréchures.`,
+  'Grande Sunray':(c)=>`Verre empilable de la collection Grande Sunray de Browne, avec le motif rayonnant signature sur la base. Qualité commerciale, passe au lave-vaisselle.`,
+  'Foundation':(c)=>`Pièce en porcelaine vitrifiée blanche de la collection Foundation de Browne. Résistant aux ébréchures, empilable, approuvé NSF, passe au lave-vaisselle.`,
+  'Savage':(c)=>`Verre coupe de la collection Savage de Browne. Silhouette coupe classique pour champagne et cocktails. Passe au lave-vaisselle commercial.`,
   'Hue':(c)=>`La collection Hue de PP Peltre apporte une énergie artisanale audacieuse avec son motif moucheé. Surface en émail durable, résistante à la chaleur. Passe au lave-vaisselle.`,
 };
 function getFr(line,colour){const fn=FR[line];return fn?fn(colour):`Pièce artisanale de la collection ${line}. Passe au lave-vaisselle.`;}
@@ -377,8 +429,13 @@ function accentFor(line){
     'Terra':'#B5946A','Tidal':'#7B9A86','Tidal Wave':'#7B9A86',
     'Basalt - Ocean Green':'#7B9A86','Dolmen':'#7B9A86','Obsidian':'#1C2133',
     'Elevate':'#7B9A86','Stride':'#7B9A86','Spark':'#3D7A60',
-    'Hue':'#B5946A','Vital Coupe':'#3D7A60','Flux':'#1C2133','Phase':'#B5946A',
+    'Frame':(c)=>`La collection Frame d’Anfora Opal est fabriquée en verre opal trempé — l’apparence de la porcelaine fine avec la résistance aux chocs thermiques du verre trempé. Le rebord précis encadre naturellement chaque présentation. Passe au lave-vaisselle, résistant aux ébréchures.`,
+  'Grande Sunray':(c)=>`Verre empilable de la collection Grande Sunray de Browne, avec le motif rayonnant signature sur la base. Qualité commerciale, passe au lave-vaisselle.`,
+  'Foundation':(c)=>`Pièce en porcelaine vitrifiée blanche de la collection Foundation de Browne. Résistant aux ébréchures, empilable, approuvé NSF, passe au lave-vaisselle.`,
+  'Savage':(c)=>`Verre coupe de la collection Savage de Browne. Silhouette coupe classique pour champagne et cocktails. Passe au lave-vaisselle commercial.`,
+  'Hue':'#B5946A','Vital Coupe':'#3D7A60','Flux':'#1C2133','Phase':'#B5946A',
     'Sara':'#7B9A86','Edita':'#7B9A86','Royal':'#7B9A86',
+    'Frame':'#7B9A86','Grande Sunray':'#B5946A','Foundation':'#B5946A','Savage':'#7B9A86',
     'Centra':'#B5946A','Side-heavy Sham':'#B5946A','Reserva':'#B5946A','Finesse':'#B5946A',
   };
   return m[line]||'#3D7A60';
@@ -535,7 +592,14 @@ browne: [
   {formaSku:"1001.00013",name:"Shot \u2014 2 oz",formaLine:"Finesse",supplierName:"Browne Group",stockistPrice:9.06,retailPrice:20.4,colour:"Transparent",material:"Glass",description:"Finesse shot glass, 2 oz / 60 ml. Refined silhouette for spirits service. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG64008.jpg"],imageBg:"white"},
   {formaSku:"1001.00014",name:"Whisky \u2014 10.25 oz",formaLine:"Finesse",supplierName:"Browne Group",stockistPrice:16.31,retailPrice:36.7,colour:"Transparent",material:"Glass",description:"Finesse whisky glass, 10.25 oz / 300 ml. Elegant tapered form. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG64009.jpg"],imageBg:"white"},
   {formaSku:"1001.00016",name:"Long Drink \u2014 11.75 oz",formaLine:"Finesse",supplierName:"Browne Group",stockistPrice:13.36,retailPrice:30.05,colour:"Transparent",material:"Glass",description:"Finesse long drink glass, 11.75 oz / 350 ml. Sleek profile for cocktails and mixers. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG64011.jpg"],imageBg:"white"},
-  {formaSku:"1001.00017",name:"Hiball \u2014 15 oz",formaLine:"Finesse",supplierName:"Browne Group",stockistPrice:19.2,retailPrice:43.2,colour:"Transparent",material:"Glass",description:"Finesse hiball glass, 15 oz / 445 ml. Tall refined form for long drinks. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG64012.jpg"],imageBg:"white"}
+  {formaSku:"1001.00017",name:"Hiball \u2014 15 oz",formaLine:"Finesse",supplierName:"Browne Group",stockistPrice:19.2,retailPrice:43.2,colour:"Transparent",material:"Glass",description:"Finesse hiball glass, 15 oz / 445 ml. Tall refined form for long drinks. Commercial dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/NG64012.jpg"],imageBg:"white"},
+  {formaSku:"1001.0003",name:"Long Drink \u2014 10 oz",formaLine:"Grande Sunray",supplierName:"Browne Group",stockistPrice:5.74,retailPrice:14.04,colour:"Transparent",material:"Glass",description:"Grande Sunray long drink glass, 10 oz / 296 ml. Iconic stackable sunray-pattern base. Commercial-grade, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/PG520420.jpg"],imageBg:"white"},
+  {formaSku:"1001.00028",name:"Whisky \u2014 9.8 oz",formaLine:"Grande Sunray",supplierName:"Browne Group",stockistPrice:5.27,retailPrice:14.65,colour:"Transparent",material:"Glass",description:"Grande Sunray whisky glass, 9.8 oz / 290 ml. Iconic stackable sunray-pattern base. Commercial-grade, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/PG520060.jpg"],imageBg:"white"},
+  {formaSku:"1001.00029",name:"Whisky \u2014 13.2 oz",formaLine:"Grande Sunray",supplierName:"Browne Group",stockistPrice:6.03,retailPrice:16.75,colour:"Transparent",material:"Glass",description:"Grande Sunray whisky glass, 13.2 oz / 390 ml. Iconic stackable sunray-pattern base. Commercial-grade, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/PG520070.jpg"],imageBg:"white"},
+  {formaSku:"1001.00048",name:"Oval Plate with Indent 33.7 x 19.2 cm",formaLine:"Foundation",supplierName:"Browne Group",stockistPrice:22.26,retailPrice:52.85,colour:"White",material:"Porcelain",description:"Browne Foundation oval plate with indent, 33.7 x 19.2 cm. The recessed indent creates a natural well for sauces and jus. Chip-resistant, stackable, NSF-approved, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/5630170.jpg"],imageBg:"white"},
+  {formaSku:"1001.00046",name:"Coupe Plate Oval 25.3 x 18.4 cm",formaLine:"Foundation",supplierName:"Browne Group",stockistPrice:13.60,retailPrice:32.30,colour:"White",material:"Porcelain",description:"Browne Foundation oval coupe plate, 25.3 x 18.4 cm. Rimless coupe profile in a versatile oval format. Chip-resistant, stackable, NSF-approved, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/5630115.jpg"],imageBg:"white"},
+  {formaSku:"1001.00047",name:"Coupe Plate Oval 30.6 x 20.6 cm",formaLine:"Foundation",supplierName:"Browne Group",stockistPrice:18.82,retailPrice:44.70,colour:"White",material:"Porcelain",description:"Browne Foundation oval coupe plate, 30.6 x 20.6 cm. Large-format rimless coupe in an elegant oval. Chip-resistant, stackable, NSF-approved, dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/browne/5630117.jpg"],imageBg:"white"},
+  {formaSku:"1001.00021",name:"Coupe \u2014 7.5 oz",formaLine:"Savage",supplierName:"Browne Group",stockistPrice:14.36,retailPrice:32.30,colour:"Transparent",material:"Glass",description:"Savage coupe glass, 7.5 oz / 220 ml. Classic coupe silhouette for champagne, cocktails, and sours. Commercial dishwasher safe.",imageUrls:["https://i.postimg.cc/2yvfn5M3/1001_00021.png"],imageBg:"white"}
 ],
 wmf: [
   {formaSku:"1003.00001",name:"Oval Soup Spoon",formaLine:"Sara",supplierName:"WMF",stockistPrice:10.8,retailPrice:24.0,colour:"Stainless Steel",material:"Stainless Steel",description:"WMF Sara oval soup spoon. 18/10 stainless steel construction. Precise weight and balance, lasting mirror finish. Dishwasher safe.",imageUrls:["https://i.postimg.cc/tJg6mcCY/1003_00001.png"],imageBg:"ink"},
@@ -562,7 +626,18 @@ pppeltre: [
   {formaSku:"1010.00006",name:"Luncheon Plate 24 cm \u2014 Black/White",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:12.19,retailPrice:27.08,colour:"Black w/ White",material:"Enamelware",description:"Hue luncheon plate with bold enamel body and crisp contrasting rim. Distinctive two-tone silhouette. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/8aecfae2b138e0e6.jpg"],imageBg:"white"},
   {formaSku:"1010.00003",name:"Ramekin 5 oz",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:7.96,retailPrice:17.68,colour:"Black w/ White",material:"Enamelware",description:"Hue enamelware ramekin. 5 oz. Versatile for dips and sides. Dishwasher safe.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/fd93a377c513d701.jpg"],imageBg:"white"},
   {formaSku:"1010.00001",name:"Shot Glass 3.3 oz \u2014 White/Black",formaLine:"Hue",supplierName:"PP Peltre",stockistPrice:5.42,retailPrice:12.04,colour:"White w/ Black",material:"Enamelware",description:"Hue shot glass in white with contrasting black edge. Handcrafted enamelware for spirits service.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/58e54432c34d882e.jpg"],imageBg:"white"}
-],
+],,
+frame: [
+  {formaSku:"1005.00001",name:"Dinner Plate 27 cm",formaLine:"Frame",supplierName:"Anfora Opal",stockistPrice:10.23,retailPrice:22.73,colour:"White",material:"Tempered Opal Glass",description:"The Frame collection dinner plate features clean rim definition that creates a natural visual frame for the chef's work. Tempered opal glass — dishwasher safe, chip-resistant, thermal shock proof.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/f2d847cb1d0e2269.jpg"],imageBg:"white"},
+  {formaSku:"1005.00002",name:"Salad Plate 21 cm",formaLine:"Frame",supplierName:"Anfora Opal",stockistPrice:7.44,retailPrice:16.53,colour:"White",material:"Tempered Opal Glass",description:"The Frame collection salad plate. Tempered opal glass with clean rim architecture. Dishwasher safe, chip-resistant, thermal shock proof.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/fcc0b5bdf2ccb67a.jpg"],imageBg:"white"},
+  {formaSku:"1005.00005",name:"Deep Pasta Plate 23 cm",formaLine:"Frame",supplierName:"Anfora Opal",stockistPrice:9.30,retailPrice:20.67,colour:"White",material:"Tempered Opal Glass",description:"The Frame collection deep pasta plate 23 cm. Generous well for pasta, risotto, and noodle dishes. Tempered opal glass — dishwasher safe, chip-resistant.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/59497aa22b3a3a7b.jpg"],imageBg:"white"},
+  {formaSku:"1005.00006",name:"Rectangular Oval Plate 30 cm",formaLine:"Frame",supplierName:"Anfora Opal",stockistPrice:12.99,retailPrice:28.87,colour:"White",material:"Tempered Opal Glass",description:"The Frame collection rectangular oval plate 30 cm. A statement serving piece with precise rim architecture. Tempered opal glass — dishwasher safe, chip-resistant.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/9964922deb094688.jpg"],imageBg:"white"},
+  {formaSku:"1005.00007",name:"Rectangular Oval Plate 36 cm",formaLine:"Frame",supplierName:"Anfora Opal",stockistPrice:16.35,retailPrice:36.33,colour:"White",material:"Tempered Opal Glass",description:"The Frame collection rectangular oval plate 36 cm. A large-format sharing and presentation piece with the collection's signature rim. Dishwasher safe, chip-resistant.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/6bd6223170b06c4d.jpg"],imageBg:"white"},
+  {formaSku:"1005.00008",name:"Coffee Cup 250 ml",formaLine:"Frame",supplierName:"Anfora Opal",stockistPrice:7.26,retailPrice:16.13,colour:"White",material:"Tempered Opal Glass",description:"The Frame collection coffee cup 250 ml. Clean rim detail in tempered opal glass. Dishwasher safe, chip-resistant.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/16bc23c3a4fc2fab.jpg"],imageBg:"white"},
+  {formaSku:"1005.00009",name:"Coffee Saucer 15 cm",formaLine:"Frame",supplierName:"Anfora Opal",stockistPrice:4.65,retailPrice:10.33,colour:"White",material:"Tempered Opal Glass",description:"The Frame collection coffee saucer 15 cm. Pairs with the Frame coffee cup. Tempered opal glass — dishwasher safe, chip-resistant.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/86e57a1baf924ea1.jpg"],imageBg:"white"},
+  {formaSku:"1005.00010",name:"Espresso Cup 85 ml",formaLine:"Frame",supplierName:"Anfora Opal",stockistPrice:6.33,retailPrice:14.07,colour:"White",material:"Tempered Opal Glass",description:"The Frame collection espresso cup 85 ml. Signature rim architecture in a compact espresso form. Tempered opal glass — dishwasher safe, chip-resistant.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/add46f030b75d818.jpg"],imageBg:"white"},
+  {formaSku:"1005.00011",name:"Espresso Saucer 12 cm",formaLine:"Frame",supplierName:"Anfora Opal",stockistPrice:4.47,retailPrice:9.93,colour:"White",material:"Tempered Opal Glass",description:"The Frame collection espresso saucer 12 cm. Pairs with the Frame espresso cup. Tempered opal glass — dishwasher safe, chip-resistant.",imageUrls:["https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/rehosted/b888fe292a33aed7.jpg"],imageBg:"white"},
+]
 };
 
 Object.entries(PRODUCTS).forEach(([key,products])=>{
