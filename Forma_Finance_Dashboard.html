@@ -45,13 +45,13 @@ td.r,th.r{text-align:right;}
 </head>
 <body>
 <h1>Forma Tableware — Finance Dashboard</h1>
-<div class="sub">Money in &amp; out by source · click any lender to see their payments · reconciled to bank statement 29 Jun 2026 (rev. 11) · CAD</div>
+<div class="sub">Money in &amp; out by source · click any lender to see their payments · reconciled to bank statement 29 Jun 2026 (rev. 12) · CAD</div>
 
 <div class="kpis">
-  <div class="kpi green"><div class="label">Cash collected from sales</div><div class="val">$176,963</div><div class="note">real customers, to date</div></div>
+  <div class="kpi green"><div class="label">Cash collected from sales</div><div class="val">$179,040</div><div class="note">Fraternity now 75% paid (actual)</div></div>
   <div class="kpi"><div class="label">Inventory on hand</div><div class="val">$218,356</div><div class="note">received stock</div></div>
   <div class="kpi green"><div class="label">Miso Taco — remaining</div><div class="val">$19,012</div><div class="note">$79,012 invoiced less $60k Pender offset</div></div>
-  <div class="kpi amber"><div class="label">Shareholder loans (net)</div><div class="val">$60,234</div><div class="note">only Diego open</div></div>
+  <div class="kpi amber"><div class="label">Shareholder loans (net)</div><div class="val">$57,106</div><div class="note">Diego $60,234 + Eastlake/Diego $7,000; Pender owes Forma $10,128</div></div>
   <div class="kpi green"><div class="label">Christine &amp; Johnson loan</div><div class="val">$120,000</div><div class="note">investor vendor loan (to Forma)</div></div>
   <div class="kpi red"><div class="label">BDC bank loan</div><div class="val">$150,000</div><div class="note">Stefan &amp; Diego (off P&amp;L)</div></div>
 </div>
@@ -61,9 +61,9 @@ td.r,th.r{text-align:right;}
   <table id="loanTable">
     <thead><tr><th>Lender</th><th class="r">Loaned in</th><th class="r">Repaid</th><th class="r">Net outstanding</th></tr></thead>
     <tbody id="loanBody"></tbody>
-    <tfoot><tr><th>Total</th><th class="r">$201,042.34</th><th class="r">$140,807.97</th><th class="r">$60,234.37</th></tr></tfoot>
+    <tfoot><tr><th>Total</th><th class="r">$219,983.73</th><th class="r">$162,877.56</th><th class="r">$57,106.17</th></tr></tfoot>
   </table>
-  <p style="font-size:11px;color:#889;margin-top:8px;">Only Diego remains open. Pender's $60,000 was applied to the Miso Taco invoices (offset) rather than repaid in cash, so Miso's invoice balance drops to $19,011.70. Stefan's separate $18,941.39 (Browne order) went to his account.</p>
+  <p style="font-size:11px;color:#889;margin-top:8px;">Diego is owed $60,234.37. <b>Pender is overpaid — Forma is owed $10,128.20 back</b> (Pender's $60,000 was applied to the Miso Taco invoices as an offset, so Miso's balance is $19,011.70; Forma separately sent Pender $10,128.20 too much). Eastlake: the Amex $7,000 came back but Diego's $7,000 did not, so Forma owes Diego $7,000. Stefan was repaid the $18,941.39 he fronted for the first Browne order (net $0). MTRG #2 to be split by location.</p>
 </div>
 
 <div class="grid">
@@ -72,19 +72,19 @@ td.r,th.r{text-align:right;}
 </div>
 
 <div class="foot">
-Money-in: shareholder loans $201,042 · BDC $150,000 · customer sales collected $176,963 · investor upfront $50,000 · Turo $1,794.<br>
-Money-out: inventory &amp; imports $165,859 · shareholder repayments (cash) $97,617 · furniture &amp; equipment $52,144 · chairs &amp; tables $17,587 · payroll $21,448 · Jamal $14,263 · vehicle $4,356 · BDC fee &amp; misc $2,004. (Pender's $60,000 was applied to Miso invoices, not cash-repaid.)<br>
+Money-in: shareholder loans $219,984 · BDC $150,000 · customer sales collected $179,040 · investor upfront $50,000 · Turo $1,794.<br>
+Money-out: inventory &amp; imports $165,859 · shareholder repayments (cash) $102,878 · furniture &amp; equipment $52,144 · chairs &amp; tables $17,587 · payroll $21,448 · Jamal $14,263 · vehicle $4,356 · BDC fee &amp; misc $2,004. (Pender's $60,000 was applied to Miso invoices, not cash-repaid.)<br>
 Full detail in Forma_Financial_Snapshot.xlsx (Shareholder Loans, Loan Ledger, Miso Taco tabs).
 </div>
 
 <script>
 const fmt=v=>(v<0?'-$':'$')+Math.abs(v).toLocaleString('en-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
 const LOANS=[
- {name:'Pender',in:60000,repaid:60000,net:0,
+ {name:'Pender',in:60000,repaid:70128.20,net:-10128.20,
   ins:[['2025-09-09','WW490 (acct 725)',21000],['2025-10-16','IL352',10000],['2025-11-04','WO592',15000],['2025-11-24','RR523',4000],['2025-11-25','WJ395',10000]],
-  outs:[['2026-06-29','Applied to Miso Taco invoices (offset, not cash)',60000]],
+  outs:[['2026-06-29','Applied to Miso Taco invoices (offset, not cash)',60000],['2026-04-14','Cash overpayment to Pender — now owed back to Forma',10128.20]],
   uses:[['Chairs & tables, furniture, Infrico, Browne, tableware, menu — Miso fit-out',null]],
-  note:'SETTLED by offset: the $60,000 loan is applied to the Miso Taco invoices, so Pender net $0 and Miso’s invoice balance drops to $19,011.70.'},
+  note:'$60,000 loan applied to the Miso Taco invoices (offset) → Miso balance $19,011.70. Forma ALSO sent Pender $10,128.20 in cash beyond the loan, so Pender is overpaid and now owes Forma $10,128.20 (net -$10,128.20).'},
  {name:'Diego Delgado',in:71234.37,repaid:11000,net:60234.37,
   ins:[['2025-12-01','Square MSP — Diego CC',9719.70],['2025-12-04','GC9321 cheque',45000],['2025-12-15','Stripe MSP — Diego CC',4832.30],['2026-02-24','Stripe MSP — Diego CC',8615.88],['2026-03-10','WL595 personal',25],['2026-03-18','E-transfer (for Carolyn)',2885],['2026-04-22','Fortis BC (paid by Diego)',156.49]],
   outs:[['reconciled','Repayment',11000]],
@@ -92,15 +92,15 @@ const LOANS=[
  {name:'Elysees',in:32656.44,repaid:32656.44,net:0,
   ins:[['2025-11-25','WO375 (acct 741)',100],['2025-12-16','WL234',207.44],['2026-01-08','II371',26000],['2026-01-12','RX095',5000],['2026-03-03','RB302 (Carolyn salary)',1349]],
   outs:[['reconciled','Fully repaid — cleared',32656.44]],uses:[],note:'Cleared in full.'},
- {name:'Eastlake',in:14000,repaid:14000,net:0,
+ {name:'Eastlake',in:14000,repaid:7000,net:7000,
   ins:[['2026-03-06','JR174 (Amex $7,000 + Diego $7,000)',14000]],
-  outs:[['reconciled','Fully repaid — cleared',14000]],uses:[],note:'Cleared in full.'},
+  outs:[['2026-06-27','Amex $7,000 returned',7000]],uses:[],note:'$14,000 in = Amex $7,000 + Diego $7,000. The Amex $7,000 came back; Diego’s $7,000 did NOT, so Forma owes Diego $7,000 (net $7,000).'},
  {name:'MTRG #2',in:7013,repaid:7013,net:0,
   ins:[['2026-01-02','JQ195 (acct 306)',1550],['2026-03-03','RB390 (Carolyn salary)',395],['2026-03-04','HX060 (BDC fee)',1500],['2026-03-10','WL592',65],['2026-04-10','JU313',3503]],
   outs:[['2026-02-02','RX451',1000],['2026-02-04','HW343',300],['reconciled','$4,881 back + rest cleared (balance)',5713]],uses:[],note:'Cleared in full.'},
- {name:'Stefan Woo',in:16138.53,repaid:16138.53,net:0,
-  ins:[['2025-07-15','WT212',100],['2025-08-01','JJ225',1000],['2025-12-01','Square MSP — Stefan CC',38.53],['2026-01-12','RW540',15000]],
-  outs:[['reconciled','Cleared in full',16138.53]],uses:[],note:'Cleared in full. Separate $18,941.39 toward his Browne order — confirm treatment.'},
+ {name:'Stefan Woo',in:35079.92,repaid:35079.92,net:0,
+  ins:[['2025-07-15','WT212',100],['2025-08-01','JJ225',1000],['2025-12-01','Square MSP — Stefan CC',38.53],['2026-01-12','RW540',15000],['2026-02-01','First Browne order paid by Stefan',18941.39]],
+  outs:[['2026-06-27','Cleared in full',16138.53],['2026-04-14','Repaid Stefan for first Browne order',18941.39]],uses:[],note:'Cleared in full. Includes the first Browne order ($18,941.39) Stefan fronted for Forma and was repaid for.'},
 ];
 const body=document.getElementById('loanBody');
 LOANS.forEach((l,i)=>{
@@ -120,8 +120,8 @@ LOANS.forEach((l,i)=>{
   tr.onclick=()=>{const open=det.style.display!=='none';det.style.display=open?'none':'table-row';tr.classList.toggle('open',!open);};
   body.appendChild(tr); body.appendChild(det);
 });
-const IN=[['Shareholder loans',201042],['BDC bank loan',150000],['Customer sales (collected)',176963],['Investor upfront (C&J)',50000],['Turo',1794]];
-const OUT=[['Inventory & imports',165859],['Shareholder repayments (cash)',97617],['Furniture & equipment',52144],['Chairs & tables',17587],['Payroll',21448],['Jamal CRM',14263],['Vehicle (Turo)',4356],['BDC fee & misc',2004]];
+const IN=[['Shareholder loans',219984],['BDC bank loan',150000],['Customer sales (collected)',179040],['Investor upfront (C&J)',50000],['Turo',1794]];
+const OUT=[['Inventory & imports',165859],['Shareholder repayments (cash)',102878],['Furniture & equipment',52144],['Chairs & tables',17587],['Payroll',21448],['Jamal CRM',14263],['Vehicle (Turo)',4356],['BDC fee & misc',2004]];
 const PAL=['#1F3A5F','#2E6E8E','#1E7E34','#caa53b','#C0392B','#7e57c2','#26a69a','#8d6e63'];
 function dough(id,data){new Chart(document.getElementById(id),{type:'doughnut',data:{labels:data.map(d=>d[0]),datasets:[{data:data.map(d=>d[1]),backgroundColor:PAL}]},options:{plugins:{legend:{position:'right',labels:{font:{size:11},boxWidth:12}},tooltip:{callbacks:{label:c=>c.label+': $'+c.raw.toLocaleString('en-CA')}}}}});}
 dough('cin',IN); dough('cout',OUT);
