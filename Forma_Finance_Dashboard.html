@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Forma Tableware — Finance Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--navy:#1F3A5F;--accent:#2E6E8E;--green:#1E7E34;--red:#C0392B;--amber:#8a6d00;--light:#EAF1F6;--grey:#F2F2F2;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial,Helvetica,sans-serif;background:#f6f8fa;color:#222;padding:24px;}
+h1{color:var(--navy);font-size:24px;}
+.sub{color:#666;font-size:13px;margin:4px 0 20px;}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:24px;}
+.kpi{background:#fff;border:1px solid #e2e8ee;border-radius:10px;padding:16px;border-left:5px solid var(--accent);}
+.kpi .label{font-size:11px;color:#667;text-transform:uppercase;letter-spacing:.04em;}
+.kpi .val{font-size:21px;font-weight:bold;color:var(--navy);margin-top:6px;}
+.kpi .note{font-size:11px;color:#889;margin-top:4px;}
+.kpi.green{border-left-color:var(--green);} .kpi.green .val{color:var(--green);}
+.kpi.red{border-left-color:var(--red);} .kpi.red .val{color:var(--red);}
+.kpi.amber{border-left-color:#caa53b;}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.card{background:#fff;border:1px solid #e2e8ee;border-radius:10px;padding:18px;margin-bottom:20px;}
+.card h2{font-size:15px;color:var(--navy);margin-bottom:14px;}
+.full{grid-column:1/-1;}
+canvas{max-height:300px;}
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th,td{padding:7px 10px;border-bottom:1px solid #eef2f6;text-align:left;}
+th{background:var(--accent);color:#fff;font-size:12px;}
+td.r,th.r{text-align:right;}
+.lender-row{cursor:pointer;}
+.lender-row:hover td{background:#eaf1f6;}
+.lender-row td:first-child::before{content:"▸ ";color:var(--accent);font-weight:bold;}
+.lender-row.open td:first-child::before{content:"▾ ";}
+.neg{color:var(--red);}
+.cleared{color:var(--green);font-weight:bold;}
+.detail td{background:#fbfdff;padding:0;}
+.detail-inner{padding:12px 16px;}
+.detail h4{font-size:12px;color:var(--navy);margin:8px 0 4px;text-transform:uppercase;letter-spacing:.03em;}
+.mini{width:100%;font-size:12px;border-collapse:collapse;}
+.mini td{padding:4px 8px;border-bottom:1px solid #eef2f6;}
+.foot{color:#889;font-size:11px;margin-top:18px;line-height:1.5;}
+@media(max-width:760px){.grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<h1>Forma Tableware — Finance Dashboard</h1>
+<div class="sub">Money in &amp; out by source · click any lender to see their payments · reconciled 27 Jun 2026 (rev. 10) · CAD</div>
+
+<div class="kpis">
+  <div class="kpi green"><div class="label">Cash collected from sales</div><div class="val">$176,963</div><div class="note">real customers, to date</div></div>
+  <div class="kpi"><div class="label">Inventory on hand</div><div class="val">$218,356</div><div class="note">received stock</div></div>
+  <div class="kpi green"><div class="label">Miso Taco receivable</div><div class="val">$79,012</div><div class="note">7 invoices at cost (unpaid)</div></div>
+  <div class="kpi amber"><div class="label">Shareholder loans (net)</div><div class="val">$50,106</div><div class="note">after reconciled repayments</div></div>
+  <div class="kpi green"><div class="label">Christine &amp; Johnson loan</div><div class="val">$120,000</div><div class="note">investor vendor loan (to Forma)</div></div>
+  <div class="kpi red"><div class="label">BDC bank loan</div><div class="val">$150,000</div><div class="note">Stefan &amp; Diego (off P&amp;L)</div></div>
+</div>
+
+<div class="card full">
+  <h2>Shareholder / related-party loans — click a lender for full in/out detail</h2>
+  <table id="loanTable">
+    <thead><tr><th>Lender</th><th class="r">Loaned in</th><th class="r">Repaid</th><th class="r">Net outstanding</th></tr></thead>
+    <tbody id="loanBody"></tbody>
+    <tfoot><tr><th>Total</th><th class="r">$201,042.34</th><th class="r">$140,807.97</th><th class="r">$50,106.17</th></tr></tfoot>
+  </table>
+  <p style="font-size:11px;color:#889;margin-top:8px;">Pender shows a negative net — Forma repaid ~$10,128 more than the $60,000 advanced, so Pender now owes Forma that amount. Stefan also has a separate $18,941.39 payment toward his Browne order (to confirm).</p>
+</div>
+
+<div class="grid">
+  <div class="card"><h2>Money IN — by source</h2><canvas id="cin"></canvas></div>
+  <div class="card"><h2>Money OUT — by use</h2><canvas id="cout"></canvas></div>
+</div>
+
+<div class="foot">
+Money-in: shareholder loans $201,042 · BDC $150,000 · customer sales collected $176,963 · investor upfront $50,000 · Turo $1,794.<br>
+Money-out: inventory &amp; imports $165,859 · shareholder repayments $140,808 · furniture &amp; equipment $52,144 · chairs &amp; tables $17,587 · payroll $21,448 · Jamal $14,263 · vehicle $4,356 · BDC fee &amp; misc $2,004.<br>
+Full detail in Forma_Financial_Snapshot.xlsx (Shareholder Loans, Loan Ledger, Miso Taco tabs).
+</div>
+
+<script>
+const fmt=v=>(v<0?'-$':'$')+Math.abs(v).toLocaleString('en-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
+const LOANS=[
+ {name:'Pender',in:60000,repaid:60000,net:-10128.20,
+  ins:[['2025-09-09','WW490 (acct 725)',21000],['2025-10-16','IL352',10000],['2025-11-04','WO592',15000],['2025-11-24','RR523',4000],['2025-11-25','WJ395',10000]],
+  outs:[['reconciled','Repaid in full',60000]],
+  uses:[['Chairs & tables / Miso furniture & equipment (Miso receivable)',null]],
+  note:'Repaid in full and OVERPAID by $10,128.20 — Pender now owes Forma. Funds were deployed to the Miso Taco orders (backed by the Miso receivable).'},
+ {name:'Diego Delgado',in:71234.37,repaid:11000,net:60234.37,
+  ins:[['2025-12-01','Square MSP — Diego CC',9719.70],['2025-12-04','GC9321 cheque',45000],['2025-12-15','Stripe MSP — Diego CC',4832.30],['2026-02-24','Stripe MSP — Diego CC',8615.88],['2026-03-10','WL595 personal',25],['2026-03-18','E-transfer (for Carolyn)',2885],['2026-04-22','Fortis BC (paid by Diego)',156.49]],
+  outs:[['reconciled','Repayment',11000]],
+  uses:[],note:'Largest open balance. $11,000 repaid (reconciled).'},
+ {name:'Elysees',in:32656.44,repaid:32656.44,net:0,
+  ins:[['2025-11-25','WO375 (acct 741)',100],['2025-12-16','WL234',207.44],['2026-01-08','II371',26000],['2026-01-12','RX095',5000],['2026-03-03','RB302 (Carolyn salary)',1349]],
+  outs:[['reconciled','Fully repaid — cleared',32656.44]],uses:[],note:'Cleared in full.'},
+ {name:'Eastlake',in:14000,repaid:14000,net:0,
+  ins:[['2026-03-06','JR174 (Amex $7,000 + Diego $7,000)',14000]],
+  outs:[['reconciled','Fully repaid — cleared',14000]],uses:[],note:'Cleared in full.'},
+ {name:'MTRG #2',in:7013,repaid:7013,net:0,
+  ins:[['2026-01-02','JQ195 (acct 306)',1550],['2026-03-03','RB390 (Carolyn salary)',395],['2026-03-04','HX060 (BDC fee)',1500],['2026-03-10','WL592',65],['2026-04-10','JU313',3503]],
+  outs:[['2026-02-02','RX451',1000],['2026-02-04','HW343',300],['reconciled','$4,881 back + rest cleared (balance)',5713]],uses:[],note:'Cleared in full.'},
+ {name:'Stefan Woo',in:16138.53,repaid:16138.53,net:0,
+  ins:[['2025-07-15','WT212',100],['2025-08-01','JJ225',1000],['2025-12-01','Square MSP — Stefan CC',38.53],['2026-01-12','RW540',15000]],
+  outs:[['reconciled','Cleared in full',16138.53]],uses:[],note:'Cleared in full. Separate $18,941.39 toward his Browne order — confirm treatment.'},
+];
+const body=document.getElementById('loanBody');
+LOANS.forEach((l,i)=>{
+  const tr=document.createElement('tr'); tr.className='lender-row';
+  const netCls=l.net<0?'neg':(l.net===0?'cleared':'');
+  const netTxt=l.net===0?'$0.00 (cleared)':fmt(l.net);
+  tr.innerHTML=`<td><b>${l.name}</b></td><td class="r">${fmt(l.in)}</td><td class="r">${fmt(l.repaid)}</td><td class="r ${netCls}">${netTxt}</td>`;
+  const det=document.createElement('tr'); det.className='detail'; det.style.display='none';
+  let html='<div class="detail-inner"><h4>Loans in</h4><table class="mini">';
+  l.ins.forEach(x=>html+=`<tr><td>${x[0]}</td><td>${x[1]}</td><td style="text-align:right">${fmt(x[2])}</td></tr>`);
+  html+=`</table><h4>Repayments out</h4><table class="mini">`;
+  l.outs.forEach(x=>html+=`<tr><td>${x[0]}</td><td>${x[1]}</td><td style="text-align:right">${fmt(x[2])}</td></tr>`);
+  html+='</table>';
+  if(l.uses&&l.uses.length){html+='<h4>What the funds were used for</h4><table class="mini">';l.uses.forEach(x=>html+=`<tr><td>${x[0]}</td><td style="text-align:right">${x[1]?fmt(x[1]):''}</td></tr>`);html+='</table>';}
+  html+=`<p style="font-size:11px;color:#667;margin-top:8px;">${l.note}</p></div>`;
+  det.innerHTML=`<td colspan="4">${html}</td>`;
+  tr.onclick=()=>{const open=det.style.display!=='none';det.style.display=open?'none':'table-row';tr.classList.toggle('open',!open);};
+  body.appendChild(tr); body.appendChild(det);
+});
+const IN=[['Shareholder loans',201042],['BDC bank loan',150000],['Customer sales (collected)',176963],['Investor upfront (C&J)',50000],['Turo',1794]];
+const OUT=[['Inventory & imports',165859],['Shareholder repayments',140808],['Furniture & equipment',52144],['Chairs & tables',17587],['Payroll',21448],['Jamal CRM',14263],['Vehicle (Turo)',4356],['BDC fee & misc',2004]];
+const PAL=['#1F3A5F','#2E6E8E','#1E7E34','#caa53b','#C0392B','#7e57c2','#26a69a','#8d6e63'];
+function dough(id,data){new Chart(document.getElementById(id),{type:'doughnut',data:{labels:data.map(d=>d[0]),datasets:[{data:data.map(d=>d[1]),backgroundColor:PAL}]},options:{plugins:{legend:{position:'right',labels:{font:{size:11},boxWidth:12}},tooltip:{callbacks:{label:c=>c.label+': $'+c.raw.toLocaleString('en-CA')}}}}});}
+dough('cin',IN); dough('cout',OUT);
+</script>
+</body>
+</html>
