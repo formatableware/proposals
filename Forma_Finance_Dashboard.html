@@ -48,7 +48,7 @@ td.r,th.r{text-align:right;}
 <div class="sub">Money in &amp; out by source · click any lender to see their payments · reconciled to bank statement 29 Jun 2026 (rev. 14) · CAD</div>
 
 <div class="kpis">
-  <div class="kpi green"><div class="label">Cash collected from sales</div><div class="val">$233,938</div><div class="note">Fraternity paid in full; all issued orders paid</div></div>
+  <div class="kpi green"><div class="label">Cash collected from sales</div><div class="val">$235,813</div><div class="note">Fraternity paid in full + Blaze 50% deposit</div></div>
   <div class="kpi"><div class="label">Inventory on hand</div><div class="val">$218,356</div><div class="note">received stock</div></div>
   <div class="kpi green"><div class="label">Miso Taco — remaining</div><div class="val">$21,577</div><div class="note">$81,577 invoiced (incl. BorderBuddy) less $60k Pender offset</div></div>
   <div class="kpi amber"><div class="label">Shareholder loans (net)</div><div class="val">$64,106</div><div class="note">Diego $60,234 + Eastlake $14,000 ($7k Diego + $7k Forma); Pender owes Forma $10,128</div></div>
@@ -72,7 +72,7 @@ td.r,th.r{text-align:right;}
 </div>
 
 <div class="foot">
-Money-in: shareholder loans $219,984 · BDC $150,000 · customer sales collected $233,938 (Fraternity paid in full; only Blaze 50% $1,875.87 &amp; Blue Water cocktail glasses $675.80 open) · investor upfront $50,000 · Turo $1,794.<br>
+Money-in: shareholder loans $219,984 · BDC $150,000 · customer sales collected $235,813 (Fraternity paid in full + Blaze 50% deposit; Blaze remaining $1,875.87 &amp; Blue Water cocktail glasses $675.80 open) · investor upfront $50,000 · Turo $1,794.<br>
 Money-out: inventory &amp; imports $165,859 · shareholder repayments (cash) $95,878 · furniture &amp; equipment $52,144 · chairs &amp; tables $17,587 · payroll $21,448 · Jamal $14,263 · vehicle $4,356 · BDC fee &amp; misc $2,004. (Pender's $60,000 was applied to Miso invoices, not cash-repaid.)<br>
 Full detail in Forma_Financial_Snapshot.xlsx (Shareholder Loans, Loan Ledger, Miso Taco tabs).
 </div>
@@ -120,7 +120,7 @@ LOANS.forEach((l,i)=>{
   tr.onclick=()=>{const open=det.style.display!=='none';det.style.display=open?'none':'table-row';tr.classList.toggle('open',!open);};
   body.appendChild(tr); body.appendChild(det);
 });
-const IN=[['Shareholder loans',219984],['BDC bank loan',150000],['Customer sales (collected)',233938],['Investor upfront (C&J)',50000],['Turo',1794]];
+const IN=[['Shareholder loans',219984],['BDC bank loan',150000],['Customer sales (collected)',235813],['Investor upfront (C&J)',50000],['Turo',1794]];
 const OUT=[['Inventory & imports',165859],['Shareholder repayments (cash)',95878],['Furniture & equipment',52144],['Chairs & tables',17587],['Payroll',21448],['Jamal CRM',14263],['Vehicle (Turo)',4356],['BDC fee & misc',2004]];
 const PAL=['#1F3A5F','#2E6E8E','#1E7E34','#caa53b','#C0392B','#7e57c2','#26a69a','#8d6e63'];
 function dough(id,data){new Chart(document.getElementById(id),{type:'doughnut',data:{labels:data.map(d=>d[0]),datasets:[{data:data.map(d=>d[1]),backgroundColor:PAL}]},options:{plugins:{legend:{position:'right',labels:{font:{size:11},boxWidth:12}},tooltip:{callbacks:{label:c=>c.label+': $'+c.raw.toLocaleString('en-CA')}}}}});}
