@@ -63,7 +63,7 @@ td.r,th.r{text-align:right;}
     <tbody id="loanBody"></tbody>
     <tfoot><tr><th>Total</th><th class="r">$219,983.73</th><th class="r">$162,877.56</th><th class="r">$57,106.17</th></tr></tfoot>
   </table>
-  <p style="font-size:11px;color:#889;margin-top:8px;">Diego is owed $60,234.37. <b>Pender is overpaid — Forma is owed $10,128.20 back</b> (Pender's $60,000 was applied to the Miso Taco invoices as an offset, so Miso's balance is $19,011.70; Forma separately sent Pender $10,128.20 too much). Eastlake: the Amex $7,000 came back but Diego's $7,000 did not, so Forma owes Diego $7,000. Stefan was repaid the $18,941.39 he fronted for the first Browne order (net $0). MTRG #2 to be split by location.</p>
+  <p style="font-size:11px;color:#889;margin-top:8px;">Diego is owed $60,234.37. <b>Pender is overpaid — Forma is owed $10,128.20 back</b> (Pender's $60,000 was applied to the Miso Taco invoices as an offset, so Miso's balance is $19,011.70; Forma separately sent Pender $10,128.20 too much). Eastlake: the Amex $7,000 came back but Diego's $7,000 (his credit-card payment) did not, so Forma owes Diego $7,000. Stefan was repaid the $18,941.39 he fronted for the first Browne order (net $0). MTRG #2 to be split by location.</p>
 </div>
 
 <div class="grid">
@@ -94,7 +94,7 @@ const LOANS=[
   outs:[['reconciled','Fully repaid — cleared',32656.44]],uses:[],note:'Cleared in full.'},
  {name:'Eastlake',in:14000,repaid:7000,net:7000,
   ins:[['2026-03-06','JR174 (Amex $7,000 + Diego $7,000)',14000]],
-  outs:[['2026-06-27','Amex $7,000 returned',7000]],uses:[],note:'$14,000 in = Amex $7,000 + Diego $7,000. The Amex $7,000 came back; Diego’s $7,000 did NOT, so Forma owes Diego $7,000 (net $7,000).'},
+  outs:[['2026-06-27','Amex $7,000 returned (Diego’s $7,000 CC payment not refunded)',7000]],uses:[],note:'$14,000 in = Amex $7,000 + Diego $7,000 (Diego’s portion paid on his credit card). The Amex $7,000 came back; Diego’s $7,000 has NOT been refunded, so Forma owes Diego $7,000 (net $7,000 payable).'},
  {name:'MTRG #2',in:7013,repaid:7013,net:0,
   ins:[['2026-01-02','JQ195 (acct 306)',1550],['2026-03-03','RB390 (Carolyn salary)',395],['2026-03-04','HX060 (BDC fee)',1500],['2026-03-10','WL592',65],['2026-04-10','JU313',3503]],
   outs:[['2026-02-02','RX451',1000],['2026-02-04','HW343',300],['reconciled','$4,881 back + rest cleared (balance)',5713]],uses:[],note:'Cleared in full.'},
