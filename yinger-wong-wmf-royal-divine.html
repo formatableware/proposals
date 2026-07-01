@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WMF Royal & Divine — Wine Collection | Forma Tableware</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:       #1B2A41;
+    --cream:     #F6F1E7;
+    --bone:      #EAE2D0;
+    --olive:     #6B7052;
+    --olive-lt:  #9DA47C;
+    --slate:     #4A5568;
+    --rule:      rgba(27,42,65,0.14);
+    --f-display: 'Cormorant Garamond', Georgia, serif;
+    --f-body:    'Jost', system-ui, sans-serif;
+  }
+  html { font-size: 14px; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 2.5rem 2.5rem 4rem;
+  }
+
+  /* HEADER */
+  .page-header { display: grid; grid-template-columns: 1fr auto; align-items: end; border-bottom: 2px solid var(--ink); padding-bottom: 1.2rem; margin-bottom: 0.5rem; gap: 2rem; }
+  .brand-lockup { display: flex; align-items: baseline; gap: 0.9rem; }
+  .eyebrow { font-family: var(--f-body); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate); font-weight: 500; }
+  .brand-wmf { font-family: var(--f-display); font-size: 2.5rem; font-weight: 300; letter-spacing: 0.12em; color: var(--ink); line-height: 1; }
+  .brand-wmf span { color: var(--olive); }
+  .header-meta { text-align: right; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate); line-height: 1.8; }
+  .collection-title { font-family: var(--f-display); font-size: 1.05rem; font-style: italic; font-weight: 300; color: var(--olive); letter-spacing: 0.04em; margin-top: 0.3rem; margin-bottom: 2.2rem; }
+
+  /* INTRO STRIP */
+  .intro-strip { display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr; background: var(--ink); color: var(--cream); border-radius: 2px; margin-bottom: 2.4rem; overflow: hidden; }
+  .intro-strip .divider { background: rgba(246,241,231,0.15); }
+  .intro-pill { padding: 1.1rem 1.4rem; text-align: center; }
+  .intro-pill .label { font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.65; margin-bottom: 0.25rem; }
+  .intro-pill .value { font-family: var(--f-display); font-size: 1.15rem; font-weight: 400; letter-spacing: 0.04em; }
+
+  /* COLLECTION CARDS */
+  .collections-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; margin-bottom: 2.4rem; }
+  .collection-card { border: 1px solid var(--rule); border-top: 3px solid var(--olive); background: white; padding: 1.5rem 1.6rem 1.6rem; }
+  .coll-eyebrow { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--olive); font-weight: 600; margin-bottom: 0.4rem; }
+  .coll-name { font-family: var(--f-display); font-size: 1.9rem; font-weight: 300; letter-spacing: 0.08em; line-height: 1; margin-bottom: 0.6rem; color: var(--ink); }
+  .coll-desc { font-size: 0.82rem; color: var(--slate); line-height: 1.65; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+  .coll-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 1.2rem; }
+  .spec-item { font-size: 0.75rem; color: var(--slate); }
+  .spec-item strong { color: var(--ink); font-weight: 500; }
+
+  /* SECTION RULE */
+  .section-rule { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.4rem; }
+  .section-rule h2 { font-family: var(--f-display); font-size: 1.1rem; font-weight: 400; letter-spacing: 0.08em; white-space: nowrap; color: var(--ink); }
+  .section-rule::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+  /* GLASS GRID */
+  .glass-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.8rem; margin-bottom: 2.4rem; }
+  .glass-card { background: white; border: 1px solid var(--rule); padding: 0.8rem 0.5rem 0.9rem; text-align: center; position: relative; }
+  .glass-card.featured { border-color: var(--olive); }
+  .coll-tag { position: absolute; top: 0.4rem; left: 0.4rem; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); background: var(--ink); padding: 0.1rem 0.35rem; font-weight: 500; }
+  .coll-tag.divine { background: var(--olive); color: var(--cream); }
+  .glass-visual { height: 90px; display: flex; align-items: flex-end; justify-content: center; margin-bottom: 0.5rem; overflow: hidden; }
+  .glass-visual img { max-height: 90px; max-width: 100%; object-fit: contain; object-position: bottom; }
+  .glass-name { font-size: 0.68rem; font-weight: 500; color: var(--ink); letter-spacing: 0.04em; line-height: 1.3; margin-bottom: 0.2rem; }
+  .glass-vol { font-size: 0.62rem; color: var(--slate); }
+
+  /* PRICE TABLE */
+  .price-table { width: 100%; border-collapse: collapse; font-size: 0.76rem; margin-bottom: 0.5rem; }
+  .price-table thead tr { background: var(--ink); color: var(--cream); }
+  .price-table thead th { padding: 0.65rem 0.8rem; text-align: left; font-weight: 500; letter-spacing: 0.06em; font-size: 0.62rem; text-transform: uppercase; }
+  .price-table thead th.num { text-align: right; }
+  .price-table tbody tr { border-bottom: 1px solid var(--rule); }
+  .price-table tbody tr:nth-child(even) { background: #FBF8F2; }
+  .price-table tbody td { padding: 0.55rem 0.8rem; vertical-align: middle; }
+  .price-table tbody td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .badge { display: inline-block; font-size: 0.55rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.15rem 0.45rem; font-weight: 600; }
+  .badge.royal { background: var(--ink); color: var(--cream); }
+  .badge.divine { background: var(--olive); color: var(--cream); }
+  .price-strong { font-weight: 600; color: var(--ink); }
+  .msrp-cell { color: var(--slate); }
+  .section-sub { font-size: 0.63rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--olive); font-weight: 600; padding: 0.45rem 0.8rem 0.28rem; background: var(--bone); border-bottom: 1px solid var(--rule); }
+  .price-note { font-size: 0.68rem; color: var(--slate); margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px solid var(--rule); line-height: 1.6; }
+
+  /* ACCESSORIES */
+  .acc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.4rem; }
+  .acc-card { background: white; border: 1px solid var(--rule); padding: 1.1rem 1.2rem; }
+  .acc-icon { font-size: 1.6rem; margin-bottom: 0.5rem; line-height: 1; }
+  .acc-name { font-family: var(--f-display); font-size: 1.1rem; font-weight: 400; margin-bottom: 0.3rem; color: var(--ink); }
+  .acc-desc { font-size: 0.75rem; color: var(--slate); line-height: 1.6; margin-bottom: 0.6rem; }
+  .acc-meta { font-size: 0.65rem; color: var(--olive); letter-spacing: 0.05em; font-weight: 500; }
+
+  /* SELLING POINTS */
+  .selling-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--rule); background: white; margin-bottom: 2.4rem; }
+  .selling-point { padding: 1.2rem 1.3rem; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .selling-point:nth-child(3n) { border-right: none; }
+  .selling-point:nth-child(n+4) { border-bottom: none; }
+  .sp-num { font-family: var(--f-display); font-size: 2rem; font-weight: 300; color: var(--olive-lt); line-height: 1; margin-bottom: 0.4rem; }
+  .sp-title { font-weight: 600; font-size: 0.72rem; letter-spacing: 0.04em; margin-bottom: 0.35rem; color: var(--ink); text-transform: uppercase; }
+  .sp-text { font-size: 0.75rem; color: var(--slate); line-height: 1.6; }
+
+  /* FOOTER */
+  .page-footer { border-top: 1px solid var(--rule); padding-top: 1rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1rem; }
+  .footer-contact { font-size: 0.68rem; color: var(--slate); line-height: 1.8; }
+  .footer-contact strong { color: var(--ink); font-weight: 500; }
+  .footer-logo { text-align: right; }
+  .footer-logo .name { font-family: var(--f-display); font-size: 1.3rem; font-weight: 300; letter-spacing: 0.15em; color: var(--ink); }
+  .footer-logo .tagline { font-size: 0.62rem; letter-spacing: 0.18em; color: var(--olive); font-family: var(--f-body); font-weight: 500; text-transform: uppercase; margin-top: 0.15rem; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="page-header">
+  <div>
+    <div class="brand-lockup">
+      <span class="eyebrow">Available through</span>
+      <div class="brand-wmf">W<span>M</span>F</div>
+      <span class="eyebrow" style="color:var(--olive); font-weight:600;">PROFESSIONAL</span>
+    </div>
+    <div class="eyebrow" style="margin-top:0.3rem; color:var(--slate)">Distributed by <strong>Forma Tableware Ltd.</strong> · Vancouver, BC</div>
+  </div>
+  <div class="header-meta">Origin: Germany · Since 1853<br>Prices in CAD · Per unit<br>Wine &amp; Hospitality Collection</div>
+</header>
+<div class="collection-title">Royal &amp; Divine Wine Glassware — Winery Edition</div>
+
+<!-- INTRO STRIP -->
+<div class="intro-strip">
+  <div class="intro-pill"><div class="label">Heritage</div><div class="value">Germany · Since 1853</div></div>
+  <div class="divider"></div>
+  <div class="intro-pill"><div class="label">Pack Size</div><div class="value">6 glasses per box</div></div>
+  <div class="divider"></div>
+  <div class="intro-pill"><div class="label">Glass Type</div><div class="value">Machine-blown · Dishwasher safe</div></div>
+</div>
+
+<!-- COLLECTION CARDS -->
+<div class="collections-row">
+  <div class="collection-card">
+    <div class="coll-eyebrow">ADVANCE Tier</div>
+    <div class="coll-name">ROYAL</div>
+    <div class="coll-desc">WMF's flagship stemware for professional hospitality — the standard choice for restaurant wine programs worldwide. Royal features a classically proportioned bowl, a slender stem of exceptional stability, and machine-blown crystal-clear glass that presents colour, clarity, and effervescence with precision. Its slightly heavier weight and wide base make it resilient for high-turnover service environments without sacrificing elegance.</div>
+    <div class="coll-specs">
+      <div class="spec-item"><strong>Style:</strong> Classic stem</div>
+      <div class="spec-item"><strong>Glass:</strong> Machine-blown soda-lime</div>
+      <div class="spec-item"><strong>Dishwasher:</strong> Safe</div>
+      <div class="spec-item"><strong>Pack:</strong> 6 per box</div>
+      <div class="spec-item"><strong>Best for:</strong> Restaurant, tasting room, events</div>
+      <div class="spec-item"><strong>Tier:</strong> WMF ADVANCE</div>
+    </div>
+  </div>
+  <div class="collection-card">
+    <div class="coll-eyebrow">SUPREME Tier</div>
+    <div class="coll-name">DIVINE</div>
+    <div class="coll-desc">WMF's premium glassware line for establishments where the glass is part of the guest experience. Divine is noticeably thinner and lighter than Royal, with a more elongated bowl profile that directs aromas toward the nose — ideal for guided wine tastings, premium pours, and cellar experiences. The refined silhouette photographs beautifully, making it a natural choice for winery retail and tasting room branding.</div>
+    <div class="coll-specs">
+      <div class="spec-item"><strong>Style:</strong> Fine stem, elongated bowl</div>
+      <div class="spec-item"><strong>Glass:</strong> Machine-blown fine glass</div>
+      <div class="spec-item"><strong>Dishwasher:</strong> Safe</div>
+      <div class="spec-item"><strong>Pack:</strong> 6 per box</div>
+      <div class="spec-item"><strong>Best for:</strong> Tastings, premium pours, retail gift</div>
+      <div class="spec-item"><strong>Tier:</strong> WMF SUPREME</div>
+    </div>
+  </div>
+</div>
+
+<!-- GLASS VISUAL GRID -->
+<div class="section-rule"><h2>The Collection at a Glance</h2></div>
+<div class="glass-grid">
+  <div class="glass-card featured">
+    <span class="coll-tag">Royal</span>
+    <div class="glass-visual"><img src="https://i.postimg.cc/RhbtrTNH/1003_00011.png" alt="Royal Red Wine Glass" onerror="this.style.display='none'"></div>
+    <div class="glass-name">Red Wine Goblet</div>
+    <div class="glass-vol">1003.00011</div>
+  </div>
+  <div class="glass-card featured">
+    <span class="coll-tag">Royal</span>
+    <div class="glass-visual"><img src="https://i.postimg.cc/MHrBkYvm/1003_00012.png" alt="Royal Bordeaux" onerror="this.style.display='none'"></div>
+    <div class="glass-name">Bordeaux</div>
+    <div class="glass-vol">1003.00012</div>
+  </div>
+  <div class="glass-card featured">
+    <span class="coll-tag">Royal</span>
+    <div class="glass-visual"><img src="https://i.postimg.cc/Hkbr3m4r/1003-00013.png" alt="Royal Burgundy" onerror="this.style.display='none'"></div>
+    <div class="glass-name">Burgundy</div>
+    <div class="glass-vol">1003.00013</div>
+  </div>
+  <div class="glass-card featured">
+    <span class="coll-tag">Royal</span>
+    <div class="glass-visual"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/wmf/58.0010.0029.jpg" alt="Royal Champagne" onerror="this.style.display='none'"></div>
+    <div class="glass-name">Champagne</div>
+    <div class="glass-vol">ATC.1003.00058</div>
+  </div>
+  <div class="glass-card">
+    <span class="coll-tag">Royal</span>
+    <div class="glass-visual"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/wmf/58.0010.0002.jpg" alt="Royal White Wine" onerror="this.style.display='none'"></div>
+    <div class="glass-name">White Wine Goblet</div>
+    <div class="glass-vol">ATC.1003.00052</div>
+  </div>
+  <div class="glass-card">
+    <span class="coll-tag">Royal</span>
+    <div class="glass-visual"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/wmf/58.0010.0004.jpg" alt="Royal Sherry" onerror="this.style.display='none'"></div>
+    <div class="glass-name">Sherry / Port</div>
+    <div class="glass-vol">ATC.1003.00053</div>
+  </div>
+
+  <div class="glass-card featured">
+    <span class="coll-tag divine">Divine</span>
+    <div class="glass-visual"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/wmf/58.0050.0001.jpg" alt="Divine Red Wine" onerror="this.style.display='none'"></div>
+    <div class="glass-name">Red Wine Goblet</div>
+    <div class="glass-vol">ATC.1003.00100</div>
+  </div>
+  <div class="glass-card featured">
+    <span class="coll-tag divine">Divine</span>
+    <div class="glass-visual"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/wmf/58.0050.0035.jpg" alt="Divine Bordeaux" onerror="this.style.display='none'"></div>
+    <div class="glass-name">Bordeaux</div>
+    <div class="glass-vol">ATC.1003.00108</div>
+  </div>
+  <div class="glass-card featured">
+    <span class="coll-tag divine">Divine</span>
+    <div class="glass-visual"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/wmf/58.0050.0099.jpg" alt="Divine Burgundy" onerror="this.style.display='none'"></div>
+    <div class="glass-name">Burgundy</div>
+    <div class="glass-vol">ATC.1003.00110</div>
+  </div>
+  <div class="glass-card featured">
+    <span class="coll-tag divine">Divine</span>
+    <div class="glass-visual"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/wmf/58.0050.0007.jpg" alt="Divine Champagne Flute" onerror="this.style.display='none'"></div>
+    <div class="glass-name">Champagne Flute</div>
+    <div class="glass-vol">ATC.1003.00103</div>
+  </div>
+  <div class="glass-card">
+    <span class="coll-tag divine">Divine</span>
+    <div class="glass-visual"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/wmf/58.0050.0029.jpg" alt="Divine Champagne Coupe" onerror="this.style.display='none'"></div>
+    <div class="glass-name">Champagne Coupe</div>
+    <div class="glass-vol">ATC.1003.00107</div>
+  </div>
+  <div class="glass-card">
+    <span class="coll-tag divine">Divine</span>
+    <div class="glass-visual"><img src="https://qqurgavkwjslhrmglkos.supabase.co/storage/v1/object/public/product-media/price-list/wmf/58.0050.0002.jpg" alt="Divine White Wine" onerror="this.style.display='none'"></div>
+    <div class="glass-name">White Wine Goblet</div>
+    <div class="glass-vol">ATC.1003.00101</div>
+  </div>
+</div>
+
+<!-- PRICE TABLE — ROYAL -->
+<div class="section-rule"><h2>Royal — Pricing Per Unit</h2></div>
+<table class="price-table">
+  <thead>
+    <tr><th>Product</th><th>SKU</th><th>WMF Ref.</th><th class="num">$ / unit</th><th class="num">$ / box×6</th><th class="num">Suggested MSRP* (box×6)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td colspan="6" class="section-sub">Wine &amp; Champagne</td></tr>
+    <tr><td>Red Wine Goblet</td><td>1003.00011</td><td>85.010.001</td><td class="num price-strong">$12.50</td><td class="num price-strong">$75.00</td><td class="num msrp-cell">$127.50</td></tr>
+    <tr><td>White Wine Goblet</td><td>ATC.1003.00052</td><td>85.010.002</td><td class="num price-strong">$17.08</td><td class="num price-strong">$102.48</td><td class="num msrp-cell">$174.22</td></tr>
+    <tr><td>Bordeaux</td><td>1003.00012</td><td>85.010.035</td><td class="num price-strong">$15.00</td><td class="num price-strong">$90.00</td><td class="num msrp-cell">$153.00</td></tr>
+    <tr><td>Burgundy</td><td>1003.00013</td><td>85.010.099</td><td class="num price-strong">$15.00</td><td class="num price-strong">$90.00</td><td class="num msrp-cell">$153.00</td></tr>
+    <tr><td>Champagne</td><td>ATC.1003.00058</td><td>85.010.029</td><td class="num price-strong">$17.08</td><td class="num price-strong">$102.48</td><td class="num msrp-cell">$174.22</td></tr>
+    <tr><td>Sherry / Port</td><td>ATC.1003.00053</td><td>85.010.004</td><td class="num price-strong">$15.74</td><td class="num price-strong">$94.44</td><td class="num msrp-cell">$160.55</td></tr>
+
+    <tr><td colspan="6" class="section-sub">Bar &amp; Specialty</td></tr>
+    <tr><td>Mineral Water / Beer</td><td>ATC.1003.00054</td><td>85.010.011</td><td class="num price-strong">$14.82</td><td class="num price-strong">$88.92</td><td class="num msrp-cell">$151.16</td></tr>
+    <tr><td>Brandy Glass</td><td>ATC.1003.00055</td><td>85.010.018</td><td class="num price-strong">$17.08</td><td class="num price-strong">$102.48</td><td class="num msrp-cell">$174.22</td></tr>
+    <tr><td>Digestive</td><td>ATC.1003.00056</td><td>85.010.023</td><td class="num price-strong">$15.74</td><td class="num price-strong">$94.44</td><td class="num msrp-cell">$160.55</td></tr>
+    <tr><td>Martini</td><td>ATC.1003.00057</td><td>85.010.025</td><td class="num price-strong">$17.08</td><td class="num price-strong">$102.48</td><td class="num msrp-cell">$174.22</td></tr>
+    <tr><td>Destillate</td><td>ATC.1003.00059</td><td>85.010.030</td><td class="num price-strong">$15.74</td><td class="num price-strong">$94.44</td><td class="num msrp-cell">$160.55</td></tr>
+
+    <tr><td colspan="6" class="section-sub">Measured Stems — 0.1L / 0.2L / 0.3L (Pour Compliance)</td></tr>
+    <tr><td>White Wine Goblet 0.1L</td><td>ATC.1003.00060</td><td>85.010.102</td><td class="num price-strong">$19.62</td><td class="num price-strong">$117.72</td><td class="num msrp-cell">$200.12</td></tr>
+    <tr><td>Champagne 0.1L</td><td>ATC.1003.00061</td><td>85.010.129</td><td class="num price-strong">$19.62</td><td class="num price-strong">$117.72</td><td class="num msrp-cell">$200.12</td></tr>
+    <tr><td>Red Wine Goblet 0.2L</td><td>ATC.1003.00062</td><td>85.010.201</td><td class="num price-strong">$20.48</td><td class="num price-strong">$122.88</td><td class="num msrp-cell">$208.90</td></tr>
+    <tr><td>White Wine Goblet 0.2L</td><td>ATC.1003.00063</td><td>85.010.202</td><td class="num price-strong">$19.62</td><td class="num price-strong">$117.72</td><td class="num msrp-cell">$200.12</td></tr>
+    <tr><td>Bordeaux 0.2L</td><td>ATC.1003.00064</td><td>85.010.235</td><td class="num price-strong">$21.38</td><td class="num price-strong">$128.28</td><td class="num msrp-cell">$218.08</td></tr>
+    <tr><td>Burgundy 0.2L</td><td>ATC.1003.00065</td><td>85.010.299</td><td class="num price-strong">$21.38</td><td class="num price-strong">$128.28</td><td class="num msrp-cell">$218.08</td></tr>
+    <tr><td>Mineral Water / Beer 0.3L</td><td>ATC.1003.00066</td><td>85.010.011</td><td class="num price-strong">$17.36</td><td class="num price-strong">$104.16</td><td class="num msrp-cell">$177.07</td></tr>
+  </tbody>
+</table>
+<div class="price-note">Source: Forma stockist catalogue, confirmed July 1, 2026. All prices CAD, per unit — multiply by 6 for a full box.</div>
+
+<br>
+
+<!-- PRICE TABLE — DIVINE -->
+<div class="section-rule"><h2>Divine — Pricing Per Unit</h2></div>
+<table class="price-table">
+  <thead>
+    <tr><th>Product</th><th>SKU</th><th>WMF Ref.</th><th class="num">$ / unit</th><th class="num">$ / box×6</th><th class="num">Suggested MSRP* (box×6)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td colspan="6" class="section-sub">Wine &amp; Champagne</td></tr>
+    <tr><td>Red Wine Goblet</td><td>ATC.1003.00100</td><td>85.050.001</td><td class="num price-strong">$18.40</td><td class="num price-strong">$110.40</td><td class="num msrp-cell">$187.68</td></tr>
+    <tr><td>White Wine Goblet</td><td>ATC.1003.00101</td><td>85.050.002</td><td class="num price-strong">$17.42</td><td class="num price-strong">$104.52</td><td class="num msrp-cell">$177.68</td></tr>
+    <tr><td>Bordeaux</td><td>ATC.1003.00108</td><td>85.050.035</td><td class="num price-strong">$19.28</td><td class="num price-strong">$115.68</td><td class="num msrp-cell">$196.66</td></tr>
+    <tr><td>Burgundy</td><td>ATC.1003.00110</td><td>85.050.099</td><td class="num price-strong">$19.28</td><td class="num price-strong">$115.68</td><td class="num msrp-cell">$196.66</td></tr>
+    <tr><td>Champagne Flute</td><td>ATC.1003.00103</td><td>85.050.007</td><td class="num price-strong">$17.96</td><td class="num price-strong">$107.76</td><td class="num msrp-cell">$183.19</td></tr>
+    <tr><td>Champagne Coupe</td><td>ATC.1003.00107</td><td>85.050.029</td><td class="num price-strong">$17.96</td><td class="num price-strong">$107.76</td><td class="num msrp-cell">$183.19</td></tr>
+    <tr><td>Sherry / Digestive</td><td>ATC.1003.00102</td><td>85.050.004</td><td class="num price-strong">$16.18</td><td class="num price-strong">$97.08</td><td class="num msrp-cell">$165.04</td></tr>
+
+    <tr><td colspan="6" class="section-sub">Bar, Water &amp; Colour Tumblers</td></tr>
+    <tr><td>Mixdrink</td><td>ATC.1003.00104</td><td>85.050.009</td><td class="num price-strong">$11.62</td><td class="num price-strong">$69.72</td><td class="num msrp-cell">$118.52</td></tr>
+    <tr><td>Softdrink</td><td>ATC.1003.00105</td><td>85.050.014</td><td class="num price-strong">$11.34</td><td class="num price-strong">$68.04</td><td class="num msrp-cell">$115.67</td></tr>
+    <tr><td>Tumbler</td><td>ATC.1003.00106</td><td>85.050.015</td><td class="num price-strong">$11.90</td><td class="num price-strong">$71.40</td><td class="num msrp-cell">$121.38</td></tr>
+    <tr><td>Minibar</td><td>ATC.1003.00109</td><td>85.050.047</td><td class="num price-strong">$10.58</td><td class="num price-strong">$63.48</td><td class="num msrp-cell">$107.92</td></tr>
+    <tr><td>Tumbler Colour — Smoky Blue</td><td>ATC.1003.00121</td><td>—</td><td class="num price-strong">$17.74</td><td class="num price-strong">$106.44</td><td class="num msrp-cell">$180.95</td></tr>
+    <tr><td>Tumbler Colour — Smoky Grey</td><td>ATC.1003.00122</td><td>—</td><td class="num price-strong">$17.74</td><td class="num price-strong">$106.44</td><td class="num msrp-cell">$180.95</td></tr>
+    <tr><td>Tumbler Colour — Amber</td><td>ATC.1003.00123</td><td>—</td><td class="num price-strong">$17.74</td><td class="num price-strong">$106.44</td><td class="num msrp-cell">$180.95</td></tr>
+    <tr><td>Tumbler Colour — Olive</td><td>ATC.1003.00124</td><td>—</td><td class="num price-strong">$17.74</td><td class="num price-strong">$106.44</td><td class="num msrp-cell">$180.95</td></tr>
+
+    <tr><td colspan="6" class="section-sub">Measured Stems — 0.1L / 0.2L / 0.25L (Pour Compliance)</td></tr>
+    <tr><td>White Wine Goblet 0.1L</td><td>ATC.1003.00111</td><td>85.050.102</td><td class="num price-strong">$20.10</td><td class="num price-strong">$120.60</td><td class="num msrp-cell">$205.02</td></tr>
+    <tr><td>Champagne Flute 0.1L</td><td>ATC.1003.00112</td><td>85.050.107</td><td class="num price-strong">$20.48</td><td class="num price-strong">$122.88</td><td class="num msrp-cell">$208.90</td></tr>
+    <tr><td>Champagne 0.1L</td><td>ATC.1003.00113</td><td>85.050.129</td><td class="num price-strong">$20.48</td><td class="num price-strong">$122.88</td><td class="num msrp-cell">$208.90</td></tr>
+    <tr><td>Red Wine Goblet 0.2L</td><td>ATC.1003.00114</td><td>85.050.201</td><td class="num price-strong">$20.94</td><td class="num price-strong">$125.64</td><td class="num msrp-cell">$213.59</td></tr>
+    <tr><td>White Wine Goblet 0.2L</td><td>ATC.1003.00115</td><td>85.050.202</td><td class="num price-strong">$20.10</td><td class="num price-strong">$120.60</td><td class="num msrp-cell">$205.02</td></tr>
+    <tr><td>Softdrink 0.2L</td><td>ATC.1003.00116</td><td>85.050.214</td><td class="num price-strong">$12.38</td><td class="num price-strong">$74.28</td><td class="num msrp-cell">$126.28</td></tr>
+    <tr><td>Bordeaux 0.2L</td><td>ATC.1003.00117</td><td>85.050.235</td><td class="num price-strong">$21.86</td><td class="num price-strong">$131.16</td><td class="num msrp-cell">$222.97</td></tr>
+    <tr><td>Burgundy 0.2L</td><td>ATC.1003.00118</td><td>85.050.299</td><td class="num price-strong">$21.86</td><td class="num price-strong">$131.16</td><td class="num msrp-cell">$222.97</td></tr>
+    <tr><td>Mixdrink 0.25L</td><td>ATC.1003.00119</td><td>85.050.309</td><td class="num price-strong">$12.68</td><td class="num price-strong">$76.08</td><td class="num msrp-cell">$129.34</td></tr>
+  </tbody>
+</table>
+<div class="price-note">*Suggested MSRP shown at box price × 1.7 as a starting reference only — this is not an official WMF SRP and should be adjusted to your winery's target margin. Source: Forma stockist catalogue, confirmed July 1, 2026, all prices CAD per unit.</div>
+
+<br>
+
+<!-- DECANTERS -->
+<div class="section-rule"><h2>Wine Decanters — firstglass by WMF</h2></div>
+<table class="price-table" style="margin-bottom: 0.5rem;">
+  <thead>
+    <tr><th>Product</th><th>SKU</th><th>Capacity</th><th class="num">$ / unit</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>firstglass Carafe 53</td><td>ATC.1003.00366</td><td>100 ml</td><td class="num price-strong">$29.32</td></tr>
+    <tr><td>firstglass Carafe 53 — Calibrated</td><td>ATC.1003.00369</td><td>100 ml</td><td class="num price-strong">$31.56</td></tr>
+    <tr><td>firstglass Carafe 57</td><td>ATC.1003.00367</td><td>250 ml</td><td class="num price-strong">$33.76</td></tr>
+    <tr><td>firstglass Carafe 57 — Calibrated (0.2L)</td><td>ATC.1003.00370</td><td>250 ml</td><td class="num price-strong">$36.26</td></tr>
+    <tr><td>firstglass Carafe 57 — Calibrated (0.25L)</td><td>ATC.1003.00371</td><td>250 ml</td><td class="num price-strong">$36.26</td></tr>
+    <tr><td>firstglass Carafe 58</td><td>ATC.1003.00368</td><td>500 ml</td><td class="num msrp-cell" style="font-style:italic;">Price on request</td></tr>
+    <tr><td>firstglass Carafe 58 — Calibrated (0.5L)</td><td>ATC.1003.00372</td><td>500 ml</td><td class="num price-strong">$55.26</td></tr>
+    <tr><td>firstglass Coaster — Stainless Steel</td><td>ATC.1003.00373</td><td>—</td><td class="num msrp-cell" style="font-style:italic;">Price on request</td></tr>
+  </tbody>
+</table>
+<div class="price-note">Made in Germany. Sold individually, not boxed in 6s. Calibrated versions have an etched fill line for accurate glass-by-glass service. No dedicated wine stopper SKU is currently in the WMF catalogue — check with your Forma rep for alternatives if needed.</div>
+
+<br>
+
+<!-- SELLING POINTS -->
+<div class="section-rule"><h2>Why WMF Glassware — Talking Points for Your Team</h2></div>
+<div class="selling-grid">
+  <div class="selling-point">
+    <div class="sp-num">01</div>
+    <div class="sp-title">Made in Germany · Since 1853</div>
+    <div class="sp-text">WMF has been producing table culture products in Germany for over 170 years. That heritage resonates with wine consumers who care about provenance — the same guests who care where their grapes come from will notice that the glass was made with the same commitment to craft.</div>
+  </div>
+  <div class="selling-point">
+    <div class="sp-num">02</div>
+    <div class="sp-title">Dishwasher Safe — Every Single SKU</div>
+    <div class="sp-text">Both Royal and Divine are fully dishwasher safe at commercial temperatures. Staff can run the glasses through your commercial machine without fear of thermal shock, cloudiness, or stem damage — critical during high-volume tastings and events.</div>
+  </div>
+  <div class="selling-point">
+    <div class="sp-num">03</div>
+    <div class="sp-title">Stem Stability · Designed for Service</div>
+    <div class="sp-text">Royal's base-to-bowl ratio is engineered for service stability — a wider base footprint means fewer knockovers on barn-board tables, uneven stone patios, and outdoor tasting decks. A practical design decision made for the real hospitality environment.</div>
+  </div>
+  <div class="selling-point">
+    <div class="sp-num">04</div>
+    <div class="sp-title">Consistent Availability · No Hunt Required</div>
+    <div class="sp-text">WMF maintains consistent stock availability across Royal and Divine — these are core catalog items, not seasonal specials. When you need to replace a box after a busy weekend, the glass you reorder will match exactly what's already on your shelf.</div>
+  </div>
+  <div class="selling-point">
+    <div class="sp-num">05</div>
+    <div class="sp-title">Aroma-Optimised Bowl Geometry</div>
+    <div class="sp-text">Divine's elongated bowl and tapered rim channel volatile aromatic compounds directly to the nose. For guided tastings where you're asking guests to engage their senses, the glass shape is doing real work. Use this in your tasting notes and flight descriptions.</div>
+  </div>
+  <div class="selling-point">
+    <div class="sp-num">06</div>
+    <div class="sp-title">BC Pour Compliance Built In</div>
+    <div class="sp-text">The measured-fill variants (0.1L / 0.2L / 0.25L) eliminate a separate pour step for licensed premises. The etched line is precise, subtle, and part of the glass — not a sticker or secondary tool. Operationally cleaner and audit-ready for LCRB inspection.</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <div class="footer-contact">
+    <strong>To order or request samples:</strong><br>
+    Forma Tableware Ltd. · 174–8250 Manitoba St, Vancouver BC V5X 0L6<br>
+    management@formatableware.com · 604-880-9376 · formatableware.com<br>
+    <em style="color:var(--olive)">Decanters sold individually. All other items ordered in full boxes of 6. All prices subject to change without notice.</em>
+  </div>
+  <div class="footer-logo">
+    <div class="name">FORMA</div>
+    <div class="tagline">Form. Function. Feeling.</div>
+  </div>
+</footer>
+
+</body>
+</html>
